@@ -24,4 +24,5 @@ def get_events():
 @app.route('/get_rankings')
 def get_rankings():
 	event = request.args.get('event')
+	
 app.run(host='0.0.0.0', port=8080, debug=True)

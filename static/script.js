@@ -38,4 +38,7 @@ function get_events() {
 function get_rankings() {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', '/get_rankings?event=' + $('event_selection').val())
+    xhr.onreadystatechange = function () {
+        
+    }
 }

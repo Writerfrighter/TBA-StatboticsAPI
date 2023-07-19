@@ -118,4 +118,3 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         print("The Blue Alliance API is down.")
 
 
-createRankings("2023pncmp", True, True, True, True, True, False)
