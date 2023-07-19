@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class = "input"></div>
+    <form name="beginning_data" onsubmit="event.preventDefault()" onchange="get_events()">
+    
         <label for="season_selection" class="form-label">Select the season your scouting for</label>
         <select class="form-select" aria-label="Season selection" id = "season_selection">
             <option selected>{{current_year}}</option>
@@ -13,6 +14,51 @@
         <label for="team_number" class="form-label">Team number</label>
         <input type="number" id="team_number" class="form-control">
 
+    </form>
+    <div id="testing"></div>
+    <form id = "event_selection_form" onsubmit="create_rankings()" class="d-none">
+        <label for="event_selection" class="form-label">Select an event to scout for</label>
+            <select class="form-select" aria-label="Event selection" id = "event_selection"></select>
+        
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Use OPR
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexChecChecked">
+                Use CCWMS
+            </label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckCheckede">
+                Use Overall EPA
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckCheckede">
+                Use Auto EPA
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Use TeleOp EPA
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Use Endgame EPA
+            </label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success" onsubmit="get_rankings()">Calculate</button>
 
-    </div>
+    </form>
 {% endblock %}

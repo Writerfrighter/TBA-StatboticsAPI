@@ -11,7 +11,10 @@ def checkAPIStatus():
 
 def fetchEventsForTeam(teamNumber, season) -> list:
     team_data = fetchAPIData("team/frc{}/events/{}/simple".format(teamNumber, season))
-    return [["{} ({})".format(event["name"], event["key"]), event["key"]] for event in team_data]
+    response = ""
+    for event in team_data:
+        response += "~{}~{}~".format(event["name"], event["key"])
+    return response
 
 def fetchEventOprs(eventCode):
     team_data = fetchAPIData("event/{}/oprs".format(eventCode))
