@@ -1,3 +1,3 @@
-y = ['t','c']
+import datetime
 
-print("-".join(map(str, y)))
+print("2023-11-21" < str(datetime.datetime.now())[:11:])

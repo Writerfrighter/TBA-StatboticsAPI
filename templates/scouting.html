@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form name="beginning_data" onsubmit="event.preventDefault()" onchange="get_events()">
+    <form name="beginning_data" onsubmit="event.preventDefault(); get_events()" onchange="get_events()">
     
         <label for="season_selection" class="form-label">Select the season your scouting for</label>
         <select class="form-select" aria-label="Season selection" id = "season_selection">
@@ -12,11 +12,11 @@
         </select>
 
         <label for="team_number" class="form-label">Team number</label>
-        <input type="number" id="team_number" class="form-control">
+        <input type="number" id="team_number" class="form-control" value=492>
 
     </form>
     <div id="testing"></div>
-    <form id = "event_selection_form" onsubmit="event.preventDefault()" class="d-none">
+    <form id = "event_selection_form" onsubmit="event.preventDefault(); get_events()" class="d-none">
         <label for="event_selection" class="form-label">Select an event to scout for</label>
             <select class="form-select" aria-label="Event selection" id = "event_selection"></select>
         
@@ -67,6 +67,6 @@
 
     </form>
     <div>
-        <canvas style="width: 1000; height: 1000;" id="ranking_score"></canvas>
+        <canvas style="width: 800; height: 800;" id="ranking_score"></canvas>
     </div>
 {% endblock %}

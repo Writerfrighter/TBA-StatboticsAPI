@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi</h1> 
+    {% if current_event %}
+        <div class="h2">Watch your current match</div>
+        <div id="twitch-embed"></div>
+        <button class="btn" onclick="getChannel()"></button>
+    {% else %}
+        <h1>No current events</h1>
+    {% endif %} 
 {% endblock %}

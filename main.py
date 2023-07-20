@@ -7,9 +7,11 @@ import TBA
 
 app = Flask(__name__)
 
+team = 492
+
 @app.route('/')
 def index():
-	return render_template('index.html')
+	return render_template('index.html', current_event = True if TBA.eventChannels(492) != "No current events" else False)
 
 @app.route('/scouting')
 def scouting():
@@ -20,6 +22,11 @@ def get_events():
 	season = request.args.get('season')
 	team_number = request.args.get('team_number')
 	return TBA.fetchEventsForTeam(team_number, season)
+
+@app.route('/get_channels')
+def get_channels():
+	team = request.args.get('team')
+	return TBA.eventChannels(team)
 
 @app.route('/get_rankings')
 def get_rankings():

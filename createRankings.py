@@ -94,8 +94,8 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         #        score_and_names[i][0] = max(scores)+abs(min(scores))+ random.random() * 2
 
         score_and_names.sort(reverse=True)
-        print("Ranked teams on OPR and EPA")
-        print(*score_and_names, sep="\n")
+        # print("Ranked teams on OPR and EPA")
+        # print(*score_and_names, sep="\n")
         
 
         team_names = [team for (score, team) in score_and_names]

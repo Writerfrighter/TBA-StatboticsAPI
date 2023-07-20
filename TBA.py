@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 
 TBA_Api_Key = "XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu"
 
@@ -19,7 +20,14 @@ def fetchEventsForTeam(teamNumber, season) -> list:
 def fetchEventOprs(eventCode):
     team_data = fetchAPIData("event/{}/oprs".format(eventCode))
     return team_data
-    
+
+def eventChannels(team):
+    date = datetime.now()
+    resp = fetchAPIData("team/frc{}/events/{}".format(team, date.year))
+    for event in resp:
+        if event["start_date"] < str(date)[:11:] and event["end_date"] > str(date)[:11:]:
+            return event["webcasts"][0]["channel"]
+    return "No current events"
 def fetchAPIData(url):
     """Helper function to fetch data from The Blue Alliance API."""
     API_return = requests.get("https://www.thebluealliance.com/api/v3/" + url, params = {"X-TBA-Auth-Key": TBA_Api_Key}).json()

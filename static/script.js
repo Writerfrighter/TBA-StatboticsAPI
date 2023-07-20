@@ -1,3 +1,4 @@
+
 (() => {
     'use strict'
 
@@ -17,8 +18,23 @@
     })
 })();
 
+var team = 492
+
+async function getChannel() {
+    let res = await fetch(`/get_channels?team=${team}`)
+    res = await res.text();
+     if (res != "No current events") {
+        var options = {
+            width: 854,
+            height: 480,
+            channel: res,
+        };
+        var player = new Twitch.Player("twitch-embed", options);
+        player.setVolume(0.5);
+    }
+}
+
 async function get_events() {
-    let xhr = new XMLHttpRequest();
     let res = await fetch(`/get_events?season=${$('#season_selection').val()}&team_number=${$('#team_number').val()} `);
     res = await res.text();
 
@@ -33,7 +49,6 @@ async function get_events() {
         opt.innerHTML = resp[i * 3 + 1]
         $('#event_selection').append(opt);
     }
-
 }
 
 async function get_rankings() {
@@ -68,13 +83,15 @@ async function get_rankings() {
         },
         options: {
             scales: {
-                indexAxis: 'y',
-                // x: {
-                //     beginAtZero: true
-                // }
+                // indexAxis: 'y',
+                x: {
+                    beginAtZero: true
+                }
             }
         }
     });
+}
 
+function search_team() {
 
 }
