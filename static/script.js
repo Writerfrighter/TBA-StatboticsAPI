@@ -37,13 +37,36 @@ function get_events() {
 
 function get_rankings() {
     let xhr = new XMLHttpRequest();
-    var checked
-    if ($('#use_OPR').checked == false) {
-        checked = "False"
-    } else {checked = 'True'}
-    xhr.open('GET', '/get_rankings?event=' + $('#event_selection').val() + checked)
+    var use_OPR = (document.getElementById("use_OPR").checked) ? 'True' : 'False';
+    var use_CCWMS = (document.getElementById("use_CCWMS").checked) ? 'True' : 'False';
+    var use_overall_EPA = (document.getElementById("use_overall_EPA").checked) ? 'True' : 'False';
+    var use_auto_EPA = (document.getElementById("use_auto_EPA").checked) ? 'True' : 'False';
+    var use_teleop_EPA = (document.getElementById("use_TeleOp_EPA").checked) ? 'True' : 'False';
+    var use_endgame_EPA = (document.getElementById("use_endgame_EPA").checked) ? 'True' : 'False';
+    xhr.open('GET', '/get_rankings?event='+$('#event_selection').val()+'&OPR='+use_OPR+'&CCWMS='+use_CCWMS+'&Overall='+use_overall_EPA+'&Auto='+use_auto_EPA+'&Teleop='+use_teleop_EPA+'&Endgame='+use_endgame_EPA)
     xhr.onreadystatechange = function () {
-
+        resp = xhr.response.split("=")
+        names = resp[0].split('-')
+        scores = resp[1].split('-')
+        const ctx = document.getElementById('ranking_score');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: names,
+              datasets: [{
+                label: 'Ranking',
+                data: scores,
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+        });
     }
     xhr.send()
 }

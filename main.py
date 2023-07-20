@@ -24,5 +24,12 @@ def get_events():
 @app.route('/get_rankings')
 def get_rankings():
 	event = request.args.get('event')
-	
+	use_OPR = True if request.args.get('OPR') == 'True' else False
+	use_CCWMS = True if request.args.get('CCWMS') == 'True' else False
+	use_overall_EPA = True if request.args.get('Overall') == 'True' else False
+	use_auto_EPA = True if request.args.get('Auto')  == 'True' else False
+	use_teleop_EPA = True if request.args.get('Teleop')  == 'True' else False
+	use_endgame_EPA = True if request.args.get('Endgame')  == 'True' else False
+
+	return createRankings.createRankings(event, use_OPR, use_CCWMS, use_overall_EPA, use_auto_EPA, use_teleop_EPA, use_endgame_EPA)
 app.run(host='0.0.0.0', port=8080, debug=True)

@@ -1,3 +1,3 @@
-from datetime import datetime
+y = ['t','c']
 
-print(str(datetime.now().year))
+print("-".join(map(str, y)))
