@@ -33,10 +33,12 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         if useOPR: 
             oprs = API_Response["oprs"]
             oprs_normalized = normalizeData(oprs)
+        else: oprs_normalized = dict.fromkeys(np.arange(0,len(API_Response["oprs"])+1), 0)
         if useCCWMS: 
             ccwms = API_Response["ccwms"]
             ccwms_normalized = normalizeData(ccwms)
-        
+        else: ccwms_normalized = dict.fromkeys(np.arange(0,len(API_Response["ccwms"])+1), 0)
+
         team_names = {}
         if not useOverall_EPA: epas_max = dict.fromkeys(np.arange(0,len(oprs)+1), 0)
         else: epas_max = {}
@@ -72,14 +74,18 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
 
         print("Fetching EPA data for team {} of {}".format(len(oprs), len(oprs)))
         if useOverall_EPA: epa_max_normalized = normalizeData(epas_max)
+        else: epa_max_normalized = epas_max
         if useAuto_EPA: auto_epa_max_normalized = normalizeData(auto_epas_max)
+        else: auto_epa_max_normalized = auto_epas_max
         if useTeleOp_EPA: teleop_epa_max_normalized = normalizeData(teleop_epas_max)
+        else: teleop_epa_max_normalized = teleop_epas_max
         if useEndgame_EPA: endgame_epa_max_normalized = normalizeData(endgame_epas_max)
+        else: endgame_epa_max_normalized = endgame_epas_max
 
         names = ["{} ({})".format(team_names[team_number], team_number[3::]) for team_number in team_names.keys()]
 
         
-        scores = [(opr * 2) + (ccwm * 2) + epa_max + auto_epa_max + teleop_epa_max for (opr, ccwm, epa_max, auto_epa_max, teleop_epa_max) in zip(oprs_normalized.values(), ccwms_normalized.values(), epa_max_normalized.values(), auto_epa_max_normalized.values(), teleop_epa_max_normalized.values())]
+        scores = [(opr * 2) + (ccwm * 2) + epa_max + auto_epa_max + teleop_epa_max + endgame_epa_max for (opr, ccwm, epa_max, auto_epa_max, teleop_epa_max, endgame_epa_max) in zip(oprs_normalized.values(), ccwms_normalized.values(), epa_max_normalized.values(), auto_epa_max_normalized.values(), teleop_epa_max_normalized.values(), endgame_epa_max_normalized.values())]
         score_and_names = [(score, name) for (score, name) in zip(scores, names) ]
         
         #Shhhhh
@@ -88,8 +94,8 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         #        score_and_names[i][0] = max(scores)+abs(min(scores))+ random.random() * 2
 
         score_and_names.sort(reverse=True)
-        # print("Ranked teams on OPR and EPA")
-        # print(*score_and_names, sep="\n")
+        print("Ranked teams on OPR and EPA")
+        print(*score_and_names, sep="\n")
         
 
         team_names = [team for (score, team) in score_and_names]
@@ -98,8 +104,8 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         for i in range(len(team_scores)):
             team_scores[i] += abs(min_score)
 
-        names_joined = "-".join(map(str, team_names))
-        team_scores = "-".join(map(str, team_scores))
+        names_joined = "~".join(map(str, team_names))
+        team_scores = "~".join(map(str, team_scores))
         return names_joined + "=" + team_scores
     
     else:

@@ -58,10 +58,15 @@
             </label>
         </div>
         <br>
-        <button type="submit" class="btn btn-success" onclick="get_rankings()">Calculate</button>
+        <button type="submit" class="btn btn-success" onclick="get_rankings()">
+            <div class="spinner-border d-none" role="status" id="calculate_spinner">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div id="calculate_label">Calculate</div>
+        </button>
 
     </form>
     <div>
-        <canvas id="ranking_score"></canvas>
+        <canvas style="width: 1000; height: 1000;" id="ranking_score"></canvas>
     </div>
 {% endblock %}

@@ -30,6 +30,6 @@ def get_rankings():
 	use_auto_EPA = True if request.args.get('Auto')  == 'True' else False
 	use_teleop_EPA = True if request.args.get('Teleop')  == 'True' else False
 	use_endgame_EPA = True if request.args.get('Endgame')  == 'True' else False
-
+	# print(use_OPR, use_CCWMS,use_overall_EPA, use_auto_EPA, use_teleop_EPA, use_endgame_EPA)
 	return createRankings.createRankings(event, use_OPR, use_CCWMS, use_overall_EPA, use_auto_EPA, use_teleop_EPA, use_endgame_EPA)
 app.run(host='0.0.0.0', port=8080, debug=True)
