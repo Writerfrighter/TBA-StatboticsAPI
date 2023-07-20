@@ -26,7 +26,6 @@ def normalizeData(data):
 def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTeleOp_EPA, useEndgame_EPA):
 
     if TBA.checkAPIStatus() != True:
-
         if not useOPR and not useCCWMS and not useOverall_EPA and not useAuto_EPA and not useTeleOp_EPA and not useEndgame_EPA:
             return "Nothing was selected"
         API_Response = TBA.fetchEventOprs(event)
@@ -55,7 +54,7 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         if useOverall_EPA: tofetch.append('epa_max')
         if useAuto_EPA: tofetch.append('auto_epa_max')
         if useTeleOp_EPA: tofetch.append('teleop_epa_max')
-        if useEndgame_EPA: tofetch.append9('endgame_epa_max')
+        if useEndgame_EPA: tofetch.append('endgame_epa_max')
 
         for team in oprs:
             i+=1
@@ -89,8 +88,8 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         #        score_and_names[i][0] = max(scores)+abs(min(scores))+ random.random() * 2
 
         score_and_names.sort(reverse=True)
-        print("Ranked teams on OPR and EPA")
-        print(*score_and_names, sep="\n")
+        # print("Ranked teams on OPR and EPA")
+        # print(*score_and_names, sep="\n")
         
 
         team_names = [team for (score, team) in score_and_names]
@@ -99,22 +98,11 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         for i in range(len(team_scores)):
             team_scores[i] += abs(min_score)
 
-        fig, ax = plt.subplots()
-        red = ["tab:red" for i in range(15)]
-        blue = ["tab:blue" for i in range(len(team_scores)-15)]
-        bar_colors = red + blue
-        y_pos = np.arange(len(team_names))
-        hbars = ax.barh(y_pos, team_scores, color = bar_colors, align='center')
-        ax.set_yticks(y_pos, labels=team_names)
-        ax.invert_yaxis()  # labels read top-to-bottom
-        ax.set_xlabel('Normalized Score')
-        ax.set_title("{} Scouting Ranks".format("Yes"))
-        # Label with specially formatted floats
-        ax.bar_label(hbars, fmt='%.2f')
-        ax.set_xlim(0, int(max(team_scores)) + 2)
-        plt.subplots_adjust(.3)
-        plt.show()
+        names_joined = "-".join(map(str, team_names))
+        team_scores = "-".join(map(str, team_scores))
+        return names_joined + "=" + team_scores
+    
     else:
-        print("The Blue Alliance API is down.")
+        return "The Blue Alliance API is down."
 
 
