@@ -13,6 +13,9 @@ team = 492
 def index():
 	return render_template('index.html', current_event = True if TBA.eventChannels(492) != "No current events" else False)
 
+@app.route('/chat')
+def chat():
+	return render_template('chat.html')
 @app.route('/scouting')
 def scouting():
 	return render_template('scouting.html', current_year = datetime.now().year, years = np.flip(np.arange(start=1992, stop=datetime.now().year)))
@@ -20,6 +23,7 @@ def scouting():
 @app.route('/team/<team>')
 def team(team):
 	return team
+
 @app.route('/get_events')
 def get_events():
 	season = request.args.get('season')
