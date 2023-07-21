@@ -17,6 +17,9 @@ def index():
 def scouting():
 	return render_template('scouting.html', current_year = datetime.now().year, years = np.flip(np.arange(start=1992, stop=datetime.now().year)))
 
+@app.route('/team/n')
+def teams():
+	team = request.args.get('team')
 @app.route('/get_events')
 def get_events():
 	season = request.args.get('season')

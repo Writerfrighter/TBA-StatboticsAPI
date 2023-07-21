@@ -54,16 +54,20 @@ async function get_events() {
 async function get_rankings() {
     $('#calculate_spinner').removeClass('d-none');
     $('#calculate_label').addClass('d-none');
+
     var use_OPR = (document.getElementById("use_OPR").checked) ? 'True' : 'False';
     var use_CCWMS = (document.getElementById("use_CCWMS").checked) ? 'True' : 'False';
     var use_overall_EPA = (document.getElementById("use_overall_EPA").checked) ? 'True' : 'False';
     var use_auto_EPA = (document.getElementById("use_auto_EPA").checked) ? 'True' : 'False';
     var use_teleop_EPA = (document.getElementById("use_TeleOp_EPA").checked) ? 'True' : 'False';
     var use_endgame_EPA = (document.getElementById("use_endgame_EPA").checked) ? 'True' : 'False';
+
     let res = await fetch(`/get_rankings?event=${$('#event_selection').val()}&OPR=${use_OPR}&CCWMS=${use_CCWMS}&Overall=${use_overall_EPA}&Auto=${use_auto_EPA}&Teleop=${use_teleop_EPA}&Endgame=${use_endgame_EPA}`);
     res = await res.text();
+
     $('#calculate_spinner').addClass('d-none');
     $('#calculate_label').removeClass('d-none');
+
     let resp = res.split("=");
 
     names = resp[0].split('~');
