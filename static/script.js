@@ -97,6 +97,6 @@ async function get_rankings() {
 }
 
 function search_team() {
-    team = $('#team_search').val()
-    window.location.replace("/team/" + team);
+    team = $('#team_search').val();
+    window.location.href('/team/'+team);
 }
