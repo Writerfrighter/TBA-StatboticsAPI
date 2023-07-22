@@ -100,3 +100,43 @@ function search_team() {
     team = $('#team_search').val();
     window.location.href('/team/'+team);
 }
+
+function add_chat(chat, isBot) {
+
+    var div = document.createElement('div');
+    div.classList.add("d-flex");
+    div.classList.add("flex-row");
+    div.classList.add("p-3");
+    if (isBot) {div.classList.add("justify-content-start");}
+    else {div.classList.add("justify-content-end");}
+
+    var div2 = document.createElement('div');
+    div2.classList.add("bg-white")
+    div2.classList.add("mr-2")
+    div2.classList.add("p-3")
+
+    var span = document.createElement('span');
+    span.classList.add("text-muted");
+    span.innerHTML = chat;
+
+    var img = document.createElement('img');
+    if (isBot) {img.src = "https://img.icons8.com/?size=512&id=102660&format=png";}
+    else {img.src = "https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png";}
+    img.height = 30;
+    img.width = 30;
+
+    div2.append(span);
+    if (isBot) {div.append(img); div.append(div2);;}
+    else {div.append(div2); div.append(img);}
+
+    $('#chats').append(div);
+}
+async function send_chat() {
+    chat = $('#chat_input').val();
+    add_chat(chat,false)
+
+    let res = await fetch(`/chat_response?chat=${chat}`);
+    res = await res.text();
+
+    add_chat(res, true);
+}

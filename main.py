@@ -24,6 +24,14 @@ def scouting():
 def team(team):
 	return team
 
+@app.route('/chat_response')
+def chat_response():
+	chat = request.args.get('chat')
+
+	response = "In dev"
+	# Magic Chat stuff Annand will make
+
+	return response
 @app.route('/get_events')
 def get_events():
 	season = request.args.get('season')
