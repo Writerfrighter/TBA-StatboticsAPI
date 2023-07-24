@@ -20,9 +20,18 @@ def chat():
 def scouting():
 	return render_template('scouting.html', current_year = datetime.now().year, years = np.flip(np.arange(start=1992, stop=datetime.now().year)))
 
+@app.route('/pit_scouting')
+def pit_scouting():
+	return render_template('pit-scouting.html')
+
+@app.route('/game_scouting')
+def game_scouting():
+	return render_template('game-scouting.html')
+
 @app.route('/team/<team>')
 def team(team):
 	return team
+
 
 @app.route('/chat_response')
 def chat_response():
