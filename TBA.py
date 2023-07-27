@@ -28,6 +28,9 @@ def eventChannels(team):
         if event["start_date"] < str(date)[:11:] and event["end_date"] > str(date)[:11:]:
             return event["webcasts"][0]["channel"]
     return "No current events"
+
+def fetchTeamMedia(team):
+    
 def fetchAPIData(url):
     """Helper function to fetch data from The Blue Alliance API."""
     API_return = requests.get("https://www.thebluealliance.com/api/v3/" + url, params = {"X-TBA-Auth-Key": TBA_Api_Key}).json()

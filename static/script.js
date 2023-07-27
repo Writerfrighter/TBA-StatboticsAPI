@@ -131,6 +131,7 @@ function add_chat(chat, isBot) {
 
     $('#chats').append(div);
 }
+
 async function send_chat() {
     chat = $('#chat_input').val();
     add_chat(chat,false)
