@@ -21,7 +21,7 @@ def fetchEventOprs(eventCode):
     team_data = fetchAPIData("event/{}/oprs".format(eventCode))
     return team_data
 
-def eventChannels(team):
+def fetchEventChannels(team):
     date = datetime.now()
     resp = fetchAPIData("team/frc{}/events/{}".format(team, date.year))
     for event in resp:
@@ -29,8 +29,18 @@ def eventChannels(team):
             return event["webcasts"][0]["channel"]
     return "No current events"
 
+def fetchTeamInfo(team):
+    resp = fetchAPIData("/team/frc{}")
+    return resp
 def fetchTeamMedia(team):
-    
+    images = []
+    resp = fetchAPIData("team/frc{}/media/{}".format(team, datetime.now().year))
+    for item in resp:
+        if item["type"] == "imgur": images.append(item["direct_url"])
+    if len(images) == 0: images = "No Images"
+
+    return images
+
 def fetchAPIData(url):
     """Helper function to fetch data from The Blue Alliance API."""
     API_return = requests.get("https://www.thebluealliance.com/api/v3/" + url, params = {"X-TBA-Auth-Key": TBA_Api_Key}).json()

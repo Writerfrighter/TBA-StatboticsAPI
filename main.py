@@ -28,10 +28,12 @@ def pit_scouting():
 def game_scouting():
 	return render_template('game-scouting.html')
 
+@app.route('/testing')
+def testing():
+	return render_template('testing.html', teams = [{"images": TBA.fetchTeamMedia(492), "name": "Titan Robotics Club", "number": 492, "location": "Bellevue, Washington", "website": "https://www.titanrobotics.com/"}])
 @app.route('/team/<team>')
 def team(team):
 	return team
-
 
 @app.route('/chat_response')
 def chat_response():
@@ -50,7 +52,7 @@ def get_events():
 @app.route('/get_channels')
 def get_channels():
 	team = request.args.get('team')
-	return TBA.eventChannels(team)
+	return TBA.fetchEventChannels(team)
 
 @app.route('/get_rankings')
 def get_rankings():
