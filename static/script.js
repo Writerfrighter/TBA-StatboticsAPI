@@ -100,6 +100,10 @@ function search_team() {
     window.location.href('/team/'+team);
 }
 
+function change_flex() {
+    $('#content').attr('style', 'display: flex; justify-content: center; align-items: center;');
+}
+
 function add_chat(chat, isBot) {
 
     var div = document.createElement('div');
