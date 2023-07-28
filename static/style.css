@@ -1,3 +1,9 @@
+.content {
+    display: flex;
+  	justify-content: center;
+	align-items: center;
+}
+
 .adiv{
 	background: #0a701d;
 	border-radius: 15px;

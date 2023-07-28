@@ -11,7 +11,7 @@ team = 492
 
 @app.route('/')
 def index():
-	return render_template('index.html', current_event = True if TBA.eventChannels(492) != "No current events" else False)
+	return render_template('index.html', current_event = True if TBA.fetchEventChannels(492) != "No current events" else False)
 
 @app.route('/chat')
 def chat():
