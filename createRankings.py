@@ -5,9 +5,19 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import statbotics
 import numpy as np
-import random
+import concurrent.futures
+import logging
+
 #Local imports
 import TBA
+
+logging.basicConfig(filename="newfile.log", format='%(asctime)s %(message)s', filemode='w')
+ 
+# Creating an object
+logger = logging.getLogger()
+ 
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
 
 sb = statbotics.Statbotics()
 
@@ -23,30 +33,45 @@ def normalizeData(data):
     
     return data_normalized
 
+def fetchTeam_Threaded(name, team, event, tofetch, useOverall_EPA, useAuto_EPA, useTeleOp_EPA, useEndgame_EPA):
+    logging.info("Thread %s: starting", name)
+    team_query = {}
+    team_query = sb.get_team_event(int(team[3::]), event, tofetch) # type: ignore
+    logging.debug("Thread %s: finished API Fetch", name)
+    team_names[team] = team_query["team_name"]
+    if useOverall_EPA: epas_max[team] = float(team_query["epa_max"])
+    if useAuto_EPA: auto_epas_max[team] = float(team_query["auto_epa_max"])
+    if useTeleOp_EPA: teleop_epas_max[team] = float(team_query["teleop_epa_max"])
+    if useEndgame_EPA: endgame_epas_max[team] = float(team_query["endgame_epa_max"])
+    logging.info("Thread %s: finished", name)
+    
 def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTeleOp_EPA, useEndgame_EPA):
-
+    logger.info("Request came in for %s.", event)
     if TBA.checkAPIStatus() != True:
         if not useOPR and not useCCWMS and not useOverall_EPA and not useAuto_EPA and not useTeleOp_EPA and not useEndgame_EPA:
             return "Nothing was selected"
         API_Response = TBA.fetchEventOprs(event)
-        
+
+        team_count = len(API_Response["oprs"])
+
         if useOPR: 
             oprs = API_Response["oprs"]
             oprs_normalized = normalizeData(oprs)
-        else: oprs_normalized = dict.fromkeys(np.arange(0,len(API_Response["oprs"])+1), 0)
+        else: oprs_normalized = dict.fromkeys(np.arange(0,team_count+1), 0)
         if useCCWMS: 
             ccwms = API_Response["ccwms"]
             ccwms_normalized = normalizeData(ccwms)
-        else: ccwms_normalized = dict.fromkeys(np.arange(0,len(API_Response["ccwms"])+1), 0)
+        else: ccwms_normalized = dict.fromkeys(np.arange(0,team_count+1), 0)
 
+        global team_names, epas_max, auto_epas_max, teleop_epas_max, endgame_epas_max
         team_names = {}
-        if not useOverall_EPA: epas_max = dict.fromkeys(np.arange(0,len(oprs)+1), 0)
+        if not useOverall_EPA: epas_max = dict.fromkeys(np.arange(0,team_count+1), 0)
         else: epas_max = {}
-        if not useAuto_EPA: auto_epas_max = dict.fromkeys(np.arange(0,len(oprs)+1), 0)
+        if not useAuto_EPA: auto_epas_max = dict.fromkeys(np.arange(0,team_count+1), 0)
         else: auto_epas_max = {}
-        if not useTeleOp_EPA: teleop_epas_max = dict.fromkeys(np.arange(0,len(oprs)+1), 0)
+        if not useTeleOp_EPA: teleop_epas_max = dict.fromkeys(np.arange(0,team_count+1), 0)
         else: teleop_epas_max = {}
-        if not useEndgame_EPA: endgame_epas_max = dict.fromkeys(np.arange(0,len(oprs)+1), 0)
+        if not useEndgame_EPA: endgame_epas_max = dict.fromkeys(np.arange(0,team_count+1), 0)
         else: endgame_epas_max = {}
         
         i = 0
@@ -58,6 +83,11 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         if useTeleOp_EPA: tofetch.append('teleop_epa_max')
         if useEndgame_EPA: tofetch.append('endgame_epa_max')
 
+        logging.info("Main: beginning Statbotics API fetch...") 
+
+
+        concurrent.futures.ThreadPoolExecutor(max_workers=team_count as executer: executer.map(fetchTeam_Threaded, range(team_count), oprs.keys(), [event] * team_count, [tofetch] * team_count, [useOverall_EPA] * team_count, [useAuto_EPA] * team_count, [useTeleOp_EPA] * team_count, [useEndgame_EPA] * team_count))
+        
         for team in oprs:
             i+=1
             

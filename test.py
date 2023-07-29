@@ -1,3 +1,3 @@
-import datetime
+import platform
 
-print("2023-11-21" < str(datetime.datetime.now())[:11:])
+print(platform.python_implementation())
