@@ -86,8 +86,8 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         logging.info("Main: beginning Statbotics API fetch...") 
 
 
-        concurrent.futures.ThreadPoolExecutor(max_workers=team_count as executer: executer.map(fetchTeam_Threaded, range(team_count), oprs.keys(), [event] * team_count, [tofetch] * team_count, [useOverall_EPA] * team_count, [useAuto_EPA] * team_count, [useTeleOp_EPA] * team_count, [useEndgame_EPA] * team_count))
-        
+        with concurrent.futures.ThreadPoolExecutor(max_workers=team_count) as executer: 
+            executer.map(fetchTeam_Threaded, range(team_count), oprs.keys(), [event] * team_count, [tofetch] * team_count, [useOverall_EPA] * team_count, [useAuto_EPA] * team_count, [useTeleOp_EPA] * team_count, [useEndgame_EPA] * team_count)
         for team in oprs:
             i+=1
             
