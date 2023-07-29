@@ -97,7 +97,8 @@ async function get_rankings() {
 
 function search_team() {
     team = $('#team_search').val();
-    window.location.href('/team/'+team);
+    console.log("runing");
+    window.location.assign("https://youtube.com");
 }
 
 function change_flex() {
