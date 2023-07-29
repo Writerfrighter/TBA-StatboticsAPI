@@ -22,6 +22,7 @@ logger.setLevel(logging.DEBUG)
 sb = statbotics.Statbotics()
 
 def normalizeData(data):
+    data = {key: val for key, val in sorted(data.items(), key = lambda ele: ele[0])}
     mean_data = sum(data.values())/len(data)
     data_normalized = {team_number[3::]: data[team_number] - mean_data for team_number in data}
     max_data = max(data_normalized.values())
@@ -87,7 +88,8 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
 
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=team_count) as executer: 
-            executer.map(fetchTeam_Threaded, range(team_count), oprs.keys(), [event] * team_count, [tofetch] * team_count, [useOverall_EPA] * team_count, [useAuto_EPA] * team_count, [useTeleOp_EPA] * team_count, [useEndgame_EPA] * team_count)
+           executer.map(fetchTeam_Threaded, range(team_count), oprs.keys(), [event] * team_count, [tofetch] * team_count, [useOverall_EPA] * team_count, [useAuto_EPA] * team_count, [useTeleOp_EPA] * team_count, [useEndgame_EPA] * team_count)
+        
         # for team in oprs:
         #     i+=1
             
