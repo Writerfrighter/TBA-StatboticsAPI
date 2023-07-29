@@ -88,19 +88,19 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=team_count) as executer: 
             executer.map(fetchTeam_Threaded, range(team_count), oprs.keys(), [event] * team_count, [tofetch] * team_count, [useOverall_EPA] * team_count, [useAuto_EPA] * team_count, [useTeleOp_EPA] * team_count, [useEndgame_EPA] * team_count)
-        for team in oprs:
-            i+=1
+        # for team in oprs:
+        #     i+=1
             
-            print("Fetching EPA data for team {} of {}...".format(i, len(oprs)), end = "\r")
-            team_query = {}
-            #print(team)
-            team_query = sb.get_team_event(int(team[3::]), event, tofetch) # type: ignore
+        #     print("Fetching EPA data for team {} of {}...".format(i, len(oprs)), end = "\r")
+        #     team_query = {}
+        #     #print(team)
+        #     team_query = sb.get_team_event(int(team[3::]), event, tofetch) # type: ignore
             
-            team_names[team] = team_query["team_name"]
-            if useOverall_EPA: epas_max[team] = float(team_query["epa_max"])
-            if useAuto_EPA: auto_epas_max[team] = float(team_query["auto_epa_max"])
-            if useTeleOp_EPA: teleop_epas_max[team] = float(team_query["teleop_epa_max"])
-            if useEndgame_EPA: endgame_epas_max[team] = float(team_query["endgame_epa_max"])
+        #     team_names[team] = team_query["team_name"]
+        #     if useOverall_EPA: epas_max[team] = float(team_query["epa_max"])
+        #     if useAuto_EPA: auto_epas_max[team] = float(team_query["auto_epa_max"])
+        #     if useTeleOp_EPA: teleop_epas_max[team] = float(team_query["teleop_epa_max"])
+        #     if useEndgame_EPA: endgame_epas_max[team] = float(team_query["endgame_epa_max"])
 
         print("Fetching EPA data for team {} of {}".format(len(oprs), len(oprs)))
         if useOverall_EPA: epa_max_normalized = normalizeData(epas_max)
@@ -142,3 +142,4 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         return "The Blue Alliance API is down."
 
 
+print(createRankings("2023wasam", True, True, True, True, True, True))
