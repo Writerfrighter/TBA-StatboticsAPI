@@ -17,7 +17,7 @@ logging.basicConfig(filename="newfile.log", format='%(asctime)s %(message)s', fi
 logger = logging.getLogger()
  
 # Setting the threshold of logger to DEBUG
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 sb = statbotics.Statbotics()
 
@@ -31,7 +31,7 @@ def normalizeData(data):
 
     for team in data_normalized:
         data_normalized[team] /= max_or_min_data
-    
+    print(data_normalized)
     return data_normalized
 
 def fetchTeam_Threaded(name, team, event, tofetch, useOverall_EPA, useAuto_EPA, useTeleOp_EPA, useEndgame_EPA):
@@ -66,6 +66,7 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
 
         global team_names, epas_max, auto_epas_max, teleop_epas_max, endgame_epas_max
         team_names = {}
+
         if not useOverall_EPA: epas_max = dict.fromkeys(np.arange(0,team_count+1), 0)
         else: epas_max = {}
         if not useAuto_EPA: auto_epas_max = dict.fromkeys(np.arange(0,team_count+1), 0)
@@ -74,8 +75,6 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         else: teleop_epas_max = {}
         if not useEndgame_EPA: endgame_epas_max = dict.fromkeys(np.arange(0,team_count+1), 0)
         else: endgame_epas_max = {}
-        
-        i = 0
 
         tofetch = ["team_name"]
 
@@ -88,23 +87,12 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
 
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=team_count) as executer: 
-           executer.map(fetchTeam_Threaded, range(team_count), oprs.keys(), [event] * team_count, [tofetch] * team_count, [useOverall_EPA] * team_count, [useAuto_EPA] * team_count, [useTeleOp_EPA] * team_count, [useEndgame_EPA] * team_count)
-        
-        # for team in oprs:
-        #     i+=1
-            
-        #     print("Fetching EPA data for team {} of {}...".format(i, len(oprs)), end = "\r")
-        #     team_query = {}
-        #     #print(team)
-        #     team_query = sb.get_team_event(int(team[3::]), event, tofetch) # type: ignore
-            
-        #     team_names[team] = team_query["team_name"]
-        #     if useOverall_EPA: epas_max[team] = float(team_query["epa_max"])
-        #     if useAuto_EPA: auto_epas_max[team] = float(team_query["auto_epa_max"])
-        #     if useTeleOp_EPA: teleop_epas_max[team] = float(team_query["teleop_epa_max"])
-        #     if useEndgame_EPA: endgame_epas_max[team] = float(team_query["endgame_epa_max"])
+            executer.map(fetchTeam_Threaded, range(team_count), oprs.keys(), [event] * team_count, [tofetch] * team_count, [useOverall_EPA] * team_count, [useAuto_EPA] * team_count, [useTeleOp_EPA] * team_count, [useEndgame_EPA] * team_count)
 
-        print("Fetching EPA data for team {} of {}".format(len(oprs), len(oprs)))
+        logging.info("Main: finished Statbotics API fetch")
+
+        team_names = {key: val for key, val in sorted(team_names.items(), key = lambda ele: ele[0])}
+        
         if useOverall_EPA: epa_max_normalized = normalizeData(epas_max)
         else: epa_max_normalized = epas_max
         if useAuto_EPA: auto_epa_max_normalized = normalizeData(auto_epas_max)
@@ -142,6 +130,3 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
     
     else:
         return "The Blue Alliance API is down."
-
-
-print(createRankings("2023wasam", True, True, True, True, True, True))

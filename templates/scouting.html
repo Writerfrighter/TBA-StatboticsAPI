@@ -3,7 +3,7 @@
 {% block content %}
     <form name="beginning_data" onsubmit="event.preventDefault(); get_events()" onchange="get_events()">
     
-        <label for="season_selection" class="form-label">Select the season your scouting for</label>
+        <label for="season_selection" class="form-label">Select the season you're scouting for</label>
         <select class="form-select" aria-label="Season selection" id = "season_selection">
             <option selected>{{current_year}}</option>
             {% for year in years %}

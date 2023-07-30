@@ -1,316 +1,152 @@
-2023-07-29 16:41:05,949 Request came in for 2023wasam.
-2023-07-29 16:41:05,951 Starting new HTTPS connection (1): www.thebluealliance.com:443
-2023-07-29 16:41:06,198 https://www.thebluealliance.com:443 "GET /api/v3/status?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 155
-2023-07-29 16:41:06,200 Starting new HTTPS connection (1): www.thebluealliance.com:443
-2023-07-29 16:41:06,553 https://www.thebluealliance.com:443 "GET /api/v3/event/2023wasam/oprs?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 1342
-2023-07-29 16:41:06,555 Main: beginning Statbotics API fetch...
-2023-07-29 16:41:06,556 Thread 0: starting
-2023-07-29 16:41:06,556 Thread 1: starting
-2023-07-29 16:41:06,557 Thread 2: starting
-2023-07-29 16:41:06,557 Looking up "https://api.statbotics.io/v2/team_event/1294/2023wasam" in the cache
-2023-07-29 16:41:06,558 Thread 3: starting
-2023-07-29 16:41:06,558 Looking up "https://api.statbotics.io/v2/team_event/1899/2023wasam" in the cache
-2023-07-29 16:41:06,558 Thread 4: starting
-2023-07-29 16:41:06,558 No cache entry available
-2023-07-29 16:41:06,559 Looking up "https://api.statbotics.io/v2/team_event/1983/2023wasam" in the cache
-2023-07-29 16:41:06,559 Thread 5: starting
-2023-07-29 16:41:06,559 Thread 6: starting
-2023-07-29 16:41:06,559 No cache entry available
-2023-07-29 16:41:06,559 Thread 7: starting
-2023-07-29 16:41:06,560 Thread 8: starting
-2023-07-29 16:41:06,560 Looking up "https://api.statbotics.io/v2/team_event/2097/2023wasam" in the cache
-2023-07-29 16:41:06,560 No cache entry available
-2023-07-29 16:41:06,561 No cache entry available
-2023-07-29 16:41:06,561 Thread 9: starting
-2023-07-29 16:41:06,561 Looking up "https://api.statbotics.io/v2/team_event/2412/2023wasam" in the cache
-2023-07-29 16:41:06,561 Thread 10: starting
-2023-07-29 16:41:06,562 No cache entry available
-2023-07-29 16:41:06,562 Thread 11: starting
-2023-07-29 16:41:06,562 Looking up "https://api.statbotics.io/v2/team_event/2903/2023wasam" in the cache
-2023-07-29 16:41:06,562 Thread 12: starting
-2023-07-29 16:41:06,562 Looking up "https://api.statbotics.io/v2/team_event/2910/2023wasam" in the cache
-2023-07-29 16:41:06,563 No cache entry available
-2023-07-29 16:41:06,563 Thread 13: starting
-2023-07-29 16:41:06,563 Looking up "https://api.statbotics.io/v2/team_event/2928/2023wasam" in the cache
-2023-07-29 16:41:06,568 No cache entry available
-2023-07-29 16:41:06,564 Thread 14: starting
-2023-07-29 16:41:06,564 No cache entry available
-2023-07-29 16:41:06,564 Starting new HTTPS connection (1): api.statbotics.io:443
-2023-07-29 16:41:06,564 Thread 15: starting
-2023-07-29 16:41:06,564 Thread 16: starting
-2023-07-29 16:41:06,564 No cache entry available
-2023-07-29 16:41:06,565 Thread 17: starting
-2023-07-29 16:41:06,565 Looking up "https://api.statbotics.io/v2/team_event/3070/2023wasam" in the cache
-2023-07-29 16:41:06,565 Thread 18: starting
-2023-07-29 16:41:06,566 Thread 19: starting
-2023-07-29 16:41:06,566 Starting new HTTPS connection (2): api.statbotics.io:443
-2023-07-29 16:41:06,566 Looking up "https://api.statbotics.io/v2/team_event/360/2023wasam" in the cache
-2023-07-29 16:41:06,566 Thread 20: starting
-2023-07-29 16:41:06,566 No cache entry available
-2023-07-29 16:41:06,567 Thread 21: starting
-2023-07-29 16:41:06,567 Thread 22: starting
-2023-07-29 16:41:06,567 Looking up "https://api.statbotics.io/v2/team_event/3681/2023wasam" in the cache
-2023-07-29 16:41:06,567 No cache entry available
-2023-07-29 16:41:06,567 No cache entry available
-2023-07-29 16:41:06,568 Thread 23: starting
-2023-07-29 16:41:06,568 Looking up "https://api.statbotics.io/v2/team_event/3876/2023wasam" in the cache
-2023-07-29 16:41:06,564 Looking up "https://api.statbotics.io/v2/team_event/2976/2023wasam" in the cache
-2023-07-29 16:41:06,568 No cache entry available
-2023-07-29 16:41:06,568 Thread 24: starting
-2023-07-29 16:41:06,569 Looking up "https://api.statbotics.io/v2/team_event/4173/2023wasam" in the cache
-2023-07-29 16:41:06,569 Thread 25: starting
-2023-07-29 16:41:06,570 Thread 26: starting
-2023-07-29 16:41:06,570 Looking up "https://api.statbotics.io/v2/team_event/4180/2023wasam" in the cache
-2023-07-29 16:41:06,570 Starting new HTTPS connection (3): api.statbotics.io:443
-2023-07-29 16:41:06,570 Thread 27: starting
-2023-07-29 16:41:06,571 Looking up "https://api.statbotics.io/v2/team_event/4450/2023wasam" in the cache
-2023-07-29 16:41:06,571 No cache entry available
-2023-07-29 16:41:06,571 Thread 28: starting
-2023-07-29 16:41:06,571 Thread 29: starting
-2023-07-29 16:41:06,571 Looking up "https://api.statbotics.io/v2/team_event/4512/2023wasam" in the cache
-2023-07-29 16:41:06,572 No cache entry available
-2023-07-29 16:41:06,572 Thread 30: starting
-2023-07-29 16:41:06,572 Thread 31: starting
-2023-07-29 16:41:06,572 Looking up "https://api.statbotics.io/v2/team_event/4682/2023wasam" in the cache
-2023-07-29 16:41:06,573 Looking up "https://api.statbotics.io/v2/team_event/488/2023wasam" in the cache
-2023-07-29 16:41:06,573 No cache entry available
-2023-07-29 16:41:06,573 Looking up "https://api.statbotics.io/v2/team_event/4911/2023wasam" in the cache
-2023-07-29 16:41:06,573 No cache entry available
-2023-07-29 16:41:06,574 Looking up "https://api.statbotics.io/v2/team_event/492/2023wasam" in the cache
-2023-07-29 16:41:06,574 No cache entry available
-2023-07-29 16:41:06,575 Looking up "https://api.statbotics.io/v2/team_event/5827/2023wasam" in the cache
-2023-07-29 16:41:06,575 No cache entry available
-2023-07-29 16:41:06,575 Looking up "https://api.statbotics.io/v2/team_event/5937/2023wasam" in the cache
-2023-07-29 16:41:06,575 No cache entry available
-2023-07-29 16:41:06,575 Starting new HTTPS connection (4): api.statbotics.io:443
-2023-07-29 16:41:06,576 No cache entry available
-2023-07-29 16:41:06,576 Looking up "https://api.statbotics.io/v2/team_event/5941/2023wasam" in the cache
-2023-07-29 16:41:06,576 No cache entry available
-2023-07-29 16:41:06,576 Starting new HTTPS connection (5): api.statbotics.io:443
-2023-07-29 16:41:06,577 Looking up "https://api.statbotics.io/v2/team_event/7461/2023wasam" in the cache
-2023-07-29 16:41:06,577 No cache entry available
-2023-07-29 16:41:06,577 Looking up "https://api.statbotics.io/v2/team_event/8032/2023wasam" in the cache
-2023-07-29 16:41:06,578 Looking up "https://api.statbotics.io/v2/team_event/8051/2023wasam" in the cache
-2023-07-29 16:41:06,578 No cache entry available
-2023-07-29 16:41:06,578 Looking up "https://api.statbotics.io/v2/team_event/8248/2023wasam" in the cache
-2023-07-29 16:41:06,578 Starting new HTTPS connection (6): api.statbotics.io:443
-2023-07-29 16:41:06,579 No cache entry available
-2023-07-29 16:41:06,580 Looking up "https://api.statbotics.io/v2/team_event/9023/2023wasam" in the cache
-2023-07-29 16:41:06,580 Looking up "https://api.statbotics.io/v2/team_event/9036/2023wasam" in the cache
-2023-07-29 16:41:06,580 No cache entry available
-2023-07-29 16:41:06,580 No cache entry available
-2023-07-29 16:41:06,581 Looking up "https://api.statbotics.io/v2/team_event/948/2023wasam" in the cache
-2023-07-29 16:41:06,581 No cache entry available
-2023-07-29 16:41:06,581 Looking up "https://api.statbotics.io/v2/team_event/949/2023wasam" in the cache
-2023-07-29 16:41:06,581 No cache entry available
-2023-07-29 16:41:06,581 No cache entry available
-2023-07-29 16:41:06,581 No cache entry available
-2023-07-29 16:41:06,581 No cache entry available
-2023-07-29 16:41:06,581 Starting new HTTPS connection (7): api.statbotics.io:443
-2023-07-29 16:41:06,581 No cache entry available
-2023-07-29 16:41:06,581 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 Starting new HTTPS connection (8): api.statbotics.io:443
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,582 No cache entry available
-2023-07-29 16:41:06,583 No cache entry available
-2023-07-29 16:41:06,583 No cache entry available
-2023-07-29 16:41:06,583 No cache entry available
-2023-07-29 16:41:06,583 Starting new HTTPS connection (9): api.statbotics.io:443
-2023-07-29 16:41:06,583 No cache entry available
-2023-07-29 16:41:06,583 No cache entry available
-2023-07-29 16:41:06,583 No cache entry available
-2023-07-29 16:41:06,583 No cache entry available
-2023-07-29 16:41:06,583 Starting new HTTPS connection (10): api.statbotics.io:443
-2023-07-29 16:41:06,584 No cache entry available
-2023-07-29 16:41:06,584 Starting new HTTPS connection (11): api.statbotics.io:443
-2023-07-29 16:41:06,584 No cache entry available
-2023-07-29 16:41:06,584 No cache entry available
-2023-07-29 16:41:06,584 Starting new HTTPS connection (12): api.statbotics.io:443
-2023-07-29 16:41:06,584 No cache entry available
-2023-07-29 16:41:06,584 Starting new HTTPS connection (13): api.statbotics.io:443
-2023-07-29 16:41:06,585 No cache entry available
-2023-07-29 16:41:06,585 Starting new HTTPS connection (14): api.statbotics.io:443
-2023-07-29 16:41:06,585 No cache entry available
-2023-07-29 16:41:06,585 Starting new HTTPS connection (15): api.statbotics.io:443
-2023-07-29 16:41:06,585 No cache entry available
-2023-07-29 16:41:06,585 Starting new HTTPS connection (16): api.statbotics.io:443
-2023-07-29 16:41:06,585 No cache entry available
-2023-07-29 16:41:06,585 Starting new HTTPS connection (17): api.statbotics.io:443
-2023-07-29 16:41:06,585 No cache entry available
-2023-07-29 16:41:06,585 No cache entry available
-2023-07-29 16:41:06,586 Starting new HTTPS connection (18): api.statbotics.io:443
-2023-07-29 16:41:06,586 No cache entry available
-2023-07-29 16:41:06,586 Starting new HTTPS connection (19): api.statbotics.io:443
-2023-07-29 16:41:06,586 Starting new HTTPS connection (20): api.statbotics.io:443
-2023-07-29 16:41:06,587 Starting new HTTPS connection (21): api.statbotics.io:443
-2023-07-29 16:41:06,587 Starting new HTTPS connection (22): api.statbotics.io:443
-2023-07-29 16:41:06,587 Starting new HTTPS connection (23): api.statbotics.io:443
-2023-07-29 16:41:06,587 Starting new HTTPS connection (24): api.statbotics.io:443
-2023-07-29 16:41:06,588 Starting new HTTPS connection (25): api.statbotics.io:443
-2023-07-29 16:41:06,588 Starting new HTTPS connection (26): api.statbotics.io:443
-2023-07-29 16:41:06,588 Starting new HTTPS connection (27): api.statbotics.io:443
-2023-07-29 16:41:06,589 Starting new HTTPS connection (28): api.statbotics.io:443
-2023-07-29 16:41:06,589 Starting new HTTPS connection (29): api.statbotics.io:443
-2023-07-29 16:41:06,589 Starting new HTTPS connection (30): api.statbotics.io:443
-2023-07-29 16:41:06,589 Starting new HTTPS connection (31): api.statbotics.io:443
-2023-07-29 16:41:06,590 Starting new HTTPS connection (32): api.statbotics.io:443
-2023-07-29 16:41:07,013 https://api.statbotics.io:443 "GET /v2/team_event/1294/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,015 Updating cache with response from "https://api.statbotics.io/v2/team_event/1294/2023wasam"
-2023-07-29 16:41:07,015 Thread 0: finished API Fetch
-2023-07-29 16:41:07,015 Thread 0: finished
-2023-07-29 16:41:07,016 https://api.statbotics.io:443 "GET /v2/team_event/1983/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,017 Updating cache with response from "https://api.statbotics.io/v2/team_event/1983/2023wasam"
-2023-07-29 16:41:07,018 Thread 2: finished API Fetch
-2023-07-29 16:41:07,018 Thread 2: finished
-2023-07-29 16:41:07,019 https://api.statbotics.io:443 "GET /v2/team_event/3876/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,024 https://api.statbotics.io:443 "GET /v2/team_event/2412/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,024 Updating cache with response from "https://api.statbotics.io/v2/team_event/3876/2023wasam"
-2023-07-29 16:41:07,025 Thread 12: finished API Fetch
-2023-07-29 16:41:07,025 Thread 12: finished
-2023-07-29 16:41:07,025 Updating cache with response from "https://api.statbotics.io/v2/team_event/2412/2023wasam"
-2023-07-29 16:41:07,025 https://api.statbotics.io:443 "GET /v2/team_event/2976/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,026 Thread 4: finished API Fetch
-2023-07-29 16:41:07,026 Thread 4: finished
-2023-07-29 16:41:07,027 Updating cache with response from "https://api.statbotics.io/v2/team_event/2976/2023wasam"
-2023-07-29 16:41:07,027 Thread 8: finished API Fetch
-2023-07-29 16:41:07,027 Thread 8: finished
-2023-07-29 16:41:07,030 https://api.statbotics.io:443 "GET /v2/team_event/2903/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,031 Updating cache with response from "https://api.statbotics.io/v2/team_event/2903/2023wasam"
-2023-07-29 16:41:07,031 https://api.statbotics.io:443 "GET /v2/team_event/8032/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,032 Thread 5: finished API Fetch
-2023-07-29 16:41:07,032 Thread 5: finished
-2023-07-29 16:41:07,033 Updating cache with response from "https://api.statbotics.io/v2/team_event/8032/2023wasam"
-2023-07-29 16:41:07,033 Thread 25: finished API Fetch
-2023-07-29 16:41:07,033 Thread 25: finished
-2023-07-29 16:41:07,036 https://api.statbotics.io:443 "GET /v2/team_event/2910/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,038 Updating cache with response from "https://api.statbotics.io/v2/team_event/2910/2023wasam"
-2023-07-29 16:41:07,038 Thread 6: finished API Fetch
-2023-07-29 16:41:07,038 Thread 6: finished
-2023-07-29 16:41:07,048 https://api.statbotics.io:443 "GET /v2/team_event/4173/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,053 Updating cache with response from "https://api.statbotics.io/v2/team_event/4173/2023wasam"
-2023-07-29 16:41:07,054 Thread 13: finished API Fetch
-2023-07-29 16:41:07,054 Thread 13: finished
-2023-07-29 16:41:07,100 https://api.statbotics.io:443 "GET /v2/team_event/1899/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,103 Updating cache with response from "https://api.statbotics.io/v2/team_event/1899/2023wasam"
-2023-07-29 16:41:07,103 Thread 1: finished API Fetch
-2023-07-29 16:41:07,103 Thread 1: finished
-2023-07-29 16:41:07,104 https://api.statbotics.io:443 "GET /v2/team_event/3681/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,106 Updating cache with response from "https://api.statbotics.io/v2/team_event/3681/2023wasam"
-2023-07-29 16:41:07,107 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,107 Thread 11: finished API Fetch
-2023-07-29 16:41:07,107 Thread 11: finished
-2023-07-29 16:41:07,109 https://api.statbotics.io:443 "GET /v2/team_event/9036/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,110 Updating cache with response from "https://api.statbotics.io/v2/team_event/9036/2023wasam"
-2023-07-29 16:41:07,111 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,111 https://api.statbotics.io:443 "GET /v2/team_event/948/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,111 Thread 29: finished API Fetch
-2023-07-29 16:41:07,111 Thread 29: finished
-2023-07-29 16:41:07,112 Updating cache with response from "https://api.statbotics.io/v2/team_event/948/2023wasam"
-2023-07-29 16:41:07,112 https://api.statbotics.io:443 "GET /v2/team_event/7461/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,113 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,113 Thread 30: finished API Fetch
-2023-07-29 16:41:07,113 Thread 30: finished
-2023-07-29 16:41:07,114 Updating cache with response from "https://api.statbotics.io/v2/team_event/7461/2023wasam"
-2023-07-29 16:41:07,115 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,115 Thread 24: finished API Fetch
-2023-07-29 16:41:07,115 Thread 24: finished
-2023-07-29 16:41:07,117 https://api.statbotics.io:443 "GET /v2/team_event/5937/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,118 Updating cache with response from "https://api.statbotics.io/v2/team_event/5937/2023wasam"
-2023-07-29 16:41:07,119 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,119 Thread 22: finished API Fetch
-2023-07-29 16:41:07,119 Thread 22: finished
-2023-07-29 16:41:07,119 https://api.statbotics.io:443 "GET /v2/team_event/3070/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,120 Updating cache with response from "https://api.statbotics.io/v2/team_event/3070/2023wasam"
-2023-07-29 16:41:07,120 https://api.statbotics.io:443 "GET /v2/team_event/5827/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,121 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,121 Thread 9: finished API Fetch
-2023-07-29 16:41:07,121 Thread 9: finished
-2023-07-29 16:41:07,122 Updating cache with response from "https://api.statbotics.io/v2/team_event/5827/2023wasam"
-2023-07-29 16:41:07,123 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,123 Thread 21: finished API Fetch
-2023-07-29 16:41:07,123 Thread 21: finished
-2023-07-29 16:41:07,197 https://api.statbotics.io:443 "GET /v2/team_event/4682/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,198 Updating cache with response from "https://api.statbotics.io/v2/team_event/4682/2023wasam"
-2023-07-29 16:41:07,200 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,200 Thread 17: finished API Fetch
-2023-07-29 16:41:07,200 Thread 17: finished
-2023-07-29 16:41:07,294 https://api.statbotics.io:443 "GET /v2/team_event/9023/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,295 Updating cache with response from "https://api.statbotics.io/v2/team_event/9023/2023wasam"
-2023-07-29 16:41:07,296 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,296 Thread 28: finished API Fetch
-2023-07-29 16:41:07,296 Thread 28: finished
-2023-07-29 16:41:07,310 https://api.statbotics.io:443 "GET /v2/team_event/4450/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,311 Updating cache with response from "https://api.statbotics.io/v2/team_event/4450/2023wasam"
-2023-07-29 16:41:07,312 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,312 Thread 15: finished API Fetch
-2023-07-29 16:41:07,312 Thread 15: finished
-2023-07-29 16:41:07,313 https://api.statbotics.io:443 "GET /v2/team_event/5941/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,313 Updating cache with response from "https://api.statbotics.io/v2/team_event/5941/2023wasam"
-2023-07-29 16:41:07,314 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,314 Thread 23: finished API Fetch
-2023-07-29 16:41:07,314 Thread 23: finished
-2023-07-29 16:41:07,319 https://api.statbotics.io:443 "GET /v2/team_event/8051/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,320 Updating cache with response from "https://api.statbotics.io/v2/team_event/8051/2023wasam"
-2023-07-29 16:41:07,321 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,321 Thread 26: finished API Fetch
-2023-07-29 16:41:07,321 Thread 26: finished
-2023-07-29 16:41:07,326 https://api.statbotics.io:443 "GET /v2/team_event/492/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,326 Updating cache with response from "https://api.statbotics.io/v2/team_event/492/2023wasam"
-2023-07-29 16:41:07,328 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,328 Thread 20: finished API Fetch
-2023-07-29 16:41:07,328 Thread 20: finished
-2023-07-29 16:41:07,344 https://api.statbotics.io:443 "GET /v2/team_event/4180/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,345 Updating cache with response from "https://api.statbotics.io/v2/team_event/4180/2023wasam"
-2023-07-29 16:41:07,346 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,346 Thread 14: finished API Fetch
-2023-07-29 16:41:07,346 Thread 14: finished
-2023-07-29 16:41:07,395 https://api.statbotics.io:443 "GET /v2/team_event/2928/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,396 Updating cache with response from "https://api.statbotics.io/v2/team_event/2928/2023wasam"
-2023-07-29 16:41:07,397 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,397 Thread 7: finished API Fetch
-2023-07-29 16:41:07,397 Thread 7: finished
-2023-07-29 16:41:07,405 https://api.statbotics.io:443 "GET /v2/team_event/4512/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,405 Updating cache with response from "https://api.statbotics.io/v2/team_event/4512/2023wasam"
-2023-07-29 16:41:07,407 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,407 Thread 16: finished API Fetch
-2023-07-29 16:41:07,407 https://api.statbotics.io:443 "GET /v2/team_event/8248/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,407 Thread 16: finished
-2023-07-29 16:41:07,407 Updating cache with response from "https://api.statbotics.io/v2/team_event/8248/2023wasam"
-2023-07-29 16:41:07,408 https://api.statbotics.io:443 "GET /v2/team_event/4911/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,409 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,409 Thread 27: finished API Fetch
-2023-07-29 16:41:07,409 Thread 27: finished
-2023-07-29 16:41:07,410 Updating cache with response from "https://api.statbotics.io/v2/team_event/4911/2023wasam"
-2023-07-29 16:41:07,411 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,411 Thread 19: finished API Fetch
-2023-07-29 16:41:07,411 https://api.statbotics.io:443 "GET /v2/team_event/949/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,411 Thread 19: finished
-2023-07-29 16:41:07,411 Updating cache with response from "https://api.statbotics.io/v2/team_event/949/2023wasam"
-2023-07-29 16:41:07,412 https://api.statbotics.io:443 "GET /v2/team_event/488/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,413 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,413 Thread 31: finished API Fetch
-2023-07-29 16:41:07,413 Thread 31: finished
-2023-07-29 16:41:07,413 Updating cache with response from "https://api.statbotics.io/v2/team_event/488/2023wasam"
-2023-07-29 16:41:07,415 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,415 Thread 18: finished API Fetch
-2023-07-29 16:41:07,415 Thread 18: finished
-2023-07-29 16:41:07,415 https://api.statbotics.io:443 "GET /v2/team_event/2097/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,416 Updating cache with response from "https://api.statbotics.io/v2/team_event/2097/2023wasam"
-2023-07-29 16:41:07,417 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,417 Thread 3: finished API Fetch
-2023-07-29 16:41:07,417 Thread 3: finished
-2023-07-29 16:41:07,417 https://api.statbotics.io:443 "GET /v2/team_event/360/2023wasam HTTP/1.1" 200 None
-2023-07-29 16:41:07,418 Updating cache with response from "https://api.statbotics.io/v2/team_event/360/2023wasam"
-2023-07-29 16:41:07,419 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-29 16:41:07,419 Thread 10: finished API Fetch
-2023-07-29 16:41:07,419 Thread 10: finished
+2023-07-29 19:43:33,355  * Debugger is active!
+2023-07-29 19:43:33,357  * Debugger PIN: 192-066-354
+2023-07-29 19:43:54,320 127.0.0.1 - - [29/Jul/2023 19:43:54] "GET /scouting HTTP/1.1" 200 -
+2023-07-29 19:43:54,367 127.0.0.1 - - [29/Jul/2023 19:43:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-07-29 19:43:54,579 127.0.0.1 - - [29/Jul/2023 19:43:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-07-29 19:43:54,672 127.0.0.1 - - [29/Jul/2023 19:43:54] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-07-29 19:43:57,412 127.0.0.1 - - [29/Jul/2023 19:43:57] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
+2023-07-29 19:43:58,473 Request came in for 2023pncmp.
+2023-07-29 19:43:58,869 127.0.0.1 - - [29/Jul/2023 19:43:58] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
+2023-07-29 19:44:15,057 Main: beginning Statbotics API fetch...
+2023-07-29 19:44:15,058 Thread 0: starting
+2023-07-29 19:44:15,058 Thread 1: starting
+2023-07-29 19:44:15,059 Thread 2: starting
+2023-07-29 19:44:15,060 Thread 3: starting
+2023-07-29 19:44:15,061 Thread 4: starting
+2023-07-29 19:44:15,062 Thread 5: starting
+2023-07-29 19:44:15,063 Thread 6: starting
+2023-07-29 19:44:15,064 Thread 7: starting
+2023-07-29 19:44:15,064 Thread 8: starting
+2023-07-29 19:44:15,065 Thread 9: starting
+2023-07-29 19:44:15,066 Thread 10: starting
+2023-07-29 19:44:15,067 Thread 11: starting
+2023-07-29 19:44:15,068 Thread 12: starting
+2023-07-29 19:44:15,068 Thread 13: starting
+2023-07-29 19:44:15,069 Thread 14: starting
+2023-07-29 19:44:15,070 Thread 15: starting
+2023-07-29 19:44:15,071 Thread 16: starting
+2023-07-29 19:44:15,072 Thread 17: starting
+2023-07-29 19:44:15,073 Thread 18: starting
+2023-07-29 19:44:15,074 Thread 19: starting
+2023-07-29 19:44:15,075 Thread 20: starting
+2023-07-29 19:44:15,076 Thread 21: starting
+2023-07-29 19:44:15,076 Thread 22: starting
+2023-07-29 19:44:15,077 Thread 23: starting
+2023-07-29 19:44:15,078 Thread 24: starting
+2023-07-29 19:44:15,079 Thread 25: starting
+2023-07-29 19:44:15,080 Thread 26: starting
+2023-07-29 19:44:15,081 Thread 27: starting
+2023-07-29 19:44:15,082 Thread 28: starting
+2023-07-29 19:44:15,082 Thread 29: starting
+2023-07-29 19:44:15,083 Thread 30: starting
+2023-07-29 19:44:15,084 Thread 31: starting
+2023-07-29 19:44:15,085 Thread 32: starting
+2023-07-29 19:44:15,086 Thread 33: starting
+2023-07-29 19:44:15,086 Thread 34: starting
+2023-07-29 19:44:15,087 Thread 35: starting
+2023-07-29 19:44:15,088 Thread 36: starting
+2023-07-29 19:44:15,089 Thread 37: starting
+2023-07-29 19:44:15,090 Thread 38: starting
+2023-07-29 19:44:15,091 Thread 39: starting
+2023-07-29 19:44:15,092 Thread 40: starting
+2023-07-29 19:44:15,092 Thread 41: starting
+2023-07-29 19:44:15,093 Thread 42: starting
+2023-07-29 19:44:15,095 Thread 43: starting
+2023-07-29 19:44:15,095 Thread 44: starting
+2023-07-29 19:44:15,095 Thread 45: starting
+2023-07-29 19:44:15,097 Thread 46: starting
+2023-07-29 19:44:15,097 Thread 47: starting
+2023-07-29 19:44:15,098 Thread 48: starting
+2023-07-29 19:44:15,099 Thread 49: starting
+2023-07-29 19:44:15,531 Thread 5: finished
+2023-07-29 19:44:15,532 Thread 36: finished
+2023-07-29 19:44:15,534 Thread 9: finished
+2023-07-29 19:44:15,535 Thread 6: finished
+2023-07-29 19:44:15,536 Thread 22: finished
+2023-07-29 19:44:15,542 Thread 1: finished
+2023-07-29 19:44:15,615 Thread 7: finished
+2023-07-29 19:44:15,616 Thread 26: finished
+2023-07-29 19:44:15,617 Thread 14: finished
+2023-07-29 19:44:15,618 Thread 21: finished
+2023-07-29 19:44:15,621 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,622 Thread 39: finished
+2023-07-29 19:44:15,624 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,624 Thread 19: finished
+2023-07-29 19:44:15,625 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,625 Thread 33: finished
+2023-07-29 19:44:15,628 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,628 Thread 43: finished
+2023-07-29 19:44:15,629 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,629 Thread 45: finished
+2023-07-29 19:44:15,630 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,631 Thread 27: finished
+2023-07-29 19:44:15,632 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,632 Thread 41: finished
+2023-07-29 19:44:15,723 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,723 Thread 44: finished
+2023-07-29 19:44:15,731 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,732 Thread 48: finished
+2023-07-29 19:44:15,733 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,735 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,736 Thread 15: finished
+2023-07-29 19:44:15,736 Thread 42: finished
+2023-07-29 19:44:15,738 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,738 Thread 46: finished
+2023-07-29 19:44:15,739 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,740 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,741 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,742 Thread 10: finished
+2023-07-29 19:44:15,742 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,742 Thread 0: finished
+2023-07-29 19:44:15,744 Thread 16: finished
+2023-07-29 19:44:15,744 Thread 23: finished
+2023-07-29 19:44:15,745 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,745 Thread 49: finished
+2023-07-29 19:44:15,821 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,821 Thread 40: finished
+2023-07-29 19:44:15,826 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,826 Thread 2: finished
+2023-07-29 19:44:15,834 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,834 Thread 25: finished
+2023-07-29 19:44:15,840 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,840 Thread 29: finished
+2023-07-29 19:44:15,918 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,918 Thread 24: finished
+2023-07-29 19:44:15,922 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,922 Thread 17: finished
+2023-07-29 19:44:15,923 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,923 Thread 8: finished
+2023-07-29 19:44:15,924 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,925 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,926 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,926 Thread 13: finished
+2023-07-29 19:44:15,926 Thread 31: finished
+2023-07-29 19:44:15,926 Thread 28: finished
+2023-07-29 19:44:15,928 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,928 Thread 4: finished
+2023-07-29 19:44:15,930 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,930 Thread 35: finished
+2023-07-29 19:44:15,931 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,932 Thread 11: finished
+2023-07-29 19:44:15,933 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,933 Thread 18: finished
+2023-07-29 19:44:15,935 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:15,936 Thread 20: finished
+2023-07-29 19:44:16,022 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:16,023 Thread 37: finished
+2023-07-29 19:44:16,024 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:16,024 Thread 12: finished
+2023-07-29 19:44:16,026 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:16,026 Thread 34: finished
+2023-07-29 19:44:16,027 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:16,028 Thread 30: finished
+2023-07-29 19:44:16,029 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:16,031 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:16,031 Thread 47: finished
+2023-07-29 19:44:16,031 Thread 32: finished
+2023-07-29 19:44:16,033 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:16,033 Thread 3: finished
+2023-07-29 19:44:16,035 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-07-29 19:44:16,035 Thread 38: finished
+2023-07-29 19:44:16,036 Main: finished Statbotics API fetch
+2023-07-29 19:44:16,038 127.0.0.1 - - [29/Jul/2023 19:44:16] "GET /get_rankings?event=2023pncmp&OPR=True&CCWMS=True&Overall=True&Auto=True&Teleop=True&Endgame=True HTTP/1.1" 200 -
