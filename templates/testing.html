@@ -4,9 +4,9 @@
     <!-- Card loader -->
     <div class="row">
     {% for team in teams %}
-        <div class="card col-2" style="width: 18rem;">
+        <div class="card col-2 position-relative" style="width: 18rem;">
             {% if team["images"] != "No images" %}
-                <div id="carouselExample" class="carousel slide card-img-top" data-bs-ride="carousel">
+                <div id="{{ team["number"] }}" class="carousel slide card-img-top" data-bs-ride="carousel">
                     <div class="carousel-inner center-cropped">
                         <div class="carousel-item active">
                             <img src="{{ team["images"][0] }}" class="d-block w-100" alt="...">
@@ -17,11 +17,11 @@
                             </div>
                         {% endfor %}
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#{{ team["number"] }}" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#{{ team["number"] }}" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>

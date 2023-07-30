@@ -37,9 +37,9 @@
 }
 .center-cropped {
 	object-fit: none; /* Do not scale the image */
-	object-position: center; /* Center the image within the element */
+	object-position: center; /*Center the image within the element */
 	height: 20rem;
-	width: 18rem;
+	width: 16.5rem;
 	border-radius: 15px;
 	border: 2px solid #ffffff00;
 	padding: 2px;
