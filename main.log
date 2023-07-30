@@ -1,254 +1,122 @@
-2023-07-30 16:31:47,750  * Debugger is active!
-2023-07-30 16:31:47,752  * Debugger PIN: 192-066-354
-2023-07-30 16:31:49,775 127.0.0.1 - - [30/Jul/2023 16:31:49] "GET / HTTP/1.1" 200 -
-2023-07-30 16:31:49,836 127.0.0.1 - - [30/Jul/2023 16:31:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-07-30 16:31:49,841 127.0.0.1 - - [30/Jul/2023 16:31:49] "GET /static/script.js HTTP/1.1" 200 -
-2023-07-30 16:31:50,162 127.0.0.1 - - [30/Jul/2023 16:31:50] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-07-30 16:31:50,405 127.0.0.1 - - [30/Jul/2023 16:31:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2023-07-30 16:31:51,198 127.0.0.1 - - [30/Jul/2023 16:31:51] "GET /scouting HTTP/1.1" 200 -
-2023-07-30 16:31:51,496 127.0.0.1 - - [30/Jul/2023 16:31:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-07-30 16:31:51,559 127.0.0.1 - - [30/Jul/2023 16:31:51] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-07-30 16:31:51,559 127.0.0.1 - - [30/Jul/2023 16:31:51] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-07-30 16:31:53,111 127.0.0.1 - - [30/Jul/2023 16:31:53] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
-2023-07-30 16:31:54,953 Request came in for 2023pncmp.
-2023-07-30 16:31:55,119 127.0.0.1 - - [30/Jul/2023 16:31:55] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
-2023-07-30 16:31:55,362 Main: beginning Statbotics API fetch...
-2023-07-30 16:31:55,366 Thread 0: starting
-2023-07-30 16:31:55,367 Thread 1: starting
-2023-07-30 16:31:55,367 Thread 2: starting
-2023-07-30 16:31:55,368 Thread 3: starting
-2023-07-30 16:31:55,368 Thread 4: starting
-2023-07-30 16:31:55,369 Thread 5: starting
-2023-07-30 16:31:55,370 Thread 6: starting
-2023-07-30 16:31:55,371 Thread 7: starting
-2023-07-30 16:31:55,372 Thread 8: starting
-2023-07-30 16:31:55,373 Thread 9: starting
-2023-07-30 16:31:55,374 Thread 10: starting
-2023-07-30 16:31:55,374 Thread 11: starting
-2023-07-30 16:31:55,375 Thread 12: starting
-2023-07-30 16:31:55,376 Thread 13: starting
-2023-07-30 16:31:55,377 Thread 14: starting
-2023-07-30 16:31:55,378 Thread 15: starting
-2023-07-30 16:31:55,379 Thread 16: starting
-2023-07-30 16:31:55,380 Thread 17: starting
-2023-07-30 16:31:55,381 Thread 18: starting
-2023-07-30 16:31:55,381 Thread 19: starting
-2023-07-30 16:31:55,382 Thread 20: starting
-2023-07-30 16:31:55,383 Thread 21: starting
-2023-07-30 16:31:55,384 Thread 22: starting
-2023-07-30 16:31:55,384 Thread 23: starting
-2023-07-30 16:31:55,385 Thread 24: starting
-2023-07-30 16:31:55,386 Thread 25: starting
-2023-07-30 16:31:55,387 Thread 26: starting
-2023-07-30 16:31:55,388 Thread 27: starting
-2023-07-30 16:31:55,388 Thread 28: starting
-2023-07-30 16:31:55,389 Thread 29: starting
-2023-07-30 16:31:55,390 Thread 30: starting
-2023-07-30 16:31:55,391 Thread 31: starting
-2023-07-30 16:31:55,392 Thread 32: starting
-2023-07-30 16:31:55,393 Thread 33: starting
-2023-07-30 16:31:55,394 Thread 34: starting
-2023-07-30 16:31:55,394 Thread 35: starting
-2023-07-30 16:31:55,395 Thread 36: starting
-2023-07-30 16:31:55,396 Thread 37: starting
-2023-07-30 16:31:55,397 Thread 38: starting
-2023-07-30 16:31:55,398 Thread 39: starting
-2023-07-30 16:31:55,398 Thread 40: starting
-2023-07-30 16:31:55,399 Thread 41: starting
-2023-07-30 16:31:55,400 Thread 42: starting
-2023-07-30 16:31:55,401 Thread 43: starting
-2023-07-30 16:31:55,402 Thread 44: starting
-2023-07-30 16:31:55,403 Thread 45: starting
-2023-07-30 16:31:55,403 Thread 46: starting
-2023-07-30 16:31:55,404 Thread 47: starting
-2023-07-30 16:31:55,405 Thread 48: starting
-2023-07-30 16:31:55,406 Thread 49: starting
-2023-07-30 16:31:55,938 Thread 1: finished
-2023-07-30 16:31:56,125 Thread 5: finished
-2023-07-30 16:31:56,222 127.0.0.1 - - [30/Jul/2023 16:31:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-07-30 16:31:56,301 Thread 7: finished
-2023-07-30 16:31:56,487 Thread 26: finished
-2023-07-30 16:31:56,667 Thread 20: finished
-2023-07-30 16:31:56,847 Thread 46: finished
-2023-07-30 16:31:57,039 Thread 34: finished
-2023-07-30 16:31:57,215 Thread 28: finished
-2023-07-30 16:31:57,404 Thread 41: finished
-2023-07-30 16:31:57,580 Thread 9: finished
-2023-07-30 16:31:57,764 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:57,764 Thread 2: finished
-2023-07-30 16:31:57,946 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:57,946 Thread 30: finished
-2023-07-30 16:31:58,124 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:58,124 Thread 17: finished
-2023-07-30 16:31:58,313 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:58,313 Thread 6: finished
-2023-07-30 16:31:58,496 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:58,497 Thread 32: finished
-2023-07-30 16:31:58,680 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:58,681 Thread 29: finished
-2023-07-30 16:31:58,873 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:58,873 Thread 12: finished
-2023-07-30 16:31:59,056 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:59,056 Thread 8: finished
-2023-07-30 16:31:59,238 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:59,238 Thread 13: finished
-2023-07-30 16:31:59,430 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:59,430 Thread 43: finished
-2023-07-30 16:31:59,599 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:59,599 Thread 0: finished
-2023-07-30 16:31:59,781 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:59,782 Thread 16: finished
-2023-07-30 16:31:59,963 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:31:59,963 Thread 35: finished
-2023-07-30 16:32:00,143 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:00,143 Thread 24: finished
-2023-07-30 16:32:00,325 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:00,325 Thread 18: finished
-2023-07-30 16:32:00,508 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:00,509 Thread 36: finished
-2023-07-30 16:32:00,684 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:00,684 Thread 38: finished
-2023-07-30 16:32:00,864 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:00,864 Thread 45: finished
-2023-07-30 16:32:01,049 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:01,050 Thread 25: finished
-2023-07-30 16:32:01,246 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:01,246 Thread 44: finished
-2023-07-30 16:32:01,425 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:01,426 Thread 42: finished
-2023-07-30 16:32:01,604 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:01,605 Thread 21: finished
-2023-07-30 16:32:01,790 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:01,790 Thread 39: finished
-2023-07-30 16:32:01,971 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:01,971 Thread 31: finished
-2023-07-30 16:32:02,149 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:02,149 Thread 11: finished
-2023-07-30 16:32:02,327 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:02,328 Thread 40: finished
-2023-07-30 16:32:02,508 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:02,508 Thread 27: finished
-2023-07-30 16:32:02,692 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:02,693 Thread 10: finished
-2023-07-30 16:32:02,872 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:02,872 Thread 4: finished
-2023-07-30 16:32:03,055 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:03,055 Thread 37: finished
-2023-07-30 16:32:03,240 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:03,240 Thread 23: finished
-2023-07-30 16:32:03,416 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:03,416 Thread 47: finished
-2023-07-30 16:32:03,593 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:03,593 Thread 3: finished
-2023-07-30 16:32:03,776 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:03,776 Thread 14: finished
-2023-07-30 16:32:03,963 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:03,964 Thread 33: finished
-2023-07-30 16:32:04,139 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:04,139 Thread 15: finished
-2023-07-30 16:32:04,341 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:04,341 Thread 22: finished
-2023-07-30 16:32:04,522 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:04,523 Thread 48: finished
-2023-07-30 16:32:04,705 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:04,705 Thread 19: finished
-2023-07-30 16:32:04,893 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:04,893 Thread 49: finished
-2023-07-30 16:32:04,894 Main: finished Statbotics API fetch
-2023-07-30 16:32:04,894 127.0.0.1 - - [30/Jul/2023 16:32:04] "GET /get_rankings?event=2023pncmp&OPR=True&CCWMS=True&Overall=True&Auto=True&Teleop=True&Endgame=True HTTP/1.1" 200 -
-2023-07-30 16:32:22,605 Request came in for 2023wasam.
-2023-07-30 16:32:22,701 127.0.0.1 - - [30/Jul/2023 16:32:22] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
-2023-07-30 16:32:23,021 Main: beginning Statbotics API fetch...
-2023-07-30 16:32:23,022 Thread 0: starting
-2023-07-30 16:32:23,024 Thread 1: starting
-2023-07-30 16:32:23,025 Thread 2: starting
-2023-07-30 16:32:23,027 Thread 3: starting
-2023-07-30 16:32:23,029 Thread 4: starting
-2023-07-30 16:32:23,032 Thread 5: starting
-2023-07-30 16:32:23,032 Thread 6: starting
-2023-07-30 16:32:23,032 Thread 7: starting
-2023-07-30 16:32:23,033 Thread 8: starting
-2023-07-30 16:32:23,034 Thread 9: starting
-2023-07-30 16:32:23,035 Thread 10: starting
-2023-07-30 16:32:23,036 Thread 11: starting
-2023-07-30 16:32:23,038 Thread 12: starting
-2023-07-30 16:32:23,040 Thread 13: starting
-2023-07-30 16:32:23,042 Thread 14: starting
-2023-07-30 16:32:23,043 Thread 15: starting
-2023-07-30 16:32:23,045 Thread 16: starting
-2023-07-30 16:32:23,047 Thread 17: starting
-2023-07-30 16:32:23,048 Thread 18: starting
-2023-07-30 16:32:23,050 Thread 19: starting
-2023-07-30 16:32:23,051 Thread 20: starting
-2023-07-30 16:32:23,053 Thread 21: starting
-2023-07-30 16:32:23,055 Thread 22: starting
-2023-07-30 16:32:23,056 Thread 23: starting
-2023-07-30 16:32:23,057 Thread 24: starting
-2023-07-30 16:32:23,058 Thread 25: starting
-2023-07-30 16:32:23,060 Thread 26: starting
-2023-07-30 16:32:23,063 Thread 27: starting
-2023-07-30 16:32:23,065 Thread 28: starting
-2023-07-30 16:32:23,066 Thread 29: starting
-2023-07-30 16:32:23,067 Thread 30: starting
-2023-07-30 16:32:23,068 Thread 31: starting
-2023-07-30 16:32:23,319 Thread 1: finished
-2023-07-30 16:32:23,496 Thread 2: finished
-2023-07-30 16:32:23,697 Thread 12: finished
-2023-07-30 16:32:23,883 Thread 4: finished
-2023-07-30 16:32:24,071 Thread 5: finished
-2023-07-30 16:32:24,251 Thread 6: finished
-2023-07-30 16:32:24,438 Thread 8: finished
-2023-07-30 16:32:24,616 Thread 11: finished
-2023-07-30 16:32:24,809 Thread 13: finished
-2023-07-30 16:32:24,999 Thread 14: finished
-2023-07-30 16:32:25,187 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:25,187 Thread 22: finished
-2023-07-30 16:32:25,370 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:25,370 Thread 24: finished
-2023-07-30 16:32:25,565 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:25,566 Thread 20: finished
-2023-07-30 16:32:25,752 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:25,752 Thread 28: finished
-2023-07-30 16:32:25,940 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:25,940 Thread 26: finished
-2023-07-30 16:32:26,149 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:26,149 Thread 30: finished
-2023-07-30 16:32:26,321 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:26,321 Thread 27: finished
-2023-07-30 16:32:26,507 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:26,508 Thread 0: finished
-2023-07-30 16:32:26,700 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:26,700 Thread 3: finished
-2023-07-30 16:32:26,881 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:26,881 Thread 9: finished
-2023-07-30 16:32:27,066 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:27,066 Thread 10: finished
-2023-07-30 16:32:27,265 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:27,265 Thread 21: finished
-2023-07-30 16:32:27,451 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:27,451 Thread 29: finished
-2023-07-30 16:32:27,642 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:27,642 Thread 31: finished
-2023-07-30 16:32:27,842 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:27,842 Thread 16: finished
-2023-07-30 16:32:28,027 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:28,027 Thread 15: finished
-2023-07-30 16:32:28,211 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:28,212 Thread 18: finished
-2023-07-30 16:32:28,391 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:28,391 Thread 7: finished
-2023-07-30 16:32:28,572 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:28,573 Thread 19: finished
-2023-07-30 16:32:28,763 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:28,763 Thread 17: finished
-2023-07-30 16:32:28,945 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:28,945 Thread 23: finished
-2023-07-30 16:32:29,127 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
-2023-07-30 16:32:29,127 Thread 25: finished
-2023-07-30 16:32:29,128 Main: finished Statbotics API fetch
-2023-07-30 16:32:29,128 127.0.0.1 - - [30/Jul/2023 16:32:29] "GET /get_rankings?event=2023wasam&OPR=True&CCWMS=True&Overall=True&Auto=True&Teleop=True&Endgame=True HTTP/1.1" 200 -
-2023-07-30 16:32:36,430 127.0.0.1 - - [30/Jul/2023 16:32:36] "GET /scouting HTTP/1.1" 200 -
-2023-07-30 16:32:36,732 127.0.0.1 - - [30/Jul/2023 16:32:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-07-30 16:32:36,798 127.0.0.1 - - [30/Jul/2023 16:32:36] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-07-30 16:32:36,799 127.0.0.1 - - [30/Jul/2023 16:32:36] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-07-30 16:32:40,699 127.0.0.1 - - [30/Jul/2023 16:32:40] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
+2023-07-30 16:39:16,004  * Debugger is active!
+2023-07-30 16:39:16,006  * Debugger PIN: 192-066-354
+2023-07-30 16:39:24,476 Thread for team 1294: Starting
+2023-07-30 16:39:24,477 Thread for team 1318: Starting
+2023-07-30 16:39:24,478 Thread for team 1425: Starting
+2023-07-30 16:39:24,478 Thread for team 1540: Starting
+2023-07-30 16:39:24,479 Thread for team 1778: Starting
+2023-07-30 16:39:24,480 Thread for team 1899: Starting
+2023-07-30 16:39:24,486 Thread for team 1983: Starting
+2023-07-30 16:39:24,488 Thread for team 2046: Starting
+2023-07-30 16:39:24,489 Thread for team 2147: Starting
+2023-07-30 16:39:24,490 Thread for team 2412: Starting
+2023-07-30 16:39:24,490 Thread for team 2471: Starting
+2023-07-30 16:39:24,492 Thread for team 2521: Starting
+2023-07-30 16:39:24,493 Thread for team 2522: Starting
+2023-07-30 16:39:24,495 Thread for team 2557: Starting
+2023-07-30 16:39:24,498 Thread for team 2635: Starting
+2023-07-30 16:39:24,500 Thread for team 2811: Starting
+2023-07-30 16:39:24,502 Thread for team 2910: Starting
+2023-07-30 16:39:24,503 Thread for team 2930: Starting
+2023-07-30 16:39:24,505 Thread for team 2980: Starting
+2023-07-30 16:39:24,506 Thread for team 2990: Starting
+2023-07-30 16:39:24,507 Thread for team 3070: Starting
+2023-07-30 16:39:24,507 Thread for team 3218: Starting
+2023-07-30 16:39:24,508 Thread for team 3219: Starting
+2023-07-30 16:39:24,513 Thread for team 360: Starting
+2023-07-30 16:39:24,517 Thread for team 3636: Starting
+2023-07-30 16:39:24,517 Thread for team 3663: Starting
+2023-07-30 16:39:24,517 Thread for team 3674: Starting
+2023-07-30 16:39:24,518 Thread for team 3711: Starting
+2023-07-30 16:39:24,519 Thread for team 4061: Starting
+2023-07-30 16:39:24,520 Thread for team 4125: Starting
+2023-07-30 16:39:24,524 Thread for team 4131: Starting
+2023-07-30 16:39:24,524 Thread for team 4450: Starting
+2023-07-30 16:39:24,527 Thread for team 4469: Starting
+2023-07-30 16:39:24,529 Thread for team 4488: Starting
+2023-07-30 16:39:24,531 Thread for team 4682: Starting
+2023-07-30 16:39:24,534 Thread for team 488: Starting
+2023-07-30 16:39:24,535 Thread for team 4911: Starting
+2023-07-30 16:39:24,536 Thread for team 4915: Starting
+2023-07-30 16:39:24,537 Thread for team 4918: Starting
+2023-07-30 16:39:24,538 Thread for team 492: Starting
+2023-07-30 16:39:24,539 Thread for team 5468: Starting
+2023-07-30 16:39:24,542 Thread for team 5827: Starting
+2023-07-30 16:39:24,543 Thread for team 5920: Starting
+2023-07-30 16:39:24,545 Thread for team 6443: Starting
+2023-07-30 16:39:24,546 Thread for team 6831: Starting
+2023-07-30 16:39:24,548 Thread for team 7034: Starting
+2023-07-30 16:39:24,550 Thread for team 7461: Starting
+2023-07-30 16:39:24,552 Thread for team 753: Starting
+2023-07-30 16:39:24,554 Thread for team 7627: Starting
+2023-07-30 16:39:24,555 Thread for team 8532: Starting
+2023-07-30 16:39:24,557 Thread for team 9023: Starting
+2023-07-30 16:39:24,558 Thread for team 9036: Starting
+2023-07-30 16:39:24,560 Thread for team 948: Starting
+2023-07-30 16:39:24,561 Thread for team 955: Starting
+2023-07-30 16:39:25,775 Thread for team 360: Finished
+2023-07-30 16:39:25,872 Thread for team 2557: Finished
+2023-07-30 16:39:25,890 Thread for team 4125: Finished
+2023-07-30 16:39:26,034 Thread for team 2471: Finished
+2023-07-30 16:39:26,146 Thread for team 4911: Finished
+2023-07-30 16:39:26,216 Thread for team 1540: Finished
+2023-07-30 16:39:26,400 Thread for team 6831: Finished
+2023-07-30 16:39:26,766 Thread for team 3219: Finished
+2023-07-30 16:39:26,968 Thread for team 4918: Finished
+2023-07-30 16:39:27,406 Thread for team 2930: Finished
+2023-07-30 16:39:27,476 Thread for team 1294: Finished
+2023-07-30 16:39:27,491 Thread for team 2910: Finished
+2023-07-30 16:39:27,634 Thread for team 2046: Finished
+2023-07-30 16:39:27,829 Thread for team 2521: Finished
+2023-07-30 16:39:28,080 Thread for team 2522: Finished
+2023-07-30 16:39:28,115 Thread for team 4450: Finished
+2023-07-30 16:39:28,438 Thread for team 4469: Finished
+2023-07-30 16:39:28,659 Thread for team 2980: Finished
+2023-07-30 16:39:28,703 Thread for team 2811: Finished
+2023-07-30 16:39:28,806 Thread for team 7461: Finished
+2023-07-30 16:39:28,986 Thread for team 6443: Finished
+2023-07-30 16:39:29,014 Thread for team 8532: Finished
+2023-07-30 16:39:29,132 Thread for team 2635: Finished
+2023-07-30 16:39:29,183 Thread for team 948: Finished
+2023-07-30 16:39:29,483 Thread for team 3218: Finished
+2023-07-30 16:39:29,984 Thread for team 7034: Finished
+2023-07-30 16:39:30,266 Thread for team 2412: Finished
+2023-07-30 16:39:31,212 Thread for team 1983: Finished
+2023-07-30 16:39:31,727 Thread for team 5468: Finished
+2023-07-30 16:39:32,077 Thread for team 1318: Finished
+2023-07-30 16:39:32,478 Thread for team 2990: Finished
+2023-07-30 16:39:32,951 Thread for team 9036: Finished
+2023-07-30 16:39:33,516 Thread for team 1778: Finished
+2023-07-30 16:39:34,030 Thread for team 1425: Finished
+2023-07-30 16:39:34,453 Thread for team 1899: Finished
+2023-07-30 16:39:34,952 Thread for team 3636: Finished
+2023-07-30 16:39:35,175 Thread for team 955: Finished
+2023-07-30 16:39:35,655 Thread for team 5827: Finished
+2023-07-30 16:39:36,277 Thread for team 3711: Finished
+2023-07-30 16:39:37,174 Thread for team 488: Finished
+2023-07-30 16:39:37,594 Thread for team 3663: Finished
+2023-07-30 16:39:37,670 Thread for team 4488: Finished
+2023-07-30 16:39:38,216 Thread for team 4682: Finished
+2023-07-30 16:39:38,688 Thread for team 492: Finished
+2023-07-30 16:39:38,875 Thread for team 4061: Finished
+2023-07-30 16:39:39,940 Thread for team 3070: Finished
+2023-07-30 16:39:40,436 Thread for team 4915: Finished
+2023-07-30 16:39:40,677 Thread for team 4131: Finished
+2023-07-30 16:39:41,087 Thread for team 3674: Finished
+2023-07-30 16:39:41,555 Thread for team 753: Finished
+2023-07-30 16:39:42,798 Thread for team 7627: Finished
+2023-07-30 16:39:43,197 Thread for team 5920: Finished
+2023-07-30 16:39:43,679 Thread for team 2147: Finished
+2023-07-30 16:39:44,176 Thread for team 9023: Finished
+2023-07-30 16:39:44,183 127.0.0.1 - - [30/Jul/2023 16:39:44] "GET /testing HTTP/1.1" 200 -
+2023-07-30 16:39:44,248 127.0.0.1 - - [30/Jul/2023 16:39:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-07-30 16:39:44,256 127.0.0.1 - - [30/Jul/2023 16:39:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-07-30 16:39:44,569 127.0.0.1 - - [30/Jul/2023 16:39:44] "[33mGET /N HTTP/1.1[0m" 404 -
+2023-07-30 16:39:44,617 127.0.0.1 - - [30/Jul/2023 16:39:44] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-07-30 16:39:44,709 127.0.0.1 - - [30/Jul/2023 16:39:44] "[33mGET /o HTTP/1.1[0m" 404 -
+2023-07-30 16:39:44,878 127.0.0.1 - - [30/Jul/2023 16:39:44] "[33mGET /I HTTP/1.1[0m" 404 -
+2023-07-30 16:39:44,927 127.0.0.1 - - [30/Jul/2023 16:39:44] "[33mGET /m HTTP/1.1[0m" 404 -
+2023-07-30 16:39:45,021 127.0.0.1 - - [30/Jul/2023 16:39:45] "[33mGET /a HTTP/1.1[0m" 404 -
+2023-07-30 16:39:45,190 127.0.0.1 - - [30/Jul/2023 16:39:45] "[33mGET /g HTTP/1.1[0m" 404 -
+2023-07-30 16:39:45,248 127.0.0.1 - - [30/Jul/2023 16:39:45] "[33mGET /e HTTP/1.1[0m" 404 -
+2023-07-30 16:39:45,336 127.0.0.1 - - [30/Jul/2023 16:39:45] "[33mGET /s HTTP/1.1[0m" 404 -

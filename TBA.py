@@ -39,7 +39,10 @@ def fetchTeamMedia(team):
     images = []
     resp = fetchAPIData("team/frc{}/media/{}".format(team, datetime.now().year))
     for item in resp:
-        if item["type"] == "imgur": images.append(item["direct_url"])
+        if item["type"] == "imgur" and item["preferred"]: images.insert(0, item["direct_url"])
+        elif item["type"] == "imgur": images.append(item["direct_url"])
+
+        if len(images) >= 3: break
     if len(images) == 0: images = "No Images"
 
     return images
