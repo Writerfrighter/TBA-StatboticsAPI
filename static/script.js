@@ -67,10 +67,10 @@ async function get_rankings() {
     $('#calculate_spinner').addClass('d-none');
     $('#calculate_label').removeClass('d-none');
 
-    let resp = res.split("=");
+    let resp = JSON.parse(res);
 
-    names = resp[0].split('~');
-    scores = resp[1].split('~');
+    names = resp[0];
+    scores = resp[1];
 
     const ctx = document.getElementById('ranking_score').getContext('2d');
     new Chart(ctx, {

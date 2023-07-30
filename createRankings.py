@@ -7,7 +7,7 @@ import statbotics
 import numpy as np
 import concurrent.futures
 import logging
-
+import json
 #Local imports
 import TBA
 
@@ -123,9 +123,7 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         for i in range(len(team_scores)):
             team_scores[i] += abs(min_score) + 0.02
 
-        names_joined = "~".join(map(str, team_names))
-        team_scores = "~".join(map(str, team_scores))
-        return names_joined + "=" + team_scores
+        return json.dumps([team_names, team_scores])
     
     else:
         return "The Blue Alliance API is down."

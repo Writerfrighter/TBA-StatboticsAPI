@@ -1,3 +1,3 @@
-import platform
+import json
 
-print(platform.python_implementation())
+print(json.dumps([["hi", "o", "h"], [1,2,3]]))
