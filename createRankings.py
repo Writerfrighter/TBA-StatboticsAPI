@@ -11,7 +11,7 @@ import logging
 #Local imports
 import TBA
 
-logging.basicConfig(filename="newfile.log", format='%(asctime)s %(message)s', filemode='w')
+logging.basicConfig(filename="main.log", format='%(asctime)s %(message)s', filemode='w')
  
 # Creating an object
 logger = logging.getLogger()
@@ -31,7 +31,6 @@ def normalizeData(data):
 
     for team in data_normalized:
         data_normalized[team] /= max_or_min_data
-    print(data_normalized)
     return data_normalized
 
 def fetchTeam_Threaded(name, team, event, tofetch, useOverall_EPA, useAuto_EPA, useTeleOp_EPA, useEndgame_EPA):
@@ -92,7 +91,7 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         logging.info("Main: finished Statbotics API fetch")
 
         team_names = {key: val for key, val in sorted(team_names.items(), key = lambda ele: ele[0])}
-        
+
         if useOverall_EPA: epa_max_normalized = normalizeData(epas_max)
         else: epa_max_normalized = epas_max
         if useAuto_EPA: auto_epa_max_normalized = normalizeData(auto_epas_max)
@@ -122,7 +121,7 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         team_scores = [score for (score, team) in score_and_names]
         min_score = min(team_scores)
         for i in range(len(team_scores)):
-            team_scores[i] += abs(min_score)
+            team_scores[i] += abs(min_score) + 0.02
 
         names_joined = "~".join(map(str, team_names))
         team_scores = "~".join(map(str, team_scores))

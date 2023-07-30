@@ -4,18 +4,20 @@ from datetime import datetime
 TBA_Api_Key = "XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu"
 
 def checkAPIStatus():
-    """Checks The Blue Alliance API if it's down.
-    Returns bool"""
     TBA_status = fetchAPIData("status")
     if TBA_status["is_datafeed_down"]: return True
     else: return False
 
-def fetchEventsForTeam(teamNumber, season) -> list:
+def fetchEventsForTeam(teamNumber, season):
     team_data = fetchAPIData("team/frc{}/events/{}/simple".format(teamNumber, season))
     response = ""
     for event in team_data:
         response += "~{}~{}~".format(event["name"], event["key"])
     return response
+
+def fetchTeamsForEvents(event):
+    response = fetchAPIData("event/{}/teams/simple".format(event))
+    return [team["team_number"] for team in response]
 
 def fetchEventOprs(eventCode):
     team_data = fetchAPIData("event/{}/oprs".format(eventCode))
@@ -30,8 +32,9 @@ def fetchEventChannels(team):
     return "No current events"
 
 def fetchTeamInfo(team):
-    resp = fetchAPIData("/team/frc{}")
+    resp = fetchAPIData("/team/frc{}".format(team))
     return resp
+
 def fetchTeamMedia(team):
     images = []
     resp = fetchAPIData("team/frc{}/media/{}".format(team, datetime.now().year))

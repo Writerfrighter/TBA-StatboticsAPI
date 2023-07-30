@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect, session
 from datetime import datetime
 import numpy as np
-
+import logging
+import concurrent.futures
 import createRankings
 import TBA
 
@@ -9,6 +10,20 @@ app = Flask(__name__)
 
 team = 492
 
+logging.basicConfig(filename="main.log", format='%(asctime)s %(message)s', filemode='w')
+
+# Creating an object
+logger = logging.getLogger()
+ 
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.INFO)
+
+def getTeamData(number):
+	logging.info("Thread for team %s: Starting", number)
+	info = TBA.fetchTeamInfo(number)
+	teams.append({"images": TBA.fetchTeamMedia(number), "name": info["nickname"], "number": number, "location": "{}, {}".format(info["city"], info["state_prov"]), "website": info["website"]})
+	logging.info("Thread for team %s: Finished", number)
+	
 @app.route('/')
 def index():
 	return render_template('index.html', current_event = True if TBA.fetchEventChannels(492) != "No current events" else False)
@@ -30,7 +45,12 @@ def game_scouting():
 
 @app.route('/testing')
 def testing():
-	return render_template('testing.html', teams = [{"images": TBA.fetchTeamMedia(492), "name": "Titan Robotics Club", "number": 492, "location": "Bellevue, Washington", "website": "https://www.titanrobotics.com/"}])
+	global teams
+	teams = []
+	team_numbers = TBA.fetchTeamsForEvents("2023pncmp")
+	with concurrent.futures.ThreadPoolExecutor(max_workers=len(team_numbers)) as executer: 
+		executer.map(getTeamData, team_numbers)
+	return render_template('testing.html', teams=teams)
 @app.route('/team/<team>')
 def team(team):
 	return team

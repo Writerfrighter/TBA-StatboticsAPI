@@ -2,8 +2,9 @@
 
 {% block content %}
     <!-- Card loader -->
+    <div class="row">
     {% for team in teams %}
-        <div class="card" style="width: 18rem;">
+        <div class="card col-2" style="width: 18rem;">
             {% if team["images"] != "No images" %}
                 <div id="carouselExample" class="carousel slide card-img-top" data-bs-ride="carousel">
                     <div class="carousel-inner center-cropped">
@@ -34,4 +35,5 @@
             </div>
         </div>
     {% endfor %}
+    </div>
 {% endblock %}
