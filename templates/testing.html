@@ -5,7 +5,7 @@
     <div class="row">
     {% for team in teams %}
         <div class="card col-2 position-relative" style="width: 18rem;">
-            {% if team["images"] != "No images" %}
+            {% if team["images"] != "No Images" %}
                 <div id="{{ team["number"] }}" class="carousel slide card-img-top" data-bs-ride="carousel">
                     <div class="carousel-inner center-cropped">
                         <div class="carousel-item active">
@@ -26,6 +26,8 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+            {% else %}
+                <img src="./static/content/no-image-available.png" class=""></img>
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">{{ team["name"] }}</h5>
