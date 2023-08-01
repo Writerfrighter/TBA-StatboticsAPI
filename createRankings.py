@@ -1,8 +1,6 @@
 #Formula from 8248, Ember
 
 #External imports
-import matplotlib.pyplot as plt
-import pandas as pd
 import statbotics
 import numpy as np
 import concurrent.futures
