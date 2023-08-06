@@ -12,7 +12,7 @@ team = 492
 
 logging.basicConfig(filename="main.log", format='%(asctime)s %(message)s', filemode='w')
 
-# Creating an object
+# Creating a logging object
 logger = logging.getLogger()
  
 # Setting the threshold of logger to DEBUG
@@ -59,7 +59,7 @@ def team(team):
 def chat_response():
 	chat = request.args.get('chat')
 
-	response = "In dev"
+	response = "In developmemt, please wait."
 	# Magic Chat stuff Annand will make
 
 	return response
