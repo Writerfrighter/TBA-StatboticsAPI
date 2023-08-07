@@ -26,6 +26,7 @@ def fetchEventOprs(eventCode):
 def fetchEventChannels(team):
     date = datetime.now()
     resp = fetchAPIData("team/frc{}/events/{}".format(team, date.year))
+    print(resp)
     for event in resp:
         if event["start_date"] < str(date)[:11:] and event["end_date"] > str(date)[:11:]:
             return event["webcasts"][0]["channel"]

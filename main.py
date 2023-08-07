@@ -8,7 +8,7 @@ import TBA
 
 app = Flask(__name__)
 
-team = 492
+team_number = 492
 
 logging.basicConfig(filename="main.log", format='%(asctime)s %(message)s', filemode='w')
 
@@ -26,7 +26,7 @@ def getTeamData(number):
 	
 @app.route('/')
 def index():
-	return render_template('index.html', current_event = True if TBA.fetchEventChannels(492) != "No current events" else False)
+	return render_template('index.html', current_event = True if TBA.fetchEventChannels(team_number) != "No current events" else False)
 
 @app.route('/chat')
 def chat():
@@ -51,6 +51,7 @@ def testing():
 	with concurrent.futures.ThreadPoolExecutor(max_workers=len(team_numbers)) as executer: 
 		executer.map(getTeamData, team_numbers)
 	return render_template('testing.html', teams=teams)
+
 @app.route('/team/<team>')
 def team(team):
 	return team
@@ -85,4 +86,4 @@ def get_rankings():
 	use_endgame_EPA = True if request.args.get('Endgame')  == 'True' else False
 	# print(use_OPR, use_CCWMS,use_overall_EPA, use_auto_EPA, use_teleop_EPA, use_endgame_EPA)
 	return createRankings.createRankings(event, use_OPR, use_CCWMS, use_overall_EPA, use_auto_EPA, use_teleop_EPA, use_endgame_EPA)
-app.run(host='0.0.0.0', port=8080, debug=True)
+app.run()
