@@ -2,7 +2,5 @@ Flask
 datetime
 requests
 numpy
-logging
-concurrent.features
 statbotics
 gunicorn
