@@ -5,3 +5,4 @@ numpy
 logging
 concurrent.features
 statbotics
+gunicorn
