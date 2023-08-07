@@ -2,7 +2,6 @@ Flask
 datetime
 requests
 numpy
-json
 logging
 concurrent.features
 statbotics
