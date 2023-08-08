@@ -1,6 +1,13 @@
-2023-08-06 11:14:24,617  * Debugger is active!
-2023-08-06 11:14:24,619  * Debugger PIN: 192-066-354
-2023-08-06 11:14:30,829 127.0.0.1 - - [06/Aug/2023 11:14:30] "GET / HTTP/1.1" 200 -
-2023-08-06 11:14:30,882 127.0.0.1 - - [06/Aug/2023 11:14:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-08-06 11:14:30,884 127.0.0.1 - - [06/Aug/2023 11:14:30] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-08-06 11:14:31,198 127.0.0.1 - - [06/Aug/2023 11:14:31] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-08-08 16:31:29,881 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-08 16:31:29,881 [33mPress CTRL+C to quit[0m
+2023-08-08 16:31:32,910 127.0.0.1 - - [08/Aug/2023 16:31:32] "GET /scouting HTTP/1.1" 200 -
+2023-08-08 16:31:32,968 127.0.0.1 - - [08/Aug/2023 16:31:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-08-08 16:31:33,169 127.0.0.1 - - [08/Aug/2023 16:31:33] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-08-08 16:31:33,279 127.0.0.1 - - [08/Aug/2023 16:31:33] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-08-08 16:31:35,060 127.0.0.1 - - [08/Aug/2023 16:31:35] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
+2023-08-08 16:31:52,133 127.0.0.1 - - [08/Aug/2023 16:31:52] "GET /scouting HTTP/1.1" 200 -
+2023-08-08 16:31:52,444 127.0.0.1 - - [08/Aug/2023 16:31:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-08-08 16:31:52,507 127.0.0.1 - - [08/Aug/2023 16:31:52] "GET /static/script.js HTTP/1.1" 200 -
+2023-08-08 16:31:52,507 127.0.0.1 - - [08/Aug/2023 16:31:52] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-08-08 16:31:54,216 127.0.0.1 - - [08/Aug/2023 16:31:54] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -

@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+import json
 
 TBA_Api_Key = "XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu"
 
@@ -10,10 +11,10 @@ def checkAPIStatus():
 
 def fetchEventsForTeam(teamNumber, season):
     team_data = fetchAPIData("team/frc{}/events/{}/simple".format(teamNumber, season))
-    response = ""
+    response = []
     for event in team_data:
-        response += "~{}~{}~".format(event["name"], event["key"])
-    return response
+        response.append([event["name"], event["key"]])
+    return json.dumps(response)
 
 def fetchTeamsForEvents(event):
     response = fetchAPIData("event/{}/teams/simple".format(event))
@@ -26,7 +27,6 @@ def fetchEventOprs(eventCode):
 def fetchEventChannels(team):
     date = datetime.now()
     resp = fetchAPIData("team/frc{}/events/{}".format(team, date.year))
-    print(resp)
     for event in resp:
         if event["start_date"] < str(date)[:11:] and event["end_date"] > str(date)[:11:]:
             return event["webcasts"][0]["channel"]

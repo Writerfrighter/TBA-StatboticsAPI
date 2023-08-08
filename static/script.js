@@ -40,14 +40,15 @@ async function get_events() {
     $('#event_selection_form').removeClass('d-none');
     $('#event_selection').empty()
 
-    var resp = res.split('~');
+    var resp = JSON.parse(res);
 
-    for (var i = 0; i < (resp.length - 1) / 3; i++) {
+    resp.forEach(element => {
         var opt = document.createElement('option');
-        opt.value = resp[i * 3 + 2]
-        opt.innerHTML = resp[i * 3 + 1]
+        opt.value = element[1];
+        opt.innerHTML = element[0];
         $('#event_selection').append(opt);
-    }
+    });
+    console.log(resp);
 }
 
 async function get_rankings() {
