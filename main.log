@@ -1,13 +1,10 @@
-2023-08-08 16:31:29,881 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-08-08 17:24:54,721 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2023-08-08 16:31:29,881 [33mPress CTRL+C to quit[0m
-2023-08-08 16:31:32,910 127.0.0.1 - - [08/Aug/2023 16:31:32] "GET /scouting HTTP/1.1" 200 -
-2023-08-08 16:31:32,968 127.0.0.1 - - [08/Aug/2023 16:31:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-08-08 16:31:33,169 127.0.0.1 - - [08/Aug/2023 16:31:33] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-08-08 16:31:33,279 127.0.0.1 - - [08/Aug/2023 16:31:33] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-08-08 16:31:35,060 127.0.0.1 - - [08/Aug/2023 16:31:35] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
-2023-08-08 16:31:52,133 127.0.0.1 - - [08/Aug/2023 16:31:52] "GET /scouting HTTP/1.1" 200 -
-2023-08-08 16:31:52,444 127.0.0.1 - - [08/Aug/2023 16:31:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-08-08 16:31:52,507 127.0.0.1 - - [08/Aug/2023 16:31:52] "GET /static/script.js HTTP/1.1" 200 -
-2023-08-08 16:31:52,507 127.0.0.1 - - [08/Aug/2023 16:31:52] "[36mGET /static/content/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-08-08 16:31:54,216 127.0.0.1 - - [08/Aug/2023 16:31:54] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
+2023-08-08 17:24:54,721 [33mPress CTRL+C to quit[0m
+2023-08-08 17:24:55,944 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-08-08 17:24:56,028 https://www.thebluealliance.com:443 "GET /api/v3/team/frc492/events/2023?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 1078
+2023-08-08 17:24:56,033 127.0.0.1 - - [08/Aug/2023 17:24:56] "GET / HTTP/1.1" 200 -
+2023-08-08 17:24:56,079 127.0.0.1 - - [08/Aug/2023 17:24:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-08-08 17:24:56,206 127.0.0.1 - - [08/Aug/2023 17:24:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-08-08 17:24:56,408 127.0.0.1 - - [08/Aug/2023 17:24:56] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-08-08 17:24:56,720 127.0.0.1 - - [08/Aug/2023 17:24:56] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -

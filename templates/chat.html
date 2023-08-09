@@ -8,13 +8,13 @@
             <span class="pb-3">AI Chat</span>
             <i class="fas fa-times"></i>
         </div>
-        <div id="chats">
+        <div id="chats" style="height: 600px; overflow: auto;">
             <div class="d-flex flex-row p-3 justify-content-start">
                 <img src="https://img.icons8.com/?size=512&id=102660&format=png" width="30" height="30">
                 <div class="chat ml-2 p-3">Hello! How can I help you today?</div>
             </div>
         </div>
-        <form onsubmit="event.preventDefault(); send_chat()">
+        <form onsubmit="event.preventDefault(); send_chat()" class="d-flex">
             <textarea class="form-control" rows="5" placeholder="Type your message" id="chat_input"></textarea>
             <button class="btn btn-success" type="submit">Send</button>
         </form>

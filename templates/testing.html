@@ -5,7 +5,9 @@
     <div class="row">
     {% for team in teams %}
         <div class="card col-2 position-relative" style="width: 18rem;">
-            {% if team["images"] != "No Images" %}
+            {% if team["images"] == "No Images" %}
+                <img src="./static/images/no-image-available.png" class=""></img>
+            {% elif team["images"]|length > 1%}
                 <div id="{{ team["number"] }}" class="carousel slide card-img-top" data-bs-ride="carousel">
                     <div class="carousel-inner center-cropped">
                         <div class="carousel-item active">
@@ -27,8 +29,9 @@
                     </button>
                 </div>
             {% else %}
-                <img src="./static/content/no-image-available.png" class=""></img>
+                <img src="{{ team["images"][0] }}" class="center-cropped"></img>
             {% endif %}
+            
             <div class="card-body">
                 <h5 class="card-title">{{ team["name"] }}</h5>
                 <p class="card-text">Team {{ team["number"] }}, from {{ team["location"]}}.</p>

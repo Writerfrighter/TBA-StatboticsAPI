@@ -135,6 +135,10 @@ function add_chat(chat, isBot) {
     else {div.append(div2); div.append(img);}
 
     $('#chats').append(div);
+
+
+    var objDiv = document.getElementById("chats");
+    objDiv.scrollTop = objDiv.scrollHeight;
 }
 
 async function send_chat() {

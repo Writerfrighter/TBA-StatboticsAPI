@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from datetime import datetime
 import numpy as np
 import logging
@@ -16,14 +16,14 @@ logging.basicConfig(filename="main.log", format='%(asctime)s %(message)s', filem
 logger = logging.getLogger()
  
 # Setting the threshold of logger to DEBUG
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 def getTeamData(number):
 	logging.info("Thread for team %s: Starting", number)
 	info = TBA.fetchTeamInfo(number)
 	teams.append({"images": TBA.fetchTeamMedia(number), "name": info["nickname"], "number": number, "location": "{}, {}".format(info["city"], info["state_prov"]), "website": info["website"]})
 	logging.info("Thread for team %s: Finished", number)
-	
+
 @app.route('/')
 def index():
 	return render_template('index.html', current_event = True if TBA.fetchEventChannels(team_number) != "No current events" else False)
