@@ -16,7 +16,7 @@ logging.basicConfig(filename="main.log", format='%(asctime)s %(message)s', filem
 logger = logging.getLogger()
  
 # Setting the threshold of logger to DEBUG
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 def getTeamData(number):
 	logging.info("Thread for team %s: Starting", number)
@@ -47,7 +47,7 @@ def game_scouting():
 def testing():
 	global teams
 	teams = []
-	team_numbers = TBA.fetchTeamsForEvents("2023pncmp")
+	team_numbers = TBA.fetchTeamsForEvents("2023wasam")
 	with concurrent.futures.ThreadPoolExecutor(max_workers=len(team_numbers)) as executer: 
 		executer.map(getTeamData, team_numbers)
 	return render_template('testing.html', teams=teams)
@@ -60,7 +60,7 @@ def team(team):
 def chat_response():
 	chat = request.args.get('chat')
 
-	response = "In developmemt, please wait."
+	response = "This chat is in developmemt, please wait."
 	# Magic Chat stuff Annand will make
 
 	return response

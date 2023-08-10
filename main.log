@@ -1001,3 +1001,504 @@
 2023-08-09 19:40:56,565 Thread 31: finished
 2023-08-09 19:40:56,565 Main: finished Statbotics API fetch
 2023-08-09 19:40:56,566 127.0.0.1 - - [09/Aug/2023 19:40:56] "GET /get_rankings?event=2023pncmp&OPR=True&CCWMS=True&Overall=True&Auto=False&Teleop=True&Endgame=False HTTP/1.1" 200 -
+2023-08-09 19:51:02,207 Request came in for 2023pncmp.
+2023-08-09 19:51:02,209 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-08-09 19:51:02,211 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-08-09 19:51:02,465 https://www.thebluealliance.com:443 "GET /api/v3/team/frc492/events/2023/simple?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 327
+2023-08-09 19:51:02,466 127.0.0.1 - - [09/Aug/2023 19:51:02] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
+2023-08-09 19:51:02,511 https://www.thebluealliance.com:443 "GET /api/v3/status?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 151
+2023-08-09 19:51:02,513 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-08-09 19:51:03,402 https://www.thebluealliance.com:443 "GET /api/v3/event/2023pncmp/oprs?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 2085
+2023-08-09 19:51:03,407 Main: beginning Statbotics API fetch...
+2023-08-09 19:51:03,407 Thread 0: starting
+2023-08-09 19:51:03,408 Thread 1: starting
+2023-08-09 19:51:03,408 Thread 2: starting
+2023-08-09 19:51:03,409 Looking up "https://api.statbotics.io/v2/team_event/1318/2023pncmp" in the cache
+2023-08-09 19:51:03,409 Thread 3: starting
+2023-08-09 19:51:03,409 Looking up "https://api.statbotics.io/v2/team_event/1294/2023pncmp" in the cache
+2023-08-09 19:51:03,409 No cache entry available
+2023-08-09 19:51:03,410 Thread 4: starting
+2023-08-09 19:51:03,410 Looking up "https://api.statbotics.io/v2/team_event/1425/2023pncmp" in the cache
+2023-08-09 19:51:03,410 No cache entry available
+2023-08-09 19:51:03,410 Thread 5: starting
+2023-08-09 19:51:03,410 No cache entry available
+2023-08-09 19:51:03,411 Looking up "https://api.statbotics.io/v2/team_event/1540/2023pncmp" in the cache
+2023-08-09 19:51:03,411 Thread 6: starting
+2023-08-09 19:51:03,411 No cache entry available
+2023-08-09 19:51:03,411 No cache entry available
+2023-08-09 19:51:03,411 Thread 7: starting
+2023-08-09 19:51:03,412 Looking up "https://api.statbotics.io/v2/team_event/1778/2023pncmp" in the cache
+2023-08-09 19:51:03,412 Thread 8: starting
+2023-08-09 19:51:03,413 Thread 9: starting
+2023-08-09 19:51:03,413 No cache entry available
+2023-08-09 19:51:03,414 Looking up "https://api.statbotics.io/v2/team_event/1899/2023pncmp" in the cache
+2023-08-09 19:51:03,414 Thread 10: starting
+2023-08-09 19:51:03,414 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,414 No cache entry available
+2023-08-09 19:51:03,414 Thread 11: starting
+2023-08-09 19:51:03,415 Thread 12: starting
+2023-08-09 19:51:03,415 Looking up "https://api.statbotics.io/v2/team_event/1983/2023pncmp" in the cache
+2023-08-09 19:51:03,415 Thread 13: starting
+2023-08-09 19:51:03,415 No cache entry available
+2023-08-09 19:51:03,415 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,416 Thread 14: starting
+2023-08-09 19:51:03,416 Looking up "https://api.statbotics.io/v2/team_event/2046/2023pncmp" in the cache
+2023-08-09 19:51:03,416 Thread 15: starting
+2023-08-09 19:51:03,416 Thread 16: starting
+2023-08-09 19:51:03,417 No cache entry available
+2023-08-09 19:51:03,417 Looking up "https://api.statbotics.io/v2/team_event/2147/2023pncmp" in the cache
+2023-08-09 19:51:03,417 Thread 17: starting
+2023-08-09 19:51:03,417 No cache entry available
+2023-08-09 19:51:03,417 Looking up "https://api.statbotics.io/v2/team_event/2412/2023pncmp" in the cache
+2023-08-09 19:51:03,417 Thread 18: starting
+2023-08-09 19:51:03,418 Thread 19: starting
+2023-08-09 19:51:03,419 Thread 20: starting
+2023-08-09 19:51:03,419 Looking up "https://api.statbotics.io/v2/team_event/2471/2023pncmp" in the cache
+2023-08-09 19:51:03,420 Thread 21: starting
+2023-08-09 19:51:03,420 Thread 22: starting
+2023-08-09 19:51:03,420 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,420 No cache entry available
+2023-08-09 19:51:03,421 Looking up "https://api.statbotics.io/v2/team_event/2521/2023pncmp" in the cache
+2023-08-09 19:51:03,421 Thread 23: starting
+2023-08-09 19:51:03,421 Looking up "https://api.statbotics.io/v2/team_event/2522/2023pncmp" in the cache
+2023-08-09 19:51:03,421 No cache entry available
+2023-08-09 19:51:03,422 Thread 24: starting
+2023-08-09 19:51:03,422 Looking up "https://api.statbotics.io/v2/team_event/2557/2023pncmp" in the cache
+2023-08-09 19:51:03,422 Thread 25: starting
+2023-08-09 19:51:03,423 Thread 26: starting
+2023-08-09 19:51:03,423 No cache entry available
+2023-08-09 19:51:03,423 Thread 27: starting
+2023-08-09 19:51:03,423 Looking up "https://api.statbotics.io/v2/team_event/2811/2023pncmp" in the cache
+2023-08-09 19:51:03,423 Thread 28: starting
+2023-08-09 19:51:03,424 Looking up "https://api.statbotics.io/v2/team_event/2910/2023pncmp" in the cache
+2023-08-09 19:51:03,424 Thread 29: starting
+2023-08-09 19:51:03,425 No cache entry available
+2023-08-09 19:51:03,425 Thread 30: starting
+2023-08-09 19:51:03,425 Looking up "https://api.statbotics.io/v2/team_event/2930/2023pncmp" in the cache
+2023-08-09 19:51:03,425 Thread 31: starting
+2023-08-09 19:51:03,425 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,425 No cache entry available
+2023-08-09 19:51:03,426 Thread 32: starting
+2023-08-09 19:51:03,426 Looking up "https://api.statbotics.io/v2/team_event/2980/2023pncmp" in the cache
+2023-08-09 19:51:03,426 No cache entry available
+2023-08-09 19:51:03,426 Thread 33: starting
+2023-08-09 19:51:03,426 Thread 34: starting
+2023-08-09 19:51:03,426 Thread 35: starting
+2023-08-09 19:51:03,427 Thread 36: starting
+2023-08-09 19:51:03,427 Looking up "https://api.statbotics.io/v2/team_event/2990/2023pncmp" in the cache
+2023-08-09 19:51:03,427 No cache entry available
+2023-08-09 19:51:03,428 Looking up "https://api.statbotics.io/v2/team_event/3070/2023pncmp" in the cache
+2023-08-09 19:51:03,428 Thread 37: starting
+2023-08-09 19:51:03,428 Looking up "https://api.statbotics.io/v2/team_event/3218/2023pncmp" in the cache
+2023-08-09 19:51:03,428 Thread 38: starting
+2023-08-09 19:51:03,429 Thread 39: starting
+2023-08-09 19:51:03,429 Looking up "https://api.statbotics.io/v2/team_event/360/2023pncmp" in the cache
+2023-08-09 19:51:03,431 No cache entry available
+2023-08-09 19:51:03,431 Thread 40: starting
+2023-08-09 19:51:03,431 Looking up "https://api.statbotics.io/v2/team_event/3636/2023pncmp" in the cache
+2023-08-09 19:51:03,431 No cache entry available
+2023-08-09 19:51:03,431 Thread 41: starting
+2023-08-09 19:51:03,431 Thread 42: starting
+2023-08-09 19:51:03,431 No cache entry available
+2023-08-09 19:51:03,432 Thread 43: starting
+2023-08-09 19:51:03,432 Looking up "https://api.statbotics.io/v2/team_event/3663/2023pncmp" in the cache
+2023-08-09 19:51:03,432 Thread 44: starting
+2023-08-09 19:51:03,433 No cache entry available
+2023-08-09 19:51:03,433 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,433 Thread 45: starting
+2023-08-09 19:51:03,434 Thread 46: starting
+2023-08-09 19:51:03,434 Looking up "https://api.statbotics.io/v2/team_event/3674/2023pncmp" in the cache
+2023-08-09 19:51:03,434 Thread 47: starting
+2023-08-09 19:51:03,434 No cache entry available
+2023-08-09 19:51:03,435 Looking up "https://api.statbotics.io/v2/team_event/3711/2023pncmp" in the cache
+2023-08-09 19:51:03,435 Thread 48: starting
+2023-08-09 19:51:03,435 Looking up "https://api.statbotics.io/v2/team_event/4061/2023pncmp" in the cache
+2023-08-09 19:51:03,435 Thread 49: starting
+2023-08-09 19:51:03,435 No cache entry available
+2023-08-09 19:51:03,436 Looking up "https://api.statbotics.io/v2/team_event/4125/2023pncmp" in the cache
+2023-08-09 19:51:03,436 No cache entry available
+2023-08-09 19:51:03,436 Looking up "https://api.statbotics.io/v2/team_event/4131/2023pncmp" in the cache
+2023-08-09 19:51:03,436 No cache entry available
+2023-08-09 19:51:03,437 Looking up "https://api.statbotics.io/v2/team_event/4469/2023pncmp" in the cache
+2023-08-09 19:51:03,437 No cache entry available
+2023-08-09 19:51:03,437 Looking up "https://api.statbotics.io/v2/team_event/4488/2023pncmp" in the cache
+2023-08-09 19:51:03,439 Looking up "https://api.statbotics.io/v2/team_event/4682/2023pncmp" in the cache
+2023-08-09 19:51:03,439 No cache entry available
+2023-08-09 19:51:03,440 No cache entry available
+2023-08-09 19:51:03,440 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,440 Looking up "https://api.statbotics.io/v2/team_event/488/2023pncmp" in the cache
+2023-08-09 19:51:03,441 Looking up "https://api.statbotics.io/v2/team_event/4911/2023pncmp" in the cache
+2023-08-09 19:51:03,441 Looking up "https://api.statbotics.io/v2/team_event/4915/2023pncmp" in the cache
+2023-08-09 19:51:03,441 No cache entry available
+2023-08-09 19:51:03,442 Looking up "https://api.statbotics.io/v2/team_event/4918/2023pncmp" in the cache
+2023-08-09 19:51:03,442 No cache entry available
+2023-08-09 19:51:03,442 Looking up "https://api.statbotics.io/v2/team_event/492/2023pncmp" in the cache
+2023-08-09 19:51:03,442 No cache entry available
+2023-08-09 19:51:03,442 No cache entry available
+2023-08-09 19:51:03,443 Looking up "https://api.statbotics.io/v2/team_event/5468/2023pncmp" in the cache
+2023-08-09 19:51:03,443 No cache entry available
+2023-08-09 19:51:03,443 Looking up "https://api.statbotics.io/v2/team_event/5827/2023pncmp" in the cache
+2023-08-09 19:51:03,443 Looking up "https://api.statbotics.io/v2/team_event/5920/2023pncmp" in the cache
+2023-08-09 19:51:03,444 No cache entry available
+2023-08-09 19:51:03,444 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,444 No cache entry available
+2023-08-09 19:51:03,444 Looking up "https://api.statbotics.io/v2/team_event/6443/2023pncmp" in the cache
+2023-08-09 19:51:03,445 No cache entry available
+2023-08-09 19:51:03,445 Looking up "https://api.statbotics.io/v2/team_event/6831/2023pncmp" in the cache
+2023-08-09 19:51:03,445 Looking up "https://api.statbotics.io/v2/team_event/7034/2023pncmp" in the cache
+2023-08-09 19:51:03,445 No cache entry available
+2023-08-09 19:51:03,446 Looking up "https://api.statbotics.io/v2/team_event/7461/2023pncmp" in the cache
+2023-08-09 19:51:03,446 No cache entry available
+2023-08-09 19:51:03,448 Looking up "https://api.statbotics.io/v2/team_event/753/2023pncmp" in the cache
+2023-08-09 19:51:03,448 No cache entry available
+2023-08-09 19:51:03,449 Looking up "https://api.statbotics.io/v2/team_event/7627/2023pncmp" in the cache
+2023-08-09 19:51:03,449 Looking up "https://api.statbotics.io/v2/team_event/8532/2023pncmp" in the cache
+2023-08-09 19:51:03,450 No cache entry available
+2023-08-09 19:51:03,450 Looking up "https://api.statbotics.io/v2/team_event/9036/2023pncmp" in the cache
+2023-08-09 19:51:03,450 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,450 No cache entry available
+2023-08-09 19:51:03,451 Looking up "https://api.statbotics.io/v2/team_event/948/2023pncmp" in the cache
+2023-08-09 19:51:03,451 No cache entry available
+2023-08-09 19:51:03,451 No cache entry available
+2023-08-09 19:51:03,451 Looking up "https://api.statbotics.io/v2/team_event/955/2023pncmp" in the cache
+2023-08-09 19:51:03,451 No cache entry available
+2023-08-09 19:51:03,451 No cache entry available
+2023-08-09 19:51:03,452 No cache entry available
+2023-08-09 19:51:03,452 No cache entry available
+2023-08-09 19:51:03,452 No cache entry available
+2023-08-09 19:51:03,452 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,452 No cache entry available
+2023-08-09 19:51:03,452 No cache entry available
+2023-08-09 19:51:03,454 No cache entry available
+2023-08-09 19:51:03,454 No cache entry available
+2023-08-09 19:51:03,454 Resetting dropped connection: api.statbotics.io
+2023-08-09 19:51:03,454 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 Starting new HTTPS connection (91): api.statbotics.io:443
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,455 No cache entry available
+2023-08-09 19:51:03,457 No cache entry available
+2023-08-09 19:51:03,457 Starting new HTTPS connection (92): api.statbotics.io:443
+2023-08-09 19:51:03,457 No cache entry available
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,458 Starting new HTTPS connection (93): api.statbotics.io:443
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,458 Starting new HTTPS connection (94): api.statbotics.io:443
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,458 No cache entry available
+2023-08-09 19:51:03,459 No cache entry available
+2023-08-09 19:51:03,460 No cache entry available
+2023-08-09 19:51:03,460 No cache entry available
+2023-08-09 19:51:03,460 No cache entry available
+2023-08-09 19:51:03,461 No cache entry available
+2023-08-09 19:51:03,461 Starting new HTTPS connection (95): api.statbotics.io:443
+2023-08-09 19:51:03,461 No cache entry available
+2023-08-09 19:51:03,461 Starting new HTTPS connection (96): api.statbotics.io:443
+2023-08-09 19:51:03,461 No cache entry available
+2023-08-09 19:51:03,461 Starting new HTTPS connection (97): api.statbotics.io:443
+2023-08-09 19:51:03,461 No cache entry available
+2023-08-09 19:51:03,463 No cache entry available
+2023-08-09 19:51:03,463 No cache entry available
+2023-08-09 19:51:03,463 Starting new HTTPS connection (98): api.statbotics.io:443
+2023-08-09 19:51:03,463 No cache entry available
+2023-08-09 19:51:03,466 No cache entry available
+2023-08-09 19:51:03,466 No cache entry available
+2023-08-09 19:51:03,467 Starting new HTTPS connection (99): api.statbotics.io:443
+2023-08-09 19:51:03,467 Starting new HTTPS connection (100): api.statbotics.io:443
+2023-08-09 19:51:03,467 No cache entry available
+2023-08-09 19:51:03,467 Starting new HTTPS connection (101): api.statbotics.io:443
+2023-08-09 19:51:03,467 No cache entry available
+2023-08-09 19:51:03,467 No cache entry available
+2023-08-09 19:51:03,468 Starting new HTTPS connection (102): api.statbotics.io:443
+2023-08-09 19:51:03,468 No cache entry available
+2023-08-09 19:51:03,468 No cache entry available
+2023-08-09 19:51:03,468 Starting new HTTPS connection (103): api.statbotics.io:443
+2023-08-09 19:51:03,468 No cache entry available
+2023-08-09 19:51:03,468 No cache entry available
+2023-08-09 19:51:03,468 No cache entry available
+2023-08-09 19:51:03,468 Starting new HTTPS connection (104): api.statbotics.io:443
+2023-08-09 19:51:03,469 No cache entry available
+2023-08-09 19:51:03,469 Starting new HTTPS connection (105): api.statbotics.io:443
+2023-08-09 19:51:03,469 No cache entry available
+2023-08-09 19:51:03,469 No cache entry available
+2023-08-09 19:51:03,469 No cache entry available
+2023-08-09 19:51:03,469 Starting new HTTPS connection (106): api.statbotics.io:443
+2023-08-09 19:51:03,469 Starting new HTTPS connection (107): api.statbotics.io:443
+2023-08-09 19:51:03,469 No cache entry available
+2023-08-09 19:51:03,470 Starting new HTTPS connection (108): api.statbotics.io:443
+2023-08-09 19:51:03,470 Starting new HTTPS connection (109): api.statbotics.io:443
+2023-08-09 19:51:03,470 Starting new HTTPS connection (110): api.statbotics.io:443
+2023-08-09 19:51:03,471 Starting new HTTPS connection (111): api.statbotics.io:443
+2023-08-09 19:51:03,471 Starting new HTTPS connection (112): api.statbotics.io:443
+2023-08-09 19:51:03,471 Starting new HTTPS connection (113): api.statbotics.io:443
+2023-08-09 19:51:03,471 Starting new HTTPS connection (114): api.statbotics.io:443
+2023-08-09 19:51:03,472 Starting new HTTPS connection (115): api.statbotics.io:443
+2023-08-09 19:51:03,472 Starting new HTTPS connection (116): api.statbotics.io:443
+2023-08-09 19:51:03,472 Starting new HTTPS connection (117): api.statbotics.io:443
+2023-08-09 19:51:03,472 Starting new HTTPS connection (118): api.statbotics.io:443
+2023-08-09 19:51:03,473 Starting new HTTPS connection (119): api.statbotics.io:443
+2023-08-09 19:51:03,473 Starting new HTTPS connection (120): api.statbotics.io:443
+2023-08-09 19:51:03,473 Starting new HTTPS connection (121): api.statbotics.io:443
+2023-08-09 19:51:03,473 Starting new HTTPS connection (122): api.statbotics.io:443
+2023-08-09 19:51:03,473 Starting new HTTPS connection (123): api.statbotics.io:443
+2023-08-09 19:51:03,475 Starting new HTTPS connection (124): api.statbotics.io:443
+2023-08-09 19:51:03,475 Starting new HTTPS connection (125): api.statbotics.io:443
+2023-08-09 19:51:03,475 Starting new HTTPS connection (126): api.statbotics.io:443
+2023-08-09 19:51:03,475 Starting new HTTPS connection (127): api.statbotics.io:443
+2023-08-09 19:51:03,476 Starting new HTTPS connection (128): api.statbotics.io:443
+2023-08-09 19:51:03,476 Starting new HTTPS connection (129): api.statbotics.io:443
+2023-08-09 19:51:03,476 Starting new HTTPS connection (130): api.statbotics.io:443
+2023-08-09 19:51:04,102 https://api.statbotics.io:443 "GET /v2/team_event/2412/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,103 https://api.statbotics.io:443 "GET /v2/team_event/4061/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,104 Updating cache with response from "https://api.statbotics.io/v2/team_event/4061/2023pncmp"
+2023-08-09 19:51:04,104 Updating cache with response from "https://api.statbotics.io/v2/team_event/2412/2023pncmp"
+2023-08-09 19:51:04,104 Thread 26: finished API Fetch
+2023-08-09 19:51:04,104 Thread 26: finished
+2023-08-09 19:51:04,104 Thread 9: finished API Fetch
+2023-08-09 19:51:04,104 Thread 9: finished
+2023-08-09 19:51:04,111 https://api.statbotics.io:443 "GET /v2/team_event/1318/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,112 Updating cache with response from "https://api.statbotics.io/v2/team_event/1318/2023pncmp"
+2023-08-09 19:51:04,112 Thread 1: finished API Fetch
+2023-08-09 19:51:04,112 Thread 1: finished
+2023-08-09 19:51:04,115 https://api.statbotics.io:443 "GET /v2/team_event/955/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,116 Updating cache with response from "https://api.statbotics.io/v2/team_event/955/2023pncmp"
+2023-08-09 19:51:04,116 Thread 49: finished API Fetch
+2023-08-09 19:51:04,116 Thread 49: finished
+2023-08-09 19:51:04,127 https://api.statbotics.io:443 "GET /v2/team_event/1425/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,127 Updating cache with response from "https://api.statbotics.io/v2/team_event/1425/2023pncmp"
+2023-08-09 19:51:04,128 Thread 2: finished API Fetch
+2023-08-09 19:51:04,128 Thread 2: finished
+2023-08-09 19:51:04,155 https://api.statbotics.io:443 "GET /v2/team_event/4682/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,156 Updating cache with response from "https://api.statbotics.io/v2/team_event/4682/2023pncmp"
+2023-08-09 19:51:04,156 Thread 31: finished API Fetch
+2023-08-09 19:51:04,156 Thread 31: finished
+2023-08-09 19:51:04,158 https://api.statbotics.io:443 "GET /v2/team_event/7627/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,158 Updating cache with response from "https://api.statbotics.io/v2/team_event/7627/2023pncmp"
+2023-08-09 19:51:04,158 Thread 45: finished API Fetch
+2023-08-09 19:51:04,158 Thread 45: finished
+2023-08-09 19:51:04,175 https://api.statbotics.io:443 "GET /v2/team_event/4488/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,179 Updating cache with response from "https://api.statbotics.io/v2/team_event/4488/2023pncmp"
+2023-08-09 19:51:04,179 Thread 30: finished API Fetch
+2023-08-09 19:51:04,179 Thread 30: finished
+2023-08-09 19:51:04,181 https://api.statbotics.io:443 "GET /v2/team_event/2990/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,181 Updating cache with response from "https://api.statbotics.io/v2/team_event/2990/2023pncmp"
+2023-08-09 19:51:04,181 Thread 18: finished API Fetch
+2023-08-09 19:51:04,182 Thread 18: finished
+2023-08-09 19:51:04,198 https://api.statbotics.io:443 "GET /v2/team_event/4131/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,199 Updating cache with response from "https://api.statbotics.io/v2/team_event/4131/2023pncmp"
+2023-08-09 19:51:04,199 Thread 28: finished API Fetch
+2023-08-09 19:51:04,199 Thread 28: finished
+2023-08-09 19:51:04,202 https://api.statbotics.io:443 "GET /v2/team_event/5468/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,202 https://api.statbotics.io:443 "GET /v2/team_event/2910/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,203 https://api.statbotics.io:443 "GET /v2/team_event/2811/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,203 https://api.statbotics.io:443 "GET /v2/team_event/1983/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,204 Updating cache with response from "https://api.statbotics.io/v2/team_event/5468/2023pncmp"
+2023-08-09 19:51:04,205 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,205 Thread 37: finished API Fetch
+2023-08-09 19:51:04,205 Thread 37: finished
+2023-08-09 19:51:04,205 Updating cache with response from "https://api.statbotics.io/v2/team_event/2910/2023pncmp"
+2023-08-09 19:51:04,206 Updating cache with response from "https://api.statbotics.io/v2/team_event/1983/2023pncmp"
+2023-08-09 19:51:04,206 Updating cache with response from "https://api.statbotics.io/v2/team_event/2811/2023pncmp"
+2023-08-09 19:51:04,207 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,207 Thread 15: finished API Fetch
+2023-08-09 19:51:04,207 Thread 15: finished
+2023-08-09 19:51:04,208 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,209 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,209 Thread 6: finished API Fetch
+2023-08-09 19:51:04,209 Thread 14: finished API Fetch
+2023-08-09 19:51:04,209 Thread 6: finished
+2023-08-09 19:51:04,209 Thread 14: finished
+2023-08-09 19:51:04,283 https://api.statbotics.io:443 "GET /v2/team_event/1540/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,283 https://api.statbotics.io:443 "GET /v2/team_event/3663/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,283 https://api.statbotics.io:443 "GET /v2/team_event/1899/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,283 https://api.statbotics.io:443 "GET /v2/team_event/7461/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,284 https://api.statbotics.io:443 "GET /v2/team_event/2521/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,284 Updating cache with response from "https://api.statbotics.io/v2/team_event/1540/2023pncmp"
+2023-08-09 19:51:04,285 Updating cache with response from "https://api.statbotics.io/v2/team_event/1899/2023pncmp"
+2023-08-09 19:51:04,285 https://api.statbotics.io:443 "GET /v2/team_event/1778/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,285 Updating cache with response from "https://api.statbotics.io/v2/team_event/7461/2023pncmp"
+2023-08-09 19:51:04,285 Updating cache with response from "https://api.statbotics.io/v2/team_event/2521/2023pncmp"
+2023-08-09 19:51:04,285 Updating cache with response from "https://api.statbotics.io/v2/team_event/3663/2023pncmp"
+2023-08-09 19:51:04,286 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,288 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,288 https://api.statbotics.io:443 "GET /v2/team_event/7034/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,289 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,290 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,290 Thread 3: finished API Fetch
+2023-08-09 19:51:04,291 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,291 Updating cache with response from "https://api.statbotics.io/v2/team_event/1778/2023pncmp"
+2023-08-09 19:51:04,291 https://api.statbotics.io:443 "GET /v2/team_event/5827/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,291 https://api.statbotics.io:443 "GET /v2/team_event/5920/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,291 Thread 5: finished API Fetch
+2023-08-09 19:51:04,291 Thread 11: finished API Fetch
+2023-08-09 19:51:04,291 Thread 23: finished API Fetch
+2023-08-09 19:51:04,291 Thread 3: finished
+2023-08-09 19:51:04,291 Thread 43: finished API Fetch
+2023-08-09 19:51:04,293 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,293 Updating cache with response from "https://api.statbotics.io/v2/team_event/7034/2023pncmp"
+2023-08-09 19:51:04,293 Thread 5: finished
+2023-08-09 19:51:04,293 Thread 11: finished
+2023-08-09 19:51:04,293 Thread 23: finished
+2023-08-09 19:51:04,294 Updating cache with response from "https://api.statbotics.io/v2/team_event/5827/2023pncmp"
+2023-08-09 19:51:04,294 Thread 43: finished
+2023-08-09 19:51:04,294 Thread 4: finished API Fetch
+2023-08-09 19:51:04,295 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,295 Thread 4: finished
+2023-08-09 19:51:04,295 Thread 42: finished API Fetch
+2023-08-09 19:51:04,296 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,296 Thread 42: finished
+2023-08-09 19:51:04,296 Thread 38: finished API Fetch
+2023-08-09 19:51:04,296 Thread 38: finished
+2023-08-09 19:51:04,301 https://api.statbotics.io:443 "GET /v2/team_event/488/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,301 Updating cache with response from "https://api.statbotics.io/v2/team_event/5920/2023pncmp"
+2023-08-09 19:51:04,303 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,303 Thread 39: finished API Fetch
+2023-08-09 19:51:04,304 Thread 39: finished
+2023-08-09 19:51:04,304 Updating cache with response from "https://api.statbotics.io/v2/team_event/488/2023pncmp"
+2023-08-09 19:51:04,305 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,305 Thread 32: finished API Fetch
+2023-08-09 19:51:04,305 Thread 32: finished
+2023-08-09 19:51:04,380 https://api.statbotics.io:443 "GET /v2/team_event/2930/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,380 https://api.statbotics.io:443 "GET /v2/team_event/6831/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,380 https://api.statbotics.io:443 "GET /v2/team_event/3218/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,381 Updating cache with response from "https://api.statbotics.io/v2/team_event/2930/2023pncmp"
+2023-08-09 19:51:04,382 Updating cache with response from "https://api.statbotics.io/v2/team_event/6831/2023pncmp"
+2023-08-09 19:51:04,383 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,383 Thread 16: finished API Fetch
+2023-08-09 19:51:04,383 Thread 16: finished
+2023-08-09 19:51:04,384 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,384 Thread 41: finished API Fetch
+2023-08-09 19:51:04,384 Thread 41: finished
+2023-08-09 19:51:04,385 Updating cache with response from "https://api.statbotics.io/v2/team_event/3218/2023pncmp"
+2023-08-09 19:51:04,385 https://api.statbotics.io:443 "GET /v2/team_event/6443/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,385 https://api.statbotics.io:443 "GET /v2/team_event/3711/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,385 https://api.statbotics.io:443 "GET /v2/team_event/948/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,386 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,387 Thread 20: finished API Fetch
+2023-08-09 19:51:04,387 Thread 20: finished
+2023-08-09 19:51:04,387 Updating cache with response from "https://api.statbotics.io/v2/team_event/6443/2023pncmp"
+2023-08-09 19:51:04,387 Updating cache with response from "https://api.statbotics.io/v2/team_event/948/2023pncmp"
+2023-08-09 19:51:04,388 https://api.statbotics.io:443 "GET /v2/team_event/492/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,389 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,389 Updating cache with response from "https://api.statbotics.io/v2/team_event/3711/2023pncmp"
+2023-08-09 19:51:04,389 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,390 https://api.statbotics.io:443 "GET /v2/team_event/4469/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,390 Thread 40: finished API Fetch
+2023-08-09 19:51:04,390 Thread 48: finished API Fetch
+2023-08-09 19:51:04,390 Updating cache with response from "https://api.statbotics.io/v2/team_event/492/2023pncmp"
+2023-08-09 19:51:04,391 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,391 https://api.statbotics.io:443 "GET /v2/team_event/753/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,391 Thread 40: finished
+2023-08-09 19:51:04,392 Thread 48: finished
+2023-08-09 19:51:04,392 Updating cache with response from "https://api.statbotics.io/v2/team_event/4469/2023pncmp"
+2023-08-09 19:51:04,392 Thread 25: finished API Fetch
+2023-08-09 19:51:04,393 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,393 https://api.statbotics.io:443 "GET /v2/team_event/8532/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,393 Thread 25: finished
+2023-08-09 19:51:04,393 Updating cache with response from "https://api.statbotics.io/v2/team_event/753/2023pncmp"
+2023-08-09 19:51:04,394 Thread 36: finished API Fetch
+2023-08-09 19:51:04,394 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,395 Thread 36: finished
+2023-08-09 19:51:04,395 Thread 29: finished API Fetch
+2023-08-09 19:51:04,396 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,396 https://api.statbotics.io:443 "GET /v2/team_event/1294/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,396 Thread 29: finished
+2023-08-09 19:51:04,396 Thread 44: finished API Fetch
+2023-08-09 19:51:04,397 Updating cache with response from "https://api.statbotics.io/v2/team_event/8532/2023pncmp"
+2023-08-09 19:51:04,397 Thread 44: finished
+2023-08-09 19:51:04,397 Updating cache with response from "https://api.statbotics.io/v2/team_event/1294/2023pncmp"
+2023-08-09 19:51:04,398 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,398 Thread 46: finished API Fetch
+2023-08-09 19:51:04,399 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,399 Thread 46: finished
+2023-08-09 19:51:04,399 Thread 0: finished API Fetch
+2023-08-09 19:51:04,399 Thread 0: finished
+2023-08-09 19:51:04,475 https://api.statbotics.io:443 "GET /v2/team_event/3070/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,476 Updating cache with response from "https://api.statbotics.io/v2/team_event/3070/2023pncmp"
+2023-08-09 19:51:04,477 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,477 https://api.statbotics.io:443 "GET /v2/team_event/9036/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,477 Thread 19: finished API Fetch
+2023-08-09 19:51:04,477 Thread 19: finished
+2023-08-09 19:51:04,478 Updating cache with response from "https://api.statbotics.io/v2/team_event/9036/2023pncmp"
+2023-08-09 19:51:04,479 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,479 Thread 47: finished API Fetch
+2023-08-09 19:51:04,479 Thread 47: finished
+2023-08-09 19:51:04,480 https://api.statbotics.io:443 "GET /v2/team_event/4918/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,481 Updating cache with response from "https://api.statbotics.io/v2/team_event/4918/2023pncmp"
+2023-08-09 19:51:04,481 https://api.statbotics.io:443 "GET /v2/team_event/2980/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,483 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,483 Thread 35: finished API Fetch
+2023-08-09 19:51:04,483 Thread 35: finished
+2023-08-09 19:51:04,483 Updating cache with response from "https://api.statbotics.io/v2/team_event/2980/2023pncmp"
+2023-08-09 19:51:04,484 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,484 Thread 17: finished API Fetch
+2023-08-09 19:51:04,484 Thread 17: finished
+2023-08-09 19:51:04,508 https://api.statbotics.io:443 "GET /v2/team_event/2522/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,508 https://api.statbotics.io:443 "GET /v2/team_event/3674/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,508 https://api.statbotics.io:443 "GET /v2/team_event/4915/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,509 https://api.statbotics.io:443 "GET /v2/team_event/3636/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,509 https://api.statbotics.io:443 "GET /v2/team_event/2471/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,510 Updating cache with response from "https://api.statbotics.io/v2/team_event/2522/2023pncmp"
+2023-08-09 19:51:04,510 Updating cache with response from "https://api.statbotics.io/v2/team_event/3674/2023pncmp"
+2023-08-09 19:51:04,511 Updating cache with response from "https://api.statbotics.io/v2/team_event/4915/2023pncmp"
+2023-08-09 19:51:04,512 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,513 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,513 Thread 12: finished API Fetch
+2023-08-09 19:51:04,513 Updating cache with response from "https://api.statbotics.io/v2/team_event/3636/2023pncmp"
+2023-08-09 19:51:04,513 Updating cache with response from "https://api.statbotics.io/v2/team_event/2471/2023pncmp"
+2023-08-09 19:51:04,513 Thread 34: finished API Fetch
+2023-08-09 19:51:04,515 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,515 Thread 12: finished
+2023-08-09 19:51:04,515 Thread 34: finished
+2023-08-09 19:51:04,515 Thread 24: finished API Fetch
+2023-08-09 19:51:04,517 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,517 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,518 Thread 24: finished
+2023-08-09 19:51:04,518 Thread 22: finished API Fetch
+2023-08-09 19:51:04,518 Thread 10: finished API Fetch
+2023-08-09 19:51:04,518 Thread 22: finished
+2023-08-09 19:51:04,518 Thread 10: finished
+2023-08-09 19:51:04,575 https://api.statbotics.io:443 "GET /v2/team_event/2046/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,575 Updating cache with response from "https://api.statbotics.io/v2/team_event/2046/2023pncmp"
+2023-08-09 19:51:04,575 https://api.statbotics.io:443 "GET /v2/team_event/4125/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,577 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,577 Thread 7: finished API Fetch
+2023-08-09 19:51:04,577 Thread 7: finished
+2023-08-09 19:51:04,578 Updating cache with response from "https://api.statbotics.io/v2/team_event/4125/2023pncmp"
+2023-08-09 19:51:04,579 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,579 Thread 27: finished API Fetch
+2023-08-09 19:51:04,579 Thread 27: finished
+2023-08-09 19:51:04,583 https://api.statbotics.io:443 "GET /v2/team_event/2147/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,583 https://api.statbotics.io:443 "GET /v2/team_event/360/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,583 https://api.statbotics.io:443 "GET /v2/team_event/2557/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,583 https://api.statbotics.io:443 "GET /v2/team_event/4911/2023pncmp HTTP/1.1" 200 None
+2023-08-09 19:51:04,584 Updating cache with response from "https://api.statbotics.io/v2/team_event/2147/2023pncmp"
+2023-08-09 19:51:04,585 Updating cache with response from "https://api.statbotics.io/v2/team_event/360/2023pncmp"
+2023-08-09 19:51:04,585 Updating cache with response from "https://api.statbotics.io/v2/team_event/2557/2023pncmp"
+2023-08-09 19:51:04,585 Updating cache with response from "https://api.statbotics.io/v2/team_event/4911/2023pncmp"
+2023-08-09 19:51:04,586 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,587 Thread 8: finished API Fetch
+2023-08-09 19:51:04,588 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,589 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,589 Thread 8: finished
+2023-08-09 19:51:04,590 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-08-09 19:51:04,590 Thread 21: finished API Fetch
+2023-08-09 19:51:04,590 Thread 13: finished API Fetch
+2023-08-09 19:51:04,590 Thread 33: finished API Fetch
+2023-08-09 19:51:04,590 Thread 21: finished
+2023-08-09 19:51:04,590 Thread 13: finished
+2023-08-09 19:51:04,590 Thread 33: finished
+2023-08-09 19:51:04,591 Main: finished Statbotics API fetch
+2023-08-09 19:51:04,591 127.0.0.1 - - [09/Aug/2023 19:51:04] "GET /get_rankings?event=2023pncmp&OPR=True&CCWMS=True&Overall=False&Auto=False&Teleop=True&Endgame=False HTTP/1.1" 200 -
