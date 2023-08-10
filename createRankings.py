@@ -119,7 +119,7 @@ def createRankings(event, useOPR, useCCWMS, useOverall_EPA, useAuto_EPA, useTele
         team_scores = [score for (score, team) in score_and_names]
         min_score = min(team_scores)
         for i in range(len(team_scores)):
-            team_scores[i] += abs(min_score) + 0.02
+            team_scores[i] += abs(min_score) + 0.1
 
         return json.dumps([team_names, team_scores])
     

@@ -48,7 +48,6 @@ async function get_events() {
         opt.innerHTML = element[0];
         $('#event_selection').append(opt);
     });
-    console.log(resp);
 }
 
 async function get_rankings() {
@@ -71,31 +70,49 @@ async function get_rankings() {
     let resp = JSON.parse(res);
 
     names = resp[0];
+    console.log(names);
     scores = resp[1];
 
-    const ctx = document.getElementById('ranking_score').getContext('2d');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: names,
-            datasets: [{
-                // axis: 'y',
-                label: 'Ranking',
-                data: scores,
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                // indexAxis: 'y',
-                x: {
-                    beginAtZero: true
+    if (document.getElementById('ranking_score').style["display"] == "") {
+        const ctx = document.getElementById('ranking_score').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: names,
+                datasets: [{
+                    // axis: 'y',
+                    label: 'Ranking',
+                    data: scores,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    // indexAxis: 'y',
+                    x: {
+                        beginAtZero: true
+                    }
                 }
             }
-        }
-    });
+        });
+    } else {
+        chart = Chart.getChart('ranking_score');
+        removeData(chart);
+        addData(chart, names, scores);
+    }
 }
 
+function addData(chart, label, newData) {
+    chart.data.labels = label;
+    chart.data.datasets[0].data = newData
+    chart.update();
+}
+
+function removeData(chart) {
+    chart.data.labels = [];
+    chart.data.datasets[0].data = [];
+}
+ 
 function search_team() {
     team = $('#team_search').val();
     console.log("runing");
