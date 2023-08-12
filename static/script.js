@@ -19,20 +19,6 @@
 
 var team = 492
 
-async function getChannel() {
-    let res = await fetch(`/get_channels?team=${team}`)
-    res = await res.text();
-     if (res != "No current events") {
-        var options = {
-            width: 854,
-            height: 480,
-            channel: res,
-        };
-        var player = new Twitch.Player("twitch-embed", options);
-        player.setVolume(0.5);
-    }
-}
-
 async function get_events() {
     let res = await fetch(`/get_events?season=${$('#season_selection').val()}&team_number=${$('#team_number').val()} `);
     res = await res.text();

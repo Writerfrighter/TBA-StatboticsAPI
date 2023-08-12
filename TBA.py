@@ -32,6 +32,9 @@ def fetchEventChannels(team):
             return event["webcasts"][0]["channel"]
     return "No current events"
 
+def fetchMatchesForEvent(team, eventCode):
+    resp = fetchAPIData("team/frc{}/event/{}/matches/simple".format(team, eventCode))
+    return resp
 def fetchTeamInfo(team):
     resp = fetchAPIData("/team/frc{}".format(team))
     return resp

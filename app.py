@@ -26,11 +26,13 @@ def getTeamData(number):
 
 @app.route('/')
 def index():
-	return render_template('index.html', current_event = True if TBA.fetchEventChannels(team_number) != "No current events" else False)
+	channel = TBA.fetchEventChannels(team_number)
+	return render_template('index.html', current_event = channel if channel != "No current events" else False, matches = TBA.fetchMatchesForEvent(team_number, "2023pncmp"))
 
 @app.route('/chat')
 def chat():
 	return render_template('chat.html')
+
 @app.route('/scouting')
 def scouting():
 	return render_template('scouting.html', current_year = datetime.now().year, years = np.flip(np.arange(start=1992, stop=datetime.now().year)))
@@ -64,6 +66,7 @@ def chat_response():
 	# Magic Chat stuff Annand will make
 
 	return response
+
 @app.route('/get_events')
 def get_events():
 	season = request.args.get('season')
