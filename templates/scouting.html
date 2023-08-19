@@ -1,72 +1,117 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<form
+  name="beginning_data"
+  onsubmit="event.preventDefault(); get_events()"
+  onchange="get_events()"
+>
+  <label for="season_selection" class="form-label"
+    >Select the season you're scouting for</label
+  >
+  <select
+    class="form-select"
+    aria-label="Season selection"
+    id="season_selection"
+  >
+    <option selected>{{current_year}}</option>
+    {% for year in years %}
+    <option value="{{year}}">{{year}}</option>
+    {% endfor %}
+  </select>
 
-{% block content %}
-    <form name="beginning_data" onsubmit="event.preventDefault(); get_events()" onchange="get_events()">
-    
-        <label for="season_selection" class="form-label">Select the season you're scouting for</label>
-        <select class="form-select" aria-label="Season selection" id = "season_selection">
-            <option selected>{{current_year}}</option>
-            {% for year in years %}
-                <option value={{year}}>{{year}}</option>
-            {% endfor %}
-        </select>
+  <label for="team_number" class="form-label">Team number</label>
+  <input type="number" id="team_number" class="form-control" value="492" />
+</form>
+<div id="testing"></div>
+<form
+  id="event_selection_form"
+  onsubmit="event.preventDefault(); get_events()"
+  class="d-none"
+>
+  <label for="event_selection" class="form-label"
+    >Select an event to scout for</label
+  >
+  <select
+    class="form-select"
+    aria-label="Event selection"
+    id="event_selection"
+  ></select>
 
-        <label for="team_number" class="form-label">Team number</label>
-        <input type="number" id="team_number" class="form-control" value=492>
-
-    </form>
-    <div id="testing"></div>
-    <form id = "event_selection_form" onsubmit="event.preventDefault(); get_events()" class="d-none">
-        <label for="event_selection" class="form-label">Select an event to scout for</label>
-            <select class="form-select" aria-label="Event selection" id = "event_selection"></select>
-        
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="use_OPR" checked>
-            <label class="form-check-label" for="use_OPR">
-                Use OPR
-            </label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="use_CCWMS" checked>
-            <label class="form-check-label" for="use_CCWMS">
-                Use CCWMS
-            </label>
-        </div>
-        <br>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="use_overall_EPA" checked>
-            <label class="form-check-label" for="use_overall_EPA">
-                Use Overall EPA
-            </label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="use_auto_EPA" checked>
-            <label class="form-check-label" for="use_auto_EPA">
-                Use Auto EPA
-            </label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="use_TeleOp_EPA" checked>
-            <label class="form-check-label" for="use_teleop_EPA">
-                Use TeleOp EPA
-            </label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="" id="use_endgame_EPA" checked>
-            <label class="form-check-label" for="use_endgame_EPA">
-                Use Endgame EPA
-            </label>
-        </div>
-        <br>
-        <button type="submit" class="btn btn-success" onclick="get_rankings()">
-            <div class="spinner-border d-none" role="status" id="calculate_spinner">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <div id="calculate_label">Calculate</div>
-        </button>
-
-    </form>
-    <div>
-        <canvas style="width: 800; height: 600;" id="ranking_score"></canvas>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="use_OPR"
+      checked
+    />
+    <label class="form-check-label" for="use_OPR"> Use OPR </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="use_CCWMS"
+      checked
+    />
+    <label class="form-check-label" for="use_CCWMS"> Use CCWMS </label>
+  </div>
+  <br />
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="use_overall_EPA"
+      checked
+    />
+    <label class="form-check-label" for="use_overall_EPA">
+      Use Overall EPA
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="use_auto_EPA"
+      checked
+    />
+    <label class="form-check-label" for="use_auto_EPA"> Use Auto EPA </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="use_TeleOp_EPA"
+      checked
+    />
+    <label class="form-check-label" for="use_teleop_EPA">
+      Use TeleOp EPA
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="use_endgame_EPA"
+      checked
+    />
+    <label class="form-check-label" for="use_endgame_EPA">
+      Use Endgame EPA
+    </label>
+  </div>
+  <br />
+  <button type="submit" class="btn btn-success" onclick="get_rankings()">
+    <div class="spinner-border d-none" role="status" id="calculate_spinner">
+      <span class="visually-hidden">Loading...</span>
     </div>
+    <div id="calculate_label">Calculate</div>
+  </button>
+</form>
+<div>
+  <canvas style="width: 800; height: 600" id="ranking_score"></canvas>
+</div>
 {% endblock %}

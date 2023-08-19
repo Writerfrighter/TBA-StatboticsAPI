@@ -1,44 +1,54 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <!-- Card loader -->
-    <div class="row">
-    {% for team in teams %}
-        <div class="card col-2 position-relative" style="width: 18rem;">
-            {% if team["images"] == "No Images" %}
-                <img src="./static/images/no-image-available.png" class=""></img>
-            {% elif team["images"]|length > 1%}
-                <div id="{{ team["number"] }}" class="carousel slide card-img-top" data-bs-ride="carousel">
-                    <div class="carousel-inner center-cropped">
-                        <div class="carousel-item active">
-                            <img src="{{ team["images"][0] }}" class="d-block w-100" alt="...">
-                        </div>
-                        {% for image in team["images"][1::] %}
-                            <div class="carousel-item">
-                                <img src="{{ image }}" class="d-block w-100" alt="...">
-                            </div>
-                        {% endfor %}
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#{{ team["number"] }}" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#{{ team["number"] }}" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            {% else %}
-                <img src="{{ team["images"][0] }}" class="center-cropped"></img>
-            {% endif %}
-            
-            <div class="card-body">
-                <h5 class="card-title">{{ team["name"] }}</h5>
-                <p class="card-text">Team {{ team["number"] }}, from {{ team["location"]}}.</p>
-                <a href="/team/{{ team["number"] }}"" class="btn btn-primary">Scouting page</a>
-                <a href="{{ team["website"] }}" class="btn btn-primary">Website</a>
-            </div>
+{% extends "base.html" %} {% block content %}
+<!-- Card loader -->
+<div class="row">
+  {% for team in teams %}
+  <div class="card col-2 position-relative" style="width: 18rem">
+    {% if team["images"] == "No Images" %}
+    <img src="./static/images/no-image-available.png" class="" />
+    {% elif team["images"]|length > 1%}
+    <div id="{{ team["number"] }}" class="carousel slide card-img-top" data-bs-ride="carousel">
+      <div class="carousel-inner center-cropped">
+        <div class="carousel-item active">
+          <img src="{{ team["images"][0] }}" class="d-block w-100" alt="..." />
         </div>
-    {% endfor %}
+        {% for image in team["images"][1::] %}
+        <div class="carousel-item">
+          <img src="{{ image }}" class="d-block w-100" alt="..." />
+        </div>
+        {% endfor %}
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#{{ team["number"] }}"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#{{ team["number"] }}"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+    {% else %}
+    <img src="{{ team["images"][0] }}" class="center-cropped" />
+    {% endif %}
+
+    <div class="card-body">
+      <h5 class="card-title">{{ team["name"] }}</h5>
+      <p class="card-text">
+        Team {{ team["number"] }}, from {{ team["location"]}}.
+      </p>
+      <a href="/team/{{ team["number"] }}" class="btn btn-primary">Scouting page</a>
+      <a href="{{ team["website"] }}" class="btn btn-primary">Website</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}

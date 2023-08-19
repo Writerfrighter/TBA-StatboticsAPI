@@ -1,8 +1,8 @@
-2023-08-11 21:01:15,488 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-08-13 15:33:34,638 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2023-08-11 21:01:15,488 [33mPress CTRL+C to quit[0m
-2023-08-11 21:01:17,056 127.0.0.1 - - [11/Aug/2023 21:01:17] "GET / HTTP/1.1" 200 -
-2023-08-11 21:01:17,384 127.0.0.1 - - [11/Aug/2023 21:01:17] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-08-11 21:01:17,415 127.0.0.1 - - [11/Aug/2023 21:01:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-08-11 21:01:17,434 127.0.0.1 - - [11/Aug/2023 21:01:17] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-08-11 21:01:17,781 127.0.0.1 - - [11/Aug/2023 21:01:17] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2023-08-13 15:33:34,639 [33mPress CTRL+C to quit[0m
+2023-08-13 15:33:38,435 127.0.0.1 - - [13/Aug/2023 15:33:38] "GET / HTTP/1.1" 200 -
+2023-08-13 15:33:38,486 127.0.0.1 - - [13/Aug/2023 15:33:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-08-13 15:33:38,489 127.0.0.1 - - [13/Aug/2023 15:33:38] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-08-13 15:33:38,806 127.0.0.1 - - [13/Aug/2023 15:33:38] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-08-13 15:33:39,060 127.0.0.1 - - [13/Aug/2023 15:33:39] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
