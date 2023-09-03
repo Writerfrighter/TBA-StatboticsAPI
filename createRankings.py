@@ -196,6 +196,7 @@ def createRankings(
         #        score_and_names[i][0] = max(scores)+abs(min(scores))+ random.random() * 2
 
         score_and_names.sort(reverse=True)
+        
         # print("Ranked teams on OPR and EPA")
         # print(*score_and_names, sep="\n")
 
