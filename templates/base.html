@@ -83,7 +83,7 @@
               <a class="nav-link disabled">Disabled</a>
             </li>
           </ul>
-          <form class="d-flex" role="search" onsubmit="search_team()">
+          <form class="d-flex" role="search" onsubmit="event.preventDefault(); search_team()">
             <input
               class="form-control me-2"
               type="search"

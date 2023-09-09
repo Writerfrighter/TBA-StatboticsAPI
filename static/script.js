@@ -126,7 +126,7 @@ function removeData(chart) {
 function search_team() {
   team = $("#team_search").val();
   console.log("runing");
-  window.location.assign("https://youtube.com");
+  window.location.assign("/team/" + team);
 }
 
 function change_flex() {
