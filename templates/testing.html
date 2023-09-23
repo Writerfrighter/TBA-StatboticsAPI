@@ -46,7 +46,11 @@
         Team {{ team["number"] }}, from {{ team["location"]}}.
       </p>
       <a href="/team/{{ team["number"] }}" class="btn btn-primary">Scouting page</a>
-      <a href="{{ team["website"] }}" class="btn btn-primary">Website</a>
+      {% if team["website"] ==None %}
+      <a class="btn btn-primary disabled">Website</a>
+      {% else %}
+        <a href="{{ team["website"] }}" class="btn btn-primary">Website</a>
+      {% endif %}
     </div>
   </div>
   {% endfor %}
