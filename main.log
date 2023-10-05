@@ -1,90 +1,63 @@
-2023-09-22 19:15:42,680 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-10-05 13:25:41,160 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2023-09-22 19:15:42,681 [33mPress CTRL+C to quit[0m
-2023-09-22 19:15:45,451 127.0.0.1 - - [22/Sep/2023 19:15:45] "GET / HTTP/1.1" 200 -
-2023-09-22 19:15:46,519 127.0.0.1 - - [22/Sep/2023 19:15:46] "GET /static/style.css HTTP/1.1" 200 -
-2023-09-22 19:15:46,879 127.0.0.1 - - [22/Sep/2023 19:15:46] "GET /static/script.js HTTP/1.1" 200 -
-2023-09-22 19:15:47,323 127.0.0.1 - - [22/Sep/2023 19:15:47] "GET /static/images/TRC+Logo.png HTTP/1.1" 200 -
-2023-09-22 19:15:48,418 127.0.0.1 - - [22/Sep/2023 19:15:48] "GET /static/images/favicon.ico HTTP/1.1" 200 -
-2023-09-22 19:15:50,401 127.0.0.1 - - [22/Sep/2023 19:15:50] "[33mGET /team// HTTP/1.1[0m" 404 -
-2023-09-22 19:15:50,709 127.0.0.1 - - [22/Sep/2023 19:15:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2023-09-22 19:15:55,691 127.0.0.1 - - [22/Sep/2023 19:15:55] "GET /team/492 HTTP/1.1" 200 -
-2023-09-22 19:15:59,604 127.0.0.1 - - [22/Sep/2023 19:15:59] "[33mGET /team/ HTTP/1.1[0m" 404 -
-2023-09-22 19:16:08,615 127.0.0.1 - - [22/Sep/2023 19:16:08] "GET /team/492?q=1 HTTP/1.1" 200 -
-2023-09-22 19:16:56,385 127.0.0.1 - - [22/Sep/2023 19:16:56] "GET / HTTP/1.1" 200 -
-2023-09-22 19:16:56,460 127.0.0.1 - - [22/Sep/2023 19:16:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-09-22 19:16:56,854 127.0.0.1 - - [22/Sep/2023 19:16:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-09-22 19:16:56,860 127.0.0.1 - - [22/Sep/2023 19:16:56] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-09-22 19:16:58,599 Thread for team 1294: Starting
-2023-09-22 19:16:58,600 Thread for team 1899: Starting
-2023-09-22 19:16:58,601 Thread for team 1983: Starting
-2023-09-22 19:16:58,605 Thread for team 2097: Starting
-2023-09-22 19:16:58,611 Thread for team 2412: Starting
-2023-09-22 19:16:58,620 Thread for team 2903: Starting
-2023-09-22 19:16:58,626 Thread for team 2910: Starting
-2023-09-22 19:16:58,634 Thread for team 2928: Starting
-2023-09-22 19:16:58,645 Thread for team 2976: Starting
-2023-09-22 19:16:58,731 Thread for team 3070: Starting
-2023-09-22 19:16:58,759 Thread for team 360: Starting
-2023-09-22 19:16:58,764 Thread for team 3681: Starting
-2023-09-22 19:16:58,776 Thread for team 3876: Starting
-2023-09-22 19:16:58,780 Thread for team 4173: Starting
-2023-09-22 19:16:58,784 Thread for team 4180: Starting
-2023-09-22 19:16:58,798 Thread for team 4450: Starting
-2023-09-22 19:16:58,809 Thread for team 4512: Starting
-2023-09-22 19:16:58,818 Thread for team 4682: Starting
-2023-09-22 19:16:58,829 Thread for team 488: Starting
-2023-09-22 19:16:58,835 Thread for team 4911: Starting
-2023-09-22 19:16:58,844 Thread for team 492: Starting
-2023-09-22 19:16:58,919 Thread for team 5827: Starting
-2023-09-22 19:16:58,933 Thread for team 5937: Starting
-2023-09-22 19:16:58,942 Thread for team 5941: Starting
-2023-09-22 19:16:58,952 Thread for team 7461: Starting
-2023-09-22 19:16:58,959 Thread for team 8032: Starting
-2023-09-22 19:16:58,963 Thread for team 8051: Starting
-2023-09-22 19:16:58,968 Thread for team 8248: Starting
-2023-09-22 19:16:58,987 Thread for team 9023: Starting
-2023-09-22 19:16:59,117 Thread for team 9036: Starting
-2023-09-22 19:16:59,131 Thread for team 948: Starting
-2023-09-22 19:16:59,150 Thread for team 949: Starting
-2023-09-22 19:16:59,994 Thread for team 1983: Finished
-2023-09-22 19:17:00,472 Thread for team 2928: Finished
-2023-09-22 19:17:00,501 Thread for team 2910: Finished
-2023-09-22 19:17:01,214 Thread for team 1899: Finished
-2023-09-22 19:17:01,730 Thread for team 2097: Finished
-2023-09-22 19:17:02,243 Thread for team 5937: Finished
-2023-09-22 19:17:02,793 Thread for team 4911: Finished
-2023-09-22 19:17:02,812 Thread for team 5941: Finished
-2023-09-22 19:17:02,818 Thread for team 488: Finished
-2023-09-22 19:17:02,855 Thread for team 949: Finished
-2023-09-22 19:17:02,999 Thread for team 492: Finished
-2023-09-22 19:17:03,014 Thread for team 1294: Finished
-2023-09-22 19:17:03,019 Thread for team 9036: Finished
-2023-09-22 19:17:03,658 Thread for team 4450: Finished
-2023-09-22 19:17:04,018 Thread for team 3070: Finished
-2023-09-22 19:17:04,134 Thread for team 2976: Finished
-2023-09-22 19:17:05,373 Thread for team 7461: Finished
-2023-09-22 19:17:05,681 Thread for team 2412: Finished
-2023-09-22 19:17:05,974 Thread for team 4682: Finished
-2023-09-22 19:17:06,084 Thread for team 360: Finished
-2023-09-22 19:17:06,187 Thread for team 2903: Finished
-2023-09-22 19:17:06,677 Thread for team 8051: Finished
-2023-09-22 19:17:07,296 Thread for team 4180: Finished
-2023-09-22 19:17:07,700 Thread for team 4173: Finished
-2023-09-22 19:17:08,290 Thread for team 9023: Finished
-2023-09-22 19:17:08,935 Thread for team 8248: Finished
-2023-09-22 19:17:09,545 Thread for team 3876: Finished
-2023-09-22 19:17:09,958 Thread for team 948: Finished
-2023-09-22 19:17:10,683 Thread for team 3681: Finished
-2023-09-22 19:17:11,189 Thread for team 4512: Finished
-2023-09-22 19:17:11,716 Thread for team 8032: Finished
-2023-09-22 19:17:12,928 Thread for team 5827: Finished
-2023-09-22 19:17:12,970 127.0.0.1 - - [22/Sep/2023 19:17:12] "GET /testing HTTP/1.1" 200 -
-2023-09-22 19:17:13,027 127.0.0.1 - - [22/Sep/2023 19:17:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-09-22 19:17:13,499 127.0.0.1 - - [22/Sep/2023 19:17:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-09-22 19:17:13,501 127.0.0.1 - - [22/Sep/2023 19:17:13] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-09-22 19:20:21,964 127.0.0.1 - - [22/Sep/2023 19:20:21] "GET /chat HTTP/1.1" 200 -
-2023-09-22 19:20:22,059 127.0.0.1 - - [22/Sep/2023 19:20:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-09-22 19:20:22,312 127.0.0.1 - - [22/Sep/2023 19:20:22] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
-2023-09-22 19:20:22,396 127.0.0.1 - - [22/Sep/2023 19:20:22] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-09-22 19:21:53,319 127.0.0.1 - - [22/Sep/2023 19:21:53] "GET /chat_response?chat=Hi%20There HTTP/1.1" 200 -
+2023-10-05 13:25:41,160 [33mPress CTRL+C to quit[0m
+2023-10-05 13:25:49,174 127.0.0.1 - - [05/Oct/2023 13:25:49] "GET / HTTP/1.1" 200 -
+2023-10-05 13:25:49,394 127.0.0.1 - - [05/Oct/2023 13:25:49] "GET /static/style.css HTTP/1.1" 200 -
+2023-10-05 13:25:49,420 127.0.0.1 - - [05/Oct/2023 13:25:49] "GET /static/script.js HTTP/1.1" 200 -
+2023-10-05 13:25:49,898 127.0.0.1 - - [05/Oct/2023 13:25:49] "GET /static/images/TRC+Logo.png HTTP/1.1" 200 -
+2023-10-05 13:25:50,160 127.0.0.1 - - [05/Oct/2023 13:25:50] "GET /static/images/favicon.ico HTTP/1.1" 200 -
+2023-10-05 13:25:51,178 Thread for team 1294: Starting
+2023-10-05 13:25:51,179 Thread for team 1318: Starting
+2023-10-05 13:25:51,180 Thread for team 1778: Starting
+2023-10-05 13:25:51,181 Thread for team 1899: Starting
+2023-10-05 13:25:51,182 Thread for team 2046: Starting
+2023-10-05 13:25:51,183 Thread for team 2122: Starting
+2023-10-05 13:25:51,184 Thread for team 2412: Starting
+2023-10-05 13:25:51,184 Thread for team 2522: Starting
+2023-10-05 13:25:51,185 Thread for team 2557: Starting
+2023-10-05 13:25:51,186 Thread for team 2910: Starting
+2023-10-05 13:25:51,187 Thread for team 2926: Starting
+2023-10-05 13:25:51,188 Thread for team 2928: Starting
+2023-10-05 13:25:51,189 Thread for team 2976: Starting
+2023-10-05 13:25:51,190 Thread for team 2990: Starting
+2023-10-05 13:25:51,192 Thread for team 3218: Starting
+2023-10-05 13:25:51,200 Thread for team 4089: Starting
+2023-10-05 13:25:51,201 Thread for team 4180: Starting
+2023-10-05 13:25:51,202 Thread for team 4911: Starting
+2023-10-05 13:25:51,203 Thread for team 492: Starting
+2023-10-05 13:25:51,204 Thread for team 5937: Starting
+2023-10-05 13:25:51,204 Thread for team 6443: Starting
+2023-10-05 13:25:51,205 Thread for team 8248: Starting
+2023-10-05 13:25:51,206 Thread for team 9036: Starting
+2023-10-05 13:25:51,207 Thread for team 948: Starting
+2023-10-05 13:25:51,208 Thread for team 949: Starting
+2023-10-05 13:25:52,745 Thread for team 2990: Finished
+2023-10-05 13:25:52,779 Thread for team 1778: Finished
+2023-10-05 13:25:53,202 Thread for team 2122: Finished
+2023-10-05 13:25:53,311 Thread for team 4180: Finished
+2023-10-05 13:25:53,475 Thread for team 2926: Finished
+2023-10-05 13:25:53,511 Thread for team 2976: Finished
+2023-10-05 13:25:53,665 Thread for team 8248: Finished
+2023-10-05 13:25:53,725 Thread for team 1899: Finished
+2023-10-05 13:25:53,972 Thread for team 1318: Finished
+2023-10-05 13:25:54,249 Thread for team 1294: Finished
+2023-10-05 13:25:54,630 Thread for team 948: Finished
+2023-10-05 13:25:54,786 Thread for team 2412: Finished
+2023-10-05 13:25:54,942 Thread for team 2046: Finished
+2023-10-05 13:25:55,375 Thread for team 949: Finished
+2023-10-05 13:25:55,520 Thread for team 2522: Finished
+2023-10-05 13:25:55,683 Thread for team 5937: Finished
+2023-10-05 13:25:55,954 Thread for team 2910: Finished
+2023-10-05 13:25:55,962 Thread for team 2557: Finished
+2023-10-05 13:25:55,973 Thread for team 4089: Finished
+2023-10-05 13:25:56,111 Thread for team 4911: Finished
+2023-10-05 13:25:56,172 Thread for team 9036: Finished
+2023-10-05 13:25:56,494 Thread for team 2928: Finished
+2023-10-05 13:25:56,611 Thread for team 3218: Finished
+2023-10-05 13:26:01,090 Thread for team 6443: Finished
+2023-10-05 13:26:01,209 Thread for team 492: Finished
+2023-10-05 13:26:01,214 127.0.0.1 - - [05/Oct/2023 13:26:01] "GET /testing HTTP/1.1" 200 -
+2023-10-05 13:26:01,259 127.0.0.1 - - [05/Oct/2023 13:26:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-05 13:26:01,577 127.0.0.1 - - [05/Oct/2023 13:26:01] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-10-05 13:26:01,617 127.0.0.1 - - [05/Oct/2023 13:26:01] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-10-05 13:26:01,632 127.0.0.1 - - [05/Oct/2023 13:26:01] "GET /static/images/no-image-available.png HTTP/1.1" 200 -

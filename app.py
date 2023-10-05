@@ -72,7 +72,7 @@ def game_scouting():
 def testing():
     global teams
     teams = []
-    team_numbers = TBA.fetchTeamsForEvents("2023wasam")
+    team_numbers = TBA.fetchTeamsForEvents("2023brd")
     with concurrent.futures.ThreadPoolExecutor(
         max_workers=len(team_numbers)
     ) as executer:
