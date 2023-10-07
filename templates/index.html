@@ -11,9 +11,6 @@
   player.setVolume(0.5);
 </script>
 <div class="h2">Upcoming Matches</div>
-
-{% else %}
-<h1>No current events</h1>
 <table class="table text-center">
   <thead>
     <tr>
@@ -67,4 +64,7 @@
     {% endfor %}
   </tbody>
 </table>
+{% else %}
+<h1>No current events</h1>
+
 {% endif %} {% endblock %}

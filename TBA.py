@@ -31,7 +31,7 @@ def fetchEventOprs(eventCode):
     return team_data
 
 
-def fetchEventChannels(team):
+def fetchCurrentEvent(team):
     date = datetime.now()
     resp = fetchAPIData("team/frc{}/events/{}".format(team, date.year))
     for event in resp:
@@ -39,7 +39,7 @@ def fetchEventChannels(team):
             event["start_date"] < str(date)[:11:]
             and event["end_date"] > str(date)[:11:]
         ):
-            return event["webcasts"][0]["channel"]
+            return event
     return "No current events"
 
 

@@ -36,12 +36,19 @@ def getTeamData(number):
 
 @app.route("/")
 def index():
-    channel = TBA.fetchEventChannels(team_number)
-    return render_template(
-        "index.html",
-        current_event=channel if channel != "No current events" else False,
-        matches=TBA.fetchMatchesForEvent(team_number, "2023pncmp"),
-    )
+    currentEvent = TBA.fetchCurrentEvent(team_number)
+
+    if currentEvent != "No current events":
+        return render_template(
+            "index.html",
+            current_event=currentEvent["webcasts"][0]["channel"],
+            matches=TBA.fetchMatchesForEvent(team_number, currentEvent["event_code"]),
+        )
+    else:
+        return render_template(
+            "index.html",
+            current_event=False,
+        )
 
 
 @app.route("/chat")
