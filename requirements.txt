@@ -4,4 +4,3 @@ requests
 numpy
 statbotics
 gunicorn
-werkzeug.utils
