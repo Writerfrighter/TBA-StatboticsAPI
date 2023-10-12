@@ -1,0 +1,8 @@
+2023-10-10 21:02:39,341 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-10-10 21:02:39,342 [33mPress CTRL+C to quit[0m
+2023-10-10 21:02:40,247 127.0.0.1 - - [10/Oct/2023 21:02:40] "GET /game_scouting HTTP/1.1" 200 -
+2023-10-10 21:02:40,297 127.0.0.1 - - [10/Oct/2023 21:02:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-10 21:02:40,309 127.0.0.1 - - [10/Oct/2023 21:02:40] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-10-10 21:02:40,627 127.0.0.1 - - [10/Oct/2023 21:02:40] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-10-10 21:02:40,887 127.0.0.1 - - [10/Oct/2023 21:02:40] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -

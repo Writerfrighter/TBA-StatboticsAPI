@@ -1,18 +1,21 @@
 from flask import Flask, render_template, request, send_file, jsonify, flash, redirect
 from werkzeug.utils import secure_filename
+from pretty_html_table import build_table
 from datetime import datetime
+import pandas as pd
 import numpy as np
 import logging
 import concurrent.futures
 import createRankings
 import TBA
+import glob
 import os
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "scouting_data"
 app.secret_key = "no"
 
-allowed_extensions = ["csv", "xlsx", "png"]  # Extensions parsable by the data reader.
+allowed_extensions = ["csv", "xlsx"]  # Extensions parsable by the data reader.
 team_number = 492
 
 # Setting logging config
@@ -89,7 +92,16 @@ def game_scouting():
                 return render_template("game-scouting.html", message="No file attached")
             elif not allowed_file(file.filename):
                 return render_template(
-                    "game-scouting.html", message="File(s) is an unsupported extension"
+                    "game-scouting.html",
+                    message="File(s) is an unsupported extension",
+                    table=build_table(
+                        pd.read_excel(
+                            os.path.join(
+                                "combined_data", os.listdir("combined_data")[0]
+                            )
+                        ),
+                        "blue_light",
+                    ),
                 )
 
         for file in files:
@@ -98,9 +110,26 @@ def game_scouting():
                     app.config["UPLOAD_FOLDER"], secure_filename(file.filename)
                 )
             )
-        return render_template("game-scouting.html", success = True)
+        return render_template(
+            "game-scouting.html",
+            success=True,
+            table=build_table(
+                pd.read_excel(
+                    os.path.join("combined_data", os.listdir("combined_data")[0])
+                ),
+                "blue_light",
+            ),
+        )
     else:
-        return render_template("game-scouting.html")
+        return render_template(
+            "game-scouting.html",
+            table=build_table(
+                pd.read_excel(
+                    os.path.join("combined_data", os.listdir("combined_data")[0])
+                ),
+                "blue_light",
+            ),
+        )
 
 
 @app.route("/team_list")
@@ -165,6 +194,24 @@ def get_rankings():
         use_teleop_EPA,
         use_endgame_EPA,
     )
+
+
+@app.route("/download_data/<id>")
+def download_data(id):
+    try:
+        id = int(id)
+    except:
+        return "ID is not a valid integer"
+    if len(os.listdir("combined_data")) <= 0:
+        return "There are currently no available downloads."
+    elif len(os.listdir("combined_data")) <= id or id <= 0:
+        return "Invalid ID range."
+    else:
+        return send_file(
+            os.path.join(
+                "combined_data", os.listdir("combined_data").sort(key=os.path.getctime)
+            )[id]
+        )
 
 
 @app.route("/webhook", methods=["GET", "POST"])

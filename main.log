@@ -1,0 +1,53 @@
+2023-10-11 12:39:18,550 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-10-11 12:39:18,550 [33mPress CTRL+C to quit[0m
+2023-10-11 12:39:20,153 127.0.0.1 - - [11/Oct/2023 12:39:20] "[33mGET /combined_data/TRC%20Interested%20Students%20for%202023-2024%20Season%20(1).xlsx HTTP/1.1[0m" 404 -
+2023-10-11 12:39:24,018 127.0.0.1 - - [11/Oct/2023 12:39:24] "GET /game_scouting HTTP/1.1" 200 -
+2023-10-11 12:39:24,082 127.0.0.1 - - [11/Oct/2023 12:39:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-11 12:39:24,098 127.0.0.1 - - [11/Oct/2023 12:39:24] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-10-11 12:39:24,426 127.0.0.1 - - [11/Oct/2023 12:39:24] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-10-11 12:39:26,148 127.0.0.1 - - [11/Oct/2023 12:39:26] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2023-10-11 12:39:59,721 127.0.0.1 - - [11/Oct/2023 12:39:59] "GET /download_data HTTP/1.1" 200 -
+2023-10-11 12:45:28,517 Exception on /game_scouting [GET]
+Traceback (most recent call last):
+  File "C:\Users\s-fangno\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s-fangno\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s-fangno\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s-fangno\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\s-fangno\OneDrive\Documents\TRC\Scouting_Programs\TBAStatboticsAPI\app.py", line 108, in game_scouting
+    os.path.join("combined_data", os.listdir("combined_data")[0])
+  File "C:\Users\s-fangno\AppData\Roaming\Python\Python311\site-packages\pandas\io\excel\_base.py", line 504, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "C:\Users\s-fangno\AppData\Roaming\Python\Python311\site-packages\pandas\io\excel\_base.py", line 1567, in __init__
+    raise ValueError(
+ValueError: Excel file format cannot be determined, you must specify an engine manually.
+2023-10-11 12:45:28,617 127.0.0.1 - - [11/Oct/2023 12:45:28] "[35m[1mGET /game_scouting HTTP/1.1[0m" 500 -
+2023-10-11 12:50:13,180 127.0.0.1 - - [11/Oct/2023 12:50:13] "GET /game_scouting HTTP/1.1" 200 -
+2023-10-11 12:50:13,222 127.0.0.1 - - [11/Oct/2023 12:50:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-11 12:50:13,399 127.0.0.1 - - [11/Oct/2023 12:50:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-10-11 12:50:13,719 127.0.0.1 - - [11/Oct/2023 12:50:13] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-10-11 12:50:15,342 127.0.0.1 - - [11/Oct/2023 12:50:15] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2023-10-11 12:50:40,764 127.0.0.1 - - [11/Oct/2023 12:50:40] "GET /game_scouting HTTP/1.1" 200 -
+2023-10-11 12:50:40,788 127.0.0.1 - - [11/Oct/2023 12:50:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-11 12:50:41,010 127.0.0.1 - - [11/Oct/2023 12:50:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-10-11 12:50:41,324 127.0.0.1 - - [11/Oct/2023 12:50:41] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-10-11 12:50:42,892 127.0.0.1 - - [11/Oct/2023 12:50:42] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2023-10-11 12:50:43,692 127.0.0.1 - - [11/Oct/2023 12:50:43] "GET /download_data HTTP/1.1" 200 -
+2023-10-11 12:53:26,816 127.0.0.1 - - [11/Oct/2023 12:53:26] "GET /scouting HTTP/1.1" 200 -
+2023-10-11 12:53:26,872 127.0.0.1 - - [11/Oct/2023 12:53:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-11 12:53:27,031 127.0.0.1 - - [11/Oct/2023 12:53:27] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-10-11 12:53:27,209 127.0.0.1 - - [11/Oct/2023 12:53:27] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-10-11 12:53:29,559 127.0.0.1 - - [11/Oct/2023 12:53:29] "GET /chat HTTP/1.1" 200 -
+2023-10-11 12:53:29,846 127.0.0.1 - - [11/Oct/2023 12:53:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-10-11 12:53:29,901 127.0.0.1 - - [11/Oct/2023 12:53:29] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-10-11 12:53:29,910 127.0.0.1 - - [11/Oct/2023 12:53:29] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-10-11 12:53:36,628 127.0.0.1 - - [11/Oct/2023 12:53:36] "GET /webhook HTTP/1.1" 200 -

@@ -4,3 +4,5 @@ requests
 numpy
 statbotics
 gunicorn
+pandas
+openpyxl
