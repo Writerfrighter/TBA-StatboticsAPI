@@ -22,7 +22,7 @@ team_number = 492
 logging.basicConfig(filename="main.log", format="%(asctime)s %(message)s", filemode="w")
 logger = logging.getLogger()
 
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 
 def getTeamData(number):
@@ -204,14 +204,12 @@ def download_data(id):
         return "ID is not a valid integer"
     if len(os.listdir("combined_data")) <= 0:
         return "There are currently no available downloads."
-    elif len(os.listdir("combined_data")) <= id or id <= 0:
+    elif len(os.listdir("combined_data")) < id or id < 0:
         return "Invalid ID range."
     else:
-        return send_file(
-            os.path.join(
-                "combined_data", os.listdir("combined_data").sort(key=os.path.getctime)
-            )[id]
-        )
+        files = list(filter(os.path.isfile, glob.glob("combined_data" + "\*")))
+        files.sort(key=os.path.getctime)
+        return send_file(files[0])
 
 
 @app.route("/webhook", methods=["GET", "POST"])

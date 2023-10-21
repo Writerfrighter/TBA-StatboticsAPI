@@ -44,7 +44,7 @@ def fetchCurrentEvent(team):
 
 
 def fetchMatchesForEvent(team, eventCode):
-    resp = fetchAPIData("team/frc{}/event/{}/matches/simple".format(team, eventCode))
+    resp = fetchAPIData("team/frc{}/event/{}/matches/simple".format(team, str(datetime.now().year) + eventCode))
     return resp
 
 
@@ -70,6 +70,8 @@ def fetchTeamMedia(team):
     return images
 
 
+def fetchMatchResult(match_id):
+    resp = fetchAPIData("team")
 def fetchAPIData(url):
     """Helper function to fetch data from The Blue Alliance API."""
     API_return = requests.get(
@@ -77,3 +79,4 @@ def fetchAPIData(url):
         params={"X-TBA-Auth-Key": TBA_Api_Key},
     ).json()
     return API_return
+

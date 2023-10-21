@@ -1,4 +1,5 @@
 import pandas as pd
+import TBA
 import os
 
 data_save_dir = "scouting_data"
@@ -44,3 +45,19 @@ def combineData(files, filename):
             raise TypeError("Wrong file type")
 
     df.to_excel(os.path.join("combined_data", filename))
+
+def getDataAccuracy():
+    df = pd.read_excel("combined_data\BordieData.xlsx")
+    print(df)
+    
+    eventMatches = TBA.fetchEventMatchs("2023brd")
+    print(eventMatches)
+    for event in eventMatches:
+        if event['actual_time'] == None:
+            pass
+        else:
+            match = df.loc[df['Match Number'] == event['match_number']]
+            if match["Endgame Sustainbility Bonus"] == event["Endgame"]: pass
+            
+
+getDataAccuracy()

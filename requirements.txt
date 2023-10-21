@@ -6,3 +6,4 @@ statbotics
 gunicorn
 pandas
 openpyxl
+pretty_html_table
