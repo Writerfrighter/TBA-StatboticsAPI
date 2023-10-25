@@ -8,15 +8,13 @@ import logging
 import concurrent.futures
 import createRankings
 import TBA
+import params
 import glob
 import os
 
 app = Flask(__name__)
-app.config["UPLOAD_FOLDER"] = "scouting_data"
+app.config["UPLOAD_FOLDER"] = params.upload_folder
 app.secret_key = "no"
-
-allowed_extensions = ["csv", "xlsx"]  # Extensions parsable by the data reader.
-team_number = 492
 
 # Setting logging config
 logging.basicConfig(filename="main.log", format="%(asctime)s %(message)s", filemode="w")
@@ -41,18 +39,18 @@ def getTeamData(number):
 
 
 def allowed_file(filename):
-    return "." in filename and filename.rsplit(".", 1)[1].lower() in allowed_extensions
+    return "." in filename and filename.rsplit(".", 1)[1].lower() in params.allowed_file_extensions
 
 
 @app.route("/")
 def index():
-    currentEvent = TBA.fetchCurrentEvent(team_number)
+    currentEvent = TBA.fetchCurrentEvent(params.team_number)
 
     if currentEvent != "No current events":
         return render_template(
             "index.html",
             current_event=currentEvent["webcasts"][0]["channel"],
-            matches=TBA.fetchMatchesForEvent(team_number, currentEvent["event_code"]),
+            matches=TBA.fetchTeamMatchesForEvent(params.team_number, currentEvent["event_code"]),
         )
     else:
         return render_template(
@@ -97,7 +95,7 @@ def game_scouting():
                     table=build_table(
                         pd.read_excel(
                             os.path.join(
-                                "combined_data", os.listdir("combined_data")[0]
+                                params.download_folder, os.listdir(params.download_folder)[0]
                             )
                         ),
                         "blue_light",
@@ -115,7 +113,7 @@ def game_scouting():
             success=True,
             table=build_table(
                 pd.read_excel(
-                    os.path.join("combined_data", os.listdir("combined_data")[0])
+                    os.path.join(params.download_folder, os.listdir(params.download_folder)[0])
                 ),
                 "blue_light",
             ),
@@ -125,7 +123,7 @@ def game_scouting():
             "game-scouting.html",
             table=build_table(
                 pd.read_excel(
-                    os.path.join("combined_data", os.listdir("combined_data")[0])
+                    os.path.join(params.download_folder, os.listdir(params.download_folder)[0])
                 ),
                 "blue_light",
             ),
@@ -136,14 +134,14 @@ def game_scouting():
 def team_list():
     global teams
     teams = []
-    team_numbers = TBA.fetchTeamsForEvents(
+    params.team_numbers = TBA.fetchTeamsForEvents(
         "2023brd"
     )  # ToDo: Make event UI configurable
     # Initailize a multi-threaded fetch of all team data
     with concurrent.futures.ThreadPoolExecutor(
-        max_workers=len(team_numbers)
+        max_workers=len(params.team_numbers)
     ) as executer:
-        executer.map(getTeamData, team_numbers)
+        executer.map(getTeamData, params.team_numbers)
     return render_template("team-list.html", teams=teams)
 
 
@@ -202,12 +200,12 @@ def download_data(id):
         id = int(id)
     except:
         return "ID is not a valid integer"
-    if len(os.listdir("combined_data")) <= 0:
+    if len(os.listdir(params.download_folder)) <= 0:
         return "There are currently no available downloads."
-    elif len(os.listdir("combined_data")) < id or id < 0:
+    elif len(os.listdir(params.download_folder)) < id or id < 0:
         return "Invalid ID range."
     else:
-        files = list(filter(os.path.isfile, glob.glob("combined_data" + "\*")))
+        files = list(filter(os.path.isfile, glob.glob(params.download_folder + "\*")))
         files.sort(key=os.path.getctime)
         return send_file(files[0])
 
