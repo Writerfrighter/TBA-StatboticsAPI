@@ -5,27 +5,30 @@ import os
 
 
 def combineDataRange(minDate, maxDate):
+    """Combines a data range given a max and min date"""
     files = []
     for filename in os.listdir(params.upload_folder):
-        f = os.path.join(params.upload_folderr, filename)
+        f = os.path.join(params.upload_folder, filename)
         if os.path.isfile(f):
             try:
-                if int(filename.rsplit("_", 1)[0][:8:]) >= minDate and int(
-                    filename.rsplit("_", 1) <= maxDate
-                ):
-                    files.append(filename)
+                if int(filename.rsplit("_", 1)[1][:8:]) >= minDate and int(
+                    filename.rsplit("_", 1)[1][:8:]) <= maxDate:
+                    files.append( filename)
+                    
             except:
                 pass
+        else: "Hold up, there's a directory in here?"
 
     return combineData(files, str(minDate) + str(maxDate) + "scouting_data.xlsx")
 
 
 def combineData(files, filename):
+    """Combines a given list of files and writes the result it to processed_data as a xlsx"""
     extension = files[0].rsplit(".", 1)[1]
     if extension == "xlsx":
-        df = pd.read_excel(files[0])
+        df = pd.read_excel(os.path.join(params.upload_folder, files[0]))
     elif extension == "csv":
-        df = pd.read_csv(files[0])
+        df = pd.read_csv(os.path.join(params.upload_folder, files[0]))
     else:
         raise TypeError("Wrong file type")
 
@@ -44,17 +47,12 @@ def combineData(files, filename):
         else:
             raise TypeError("Wrong file type")
 
-    df.to_excel(os.path.join("combined_data", filename))
+    df.to_excel(os.path.join(params.download_folder, filename))
 
 def completeData(eventCode):
+    """Completes scouting data using TBA data for the event"""
     df = pd.read_excel("{}\{}.xlsx".format(params.download_folder, eventCode))
     eventMatches = TBA.fetchEventMatches(eventCode)
-    # for df in eventMatches:
-    #     if event['actual_time'] != None:
-    #         match = df.loc[df['Match Number'] == event['match_number']]
-    #         if not match.empty:
-    #             t = match.loc[match['Team Number'] == 492]
-    #             if not t.empty: print(match.loc[match['Team Number'] == 492])
 
     for k, entry in enumerate(df.values[::]):
         index = [
@@ -68,6 +66,8 @@ def completeData(eventCode):
             or "frc" + str(entry[1])
             in eventMatches[index]["alliances"]["red"]["team_keys"]
         ):
+
+            #Begin corrections
             if entry[27] != eventMatches[index]["alliances"][alliance]["score"]:
                 print(
                     "Wrong score in match {}: It's {} but it should be {}.".format(
@@ -92,20 +92,4 @@ def completeData(eventCode):
             )
     df.to_excel(os.path.join(params.download_folder, eventCode + ".xlsx"), index=False)
 
-
-def getDataAccuracy():
-    df = pd.read_excel("{}\BordieData.xlsx".format(params.download_folder))
-    print(df)
-
-    eventMatches = TBA.fetchEventMatchs("2023brd")
-    print(eventMatches)
-    for event in eventMatches:
-        if event["actual_time"] == None:
-            pass
-        else:
-            match = df.loc[df["Match Number"] == event["match_number"]]
-            if match["Endgame Sustainbility Bonus"] == event["Endgame"]:
-                pass
-
-
-completeData("2023brd")
+combineDataRange(20231010, 20231012)
