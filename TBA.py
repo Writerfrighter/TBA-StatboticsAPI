@@ -43,8 +43,17 @@ def fetchCurrentEvent(team):
     return "No current events"
 
 
+def fetchEventDate(eventCode):
+    resp = fetchAPIData("event/{}/simple".format(eventCode))
+    return resp["start_date"] + " " + resp["end_date"]
+
+
 def fetchTeamMatchesForEvent(team, eventCode):
-    resp = fetchAPIData("team/frc{}/event/{}/matches/simple".format(team, str(datetime.now().year) + eventCode))
+    resp = fetchAPIData(
+        "team/frc{}/event/{}/matches/simple".format(
+            team, str(datetime.now().year) + eventCode
+        )
+    )
     return resp
 
 
@@ -69,11 +78,18 @@ def fetchTeamMedia(team):
 
     return images
 
+
 def fetchEventMatches(eventCode):
     resp = fetchAPIData("event/{}/matches".format(eventCode))
-    
-    return [i for i in resp if i['comp_level'] == 'qm']
-    
+
+    return [i for i in resp if i["comp_level"] == "qm"]
+
+
+def fetchMatchData(matchKey):
+    resp = fetchAPIData("match/{}/simple".format(matchKey))
+    return resp
+
+
 def fetchAPIData(url):
     """Helper function to fetch data from The Blue Alliance API."""
     API_return = requests.get(

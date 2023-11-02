@@ -1,3 +1,353 @@
-2023-10-23 14:29:45,998 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-11-01 08:16:31,473 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2023-10-23 14:29:45,998 [33mPress CTRL+C to quit[0m
+2023-11-01 08:16:31,473 [33mPress CTRL+C to quit[0m
+2023-11-01 08:16:44,492 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-11-01 08:16:45,030 https://www.thebluealliance.com:443 "GET /api/v3/team/frc492/events/2023?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 1545
+2023-11-01 08:16:45,138 127.0.0.1 - - [01/Nov/2023 08:16:45] "GET / HTTP/1.1" 200 -
+2023-11-01 08:16:45,294 127.0.0.1 - - [01/Nov/2023 08:16:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-11-01 08:16:45,530 127.0.0.1 - - [01/Nov/2023 08:16:45] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-11-01 08:16:45,837 127.0.0.1 - - [01/Nov/2023 08:16:45] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-11-01 08:16:46,114 127.0.0.1 - - [01/Nov/2023 08:16:46] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2023-11-01 08:17:28,300 127.0.0.1 - - [01/Nov/2023 08:17:28] "GET /game_scouting HTTP/1.1" 200 -
+2023-11-01 08:17:28,332 127.0.0.1 - - [01/Nov/2023 08:17:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-11-01 08:17:28,654 127.0.0.1 - - [01/Nov/2023 08:17:28] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-11-01 08:17:28,662 127.0.0.1 - - [01/Nov/2023 08:17:28] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-11-01 08:17:39,427 127.0.0.1 - - [01/Nov/2023 08:17:39] "GET /pit_scouting HTTP/1.1" 200 -
+2023-11-01 08:17:39,642 127.0.0.1 - - [01/Nov/2023 08:17:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-11-01 08:17:39,756 127.0.0.1 - - [01/Nov/2023 08:17:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-11-01 08:17:39,756 127.0.0.1 - - [01/Nov/2023 08:17:39] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-11-01 08:17:46,433 127.0.0.1 - - [01/Nov/2023 08:17:46] "GET /chat HTTP/1.1" 200 -
+2023-11-01 08:17:46,465 127.0.0.1 - - [01/Nov/2023 08:17:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-11-01 08:17:46,694 127.0.0.1 - - [01/Nov/2023 08:17:46] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-11-01 08:17:46,814 127.0.0.1 - - [01/Nov/2023 08:17:46] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-11-01 08:17:50,851 127.0.0.1 - - [01/Nov/2023 08:17:50] "GET /chat_response?chat=Hi HTTP/1.1" 200 -
+2023-11-01 08:17:56,727 127.0.0.1 - - [01/Nov/2023 08:17:56] "GET /scouting HTTP/1.1" 200 -
+2023-11-01 08:17:56,954 127.0.0.1 - - [01/Nov/2023 08:17:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-11-01 08:17:57,061 127.0.0.1 - - [01/Nov/2023 08:17:57] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2023-11-01 08:17:57,061 127.0.0.1 - - [01/Nov/2023 08:17:57] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2023-11-01 08:17:58,618 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-11-01 08:17:59,251 https://www.thebluealliance.com:443 "GET /api/v3/team/frc492/events/2023/simple?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 435
+2023-11-01 08:17:59,251 127.0.0.1 - - [01/Nov/2023 08:17:59] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
+2023-11-01 08:18:00,025 Request came in for 2023brd.
+2023-11-01 08:18:00,025 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-11-01 08:18:00,354 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-11-01 08:18:00,380 https://www.thebluealliance.com:443 "GET /api/v3/status?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 158
+2023-11-01 08:18:00,388 Starting new HTTPS connection (1): www.thebluealliance.com:443
+2023-11-01 08:18:00,460 https://www.thebluealliance.com:443 "GET /api/v3/team/frc492/events/2023/simple?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 435
+2023-11-01 08:18:00,468 127.0.0.1 - - [01/Nov/2023 08:18:00] "GET /get_events?season=2023&team_number=492 HTTP/1.1" 200 -
+2023-11-01 08:18:00,736 https://www.thebluealliance.com:443 "GET /api/v3/event/2023brd/oprs?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 1343
+2023-11-01 08:18:00,739 Main: beginning Statbotics API fetch...
+2023-11-01 08:18:00,763 Thread 0: starting
+2023-11-01 08:18:00,763 Thread 1: starting
+2023-11-01 08:18:00,763 Thread 2: starting
+2023-11-01 08:18:00,763 Thread 3: starting
+2023-11-01 08:18:00,763 Looking up "https://api.statbotics.io/v2/team_event/1318/2023brd" in the cache
+2023-11-01 08:18:00,763 Thread 4: starting
+2023-11-01 08:18:00,763 Looking up "https://api.statbotics.io/v2/team_event/1778/2023brd" in the cache
+2023-11-01 08:18:00,763 No cache entry available
+2023-11-01 08:18:00,763 Thread 5: starting
+2023-11-01 08:18:00,763 Looking up "https://api.statbotics.io/v2/team_event/1899/2023brd" in the cache
+2023-11-01 08:18:00,763 Looking up "https://api.statbotics.io/v2/team_event/2046/2023brd" in the cache
+2023-11-01 08:18:00,763 Thread 6: starting
+2023-11-01 08:18:00,763 No cache entry available
+2023-11-01 08:18:00,773 Thread 7: starting
+2023-11-01 08:18:00,773 No cache entry available
+2023-11-01 08:18:00,773 Looking up "https://api.statbotics.io/v2/team_event/2122/2023brd" in the cache
+2023-11-01 08:18:00,773 Thread 8: starting
+2023-11-01 08:18:00,773 No cache entry available
+2023-11-01 08:18:00,773 Thread 9: starting
+2023-11-01 08:18:00,773 No cache entry available
+2023-11-01 08:18:00,773 Thread 10: starting
+2023-11-01 08:18:00,773 Looking up "https://api.statbotics.io/v2/team_event/2412/2023brd" in the cache
+2023-11-01 08:18:00,773 Thread 11: starting
+2023-11-01 08:18:00,777 No cache entry available
+2023-11-01 08:18:00,777 Thread 12: starting
+2023-11-01 08:18:00,777 Looking up "https://api.statbotics.io/v2/team_event/2522/2023brd" in the cache
+2023-11-01 08:18:00,777 Thread 13: starting
+2023-11-01 08:18:00,777 Thread 14: starting
+2023-11-01 08:18:00,777 No cache entry available
+2023-11-01 08:18:00,777 Looking up "https://api.statbotics.io/v2/team_event/2557/2023brd" in the cache
+2023-11-01 08:18:00,777 Thread 15: starting
+2023-11-01 08:18:00,777 Starting new HTTPS connection (1): api.statbotics.io:443
+2023-11-01 08:18:00,781 No cache entry available
+2023-11-01 08:18:00,781 Thread 16: starting
+2023-11-01 08:18:00,781 Thread 17: starting
+2023-11-01 08:18:00,781 No cache entry available
+2023-11-01 08:18:00,781 Looking up "https://api.statbotics.io/v2/team_event/2910/2023brd" in the cache
+2023-11-01 08:18:00,781 Thread 18: starting
+2023-11-01 08:18:00,784 No cache entry available
+2023-11-01 08:18:00,784 Thread 19: starting
+2023-11-01 08:18:00,784 Looking up "https://api.statbotics.io/v2/team_event/2926/2023brd" in the cache
+2023-11-01 08:18:00,784 Thread 20: starting
+2023-11-01 08:18:00,784 Looking up "https://api.statbotics.io/v2/team_event/2928/2023brd" in the cache
+2023-11-01 08:18:00,784 Thread 21: starting
+2023-11-01 08:18:00,784 Looking up "https://api.statbotics.io/v2/team_event/2990/2023brd" in the cache
+2023-11-01 08:18:00,784 No cache entry available
+2023-11-01 08:18:00,784 Thread 22: starting
+2023-11-01 08:18:00,784 Starting new HTTPS connection (2): api.statbotics.io:443
+2023-11-01 08:18:00,784 Thread 23: starting
+2023-11-01 08:18:00,784 Looking up "https://api.statbotics.io/v2/team_event/3218/2023brd" in the cache
+2023-11-01 08:18:00,784 Thread 24: starting
+2023-11-01 08:18:00,784 No cache entry available
+2023-11-01 08:18:00,784 Thread 25: starting
+2023-11-01 08:18:00,792 No cache entry available
+2023-11-01 08:18:00,792 Thread 26: starting
+2023-11-01 08:18:00,792 Looking up "https://api.statbotics.io/v2/team_event/4089/2023brd" in the cache
+2023-11-01 08:18:00,792 Looking up "https://api.statbotics.io/v2/team_event/4180/2023brd" in the cache
+2023-11-01 08:18:00,792 Thread 27: starting
+2023-11-01 08:18:00,792 Thread 28: starting
+2023-11-01 08:18:00,792 Looking up "https://api.statbotics.io/v2/team_event/4682/2023brd" in the cache
+2023-11-01 08:18:00,792 Thread 29: starting
+2023-11-01 08:18:00,792 Starting new HTTPS connection (3): api.statbotics.io:443
+2023-11-01 08:18:00,792 Thread 30: starting
+2023-11-01 08:18:00,792 No cache entry available
+2023-11-01 08:18:00,792 Thread 31: starting
+2023-11-01 08:18:00,800 Starting new HTTPS connection (4): api.statbotics.io:443
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/4911/2023brd" in the cache
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/492/2023brd" in the cache
+2023-11-01 08:18:00,800 No cache entry available
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/5937/2023brd" in the cache
+2023-11-01 08:18:00,800 No cache entry available
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/6443/2023brd" in the cache
+2023-11-01 08:18:00,800 No cache entry available
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/7461/2023brd" in the cache
+2023-11-01 08:18:00,800 No cache entry available
+2023-11-01 08:18:00,800 No cache entry available
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/8248/2023brd" in the cache
+2023-11-01 08:18:00,800 No cache entry available
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/8546/2023brd" in the cache
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/9036/2023brd" in the cache
+2023-11-01 08:18:00,800 Looking up "https://api.statbotics.io/v2/team_event/948/2023brd" in the cache
+2023-11-01 08:18:00,810 No cache entry available
+2023-11-01 08:18:00,810 Starting new HTTPS connection (5): api.statbotics.io:443
+2023-11-01 08:18:00,810 Looking up "https://api.statbotics.io/v2/team_event/949/2023brd" in the cache
+2023-11-01 08:18:00,810 No cache entry available
+2023-11-01 08:18:00,810 No cache entry available
+2023-11-01 08:18:00,810 Looking up "https://api.statbotics.io/v2/team_event/9988/2023brd" in the cache
+2023-11-01 08:18:00,810 No cache entry available
+2023-11-01 08:18:00,810 Looking up "https://api.statbotics.io/v2/team_event/9990/2023brd" in the cache
+2023-11-01 08:18:00,810 Looking up "https://api.statbotics.io/v2/team_event/9992/2023brd" in the cache
+2023-11-01 08:18:00,810 Looking up "https://api.statbotics.io/v2/team_event/9993/2023brd" in the cache
+2023-11-01 08:18:00,810 No cache entry available
+2023-11-01 08:18:00,810 Looking up "https://api.statbotics.io/v2/team_event/9996/2023brd" in the cache
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 Looking up "https://api.statbotics.io/v2/team_event/9997/2023brd" in the cache
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 Starting new HTTPS connection (6): api.statbotics.io:443
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 Starting new HTTPS connection (7): api.statbotics.io:443
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 Starting new HTTPS connection (8): api.statbotics.io:443
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 Starting new HTTPS connection (10): api.statbotics.io:443
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,826 Starting new HTTPS connection (11): api.statbotics.io:443
+2023-11-01 08:18:00,826 Starting new HTTPS connection (12): api.statbotics.io:443
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,828 Starting new HTTPS connection (13): api.statbotics.io:443
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,828 Starting new HTTPS connection (14): api.statbotics.io:443
+2023-11-01 08:18:00,818 No cache entry available
+2023-11-01 08:18:00,828 Starting new HTTPS connection (15): api.statbotics.io:443
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,828 Starting new HTTPS connection (16): api.statbotics.io:443
+2023-11-01 08:18:00,828 No cache entry available
+2023-11-01 08:18:00,828 Starting new HTTPS connection (17): api.statbotics.io:443
+2023-11-01 08:18:00,818 Starting new HTTPS connection (9): api.statbotics.io:443
+2023-11-01 08:18:00,843 Starting new HTTPS connection (18): api.statbotics.io:443
+2023-11-01 08:18:00,867 Starting new HTTPS connection (19): api.statbotics.io:443
+2023-11-01 08:18:00,867 Starting new HTTPS connection (20): api.statbotics.io:443
+2023-11-01 08:18:00,867 Starting new HTTPS connection (21): api.statbotics.io:443
+2023-11-01 08:18:00,867 Starting new HTTPS connection (22): api.statbotics.io:443
+2023-11-01 08:18:00,867 Starting new HTTPS connection (23): api.statbotics.io:443
+2023-11-01 08:18:00,867 Starting new HTTPS connection (24): api.statbotics.io:443
+2023-11-01 08:18:00,867 Starting new HTTPS connection (25): api.statbotics.io:443
+2023-11-01 08:18:00,876 Starting new HTTPS connection (26): api.statbotics.io:443
+2023-11-01 08:18:00,876 Starting new HTTPS connection (27): api.statbotics.io:443
+2023-11-01 08:18:00,877 Starting new HTTPS connection (28): api.statbotics.io:443
+2023-11-01 08:18:00,877 No cache entry available
+2023-11-01 08:18:00,877 Starting new HTTPS connection (29): api.statbotics.io:443
+2023-11-01 08:18:00,877 Starting new HTTPS connection (30): api.statbotics.io:443
+2023-11-01 08:18:00,881 Starting new HTTPS connection (31): api.statbotics.io:443
+2023-11-01 08:18:00,887 Starting new HTTPS connection (32): api.statbotics.io:443
+2023-11-01 08:18:01,323 https://api.statbotics.io:443 "GET /v2/team_event/2557/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:01,331 Updating cache with response from "https://api.statbotics.io/v2/team_event/2557/2023brd"
+2023-11-01 08:18:01,331 Thread 7: finished API Fetch
+2023-11-01 08:18:01,331 Thread 7: finished
+2023-11-01 08:18:01,496 https://api.statbotics.io:443 "GET /v2/team_event/2412/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:01,496 Updating cache with response from "https://api.statbotics.io/v2/team_event/2412/2023brd"
+2023-11-01 08:18:01,496 Thread 5: finished API Fetch
+2023-11-01 08:18:01,496 Thread 5: finished
+2023-11-01 08:18:01,662 https://api.statbotics.io:443 "GET /v2/team_event/4180/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:01,662 Updating cache with response from "https://api.statbotics.io/v2/team_event/4180/2023brd"
+2023-11-01 08:18:01,673 Thread 14: finished API Fetch
+2023-11-01 08:18:01,673 Thread 14: finished
+2023-11-01 08:18:01,844 https://api.statbotics.io:443 "GET /v2/team_event/1778/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:01,844 Updating cache with response from "https://api.statbotics.io/v2/team_event/1778/2023brd"
+2023-11-01 08:18:01,844 Thread 1: finished API Fetch
+2023-11-01 08:18:01,844 Thread 1: finished
+2023-11-01 08:18:02,025 https://api.statbotics.io:443 "GET /v2/team_event/1899/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:02,032 Updating cache with response from "https://api.statbotics.io/v2/team_event/1899/2023brd"
+2023-11-01 08:18:02,032 Thread 2: finished API Fetch
+2023-11-01 08:18:02,032 Thread 2: finished
+2023-11-01 08:18:02,195 https://api.statbotics.io:443 "GET /v2/team_event/7461/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:02,195 Updating cache with response from "https://api.statbotics.io/v2/team_event/7461/2023brd"
+2023-11-01 08:18:02,195 Thread 20: finished API Fetch
+2023-11-01 08:18:02,195 Thread 20: finished
+2023-11-01 08:18:02,363 https://api.statbotics.io:443 "GET /v2/team_event/8248/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:02,370 Updating cache with response from "https://api.statbotics.io/v2/team_event/8248/2023brd"
+2023-11-01 08:18:02,370 Thread 21: finished API Fetch
+2023-11-01 08:18:02,370 Thread 21: finished
+2023-11-01 08:18:02,539 https://api.statbotics.io:443 "GET /v2/team_event/9036/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:02,539 Updating cache with response from "https://api.statbotics.io/v2/team_event/9036/2023brd"
+2023-11-01 08:18:02,539 Thread 23: finished API Fetch
+2023-11-01 08:18:02,539 Thread 23: finished
+2023-11-01 08:18:02,711 https://api.statbotics.io:443 "GET /v2/team_event/492/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:02,711 Updating cache with response from "https://api.statbotics.io/v2/team_event/492/2023brd"
+2023-11-01 08:18:02,711 Thread 17: finished API Fetch
+2023-11-01 08:18:02,711 Thread 17: finished
+2023-11-01 08:18:02,878 https://api.statbotics.io:443 "GET /v2/team_event/4089/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:02,878 Updating cache with response from "https://api.statbotics.io/v2/team_event/4089/2023brd"
+2023-11-01 08:18:02,878 Thread 13: finished API Fetch
+2023-11-01 08:18:02,878 Thread 13: finished
+2023-11-01 08:18:03,062 https://api.statbotics.io:443 "GET /v2/team_event/2990/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:03,062 Updating cache with response from "https://api.statbotics.io/v2/team_event/2990/2023brd"
+2023-11-01 08:18:03,062 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:03,062 Thread 11: finished API Fetch
+2023-11-01 08:18:03,062 Thread 11: finished
+2023-11-01 08:18:03,229 https://api.statbotics.io:443 "GET /v2/team_event/949/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:03,237 Updating cache with response from "https://api.statbotics.io/v2/team_event/949/2023brd"
+2023-11-01 08:18:03,237 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:03,237 Thread 25: finished API Fetch
+2023-11-01 08:18:03,237 Thread 25: finished
+2023-11-01 08:18:03,402 https://api.statbotics.io:443 "GET /v2/team_event/9988/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:03,402 Updating cache with response from "https://api.statbotics.io/v2/team_event/9988/2023brd"
+2023-11-01 08:18:03,410 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:03,410 Thread 26: finished API Fetch
+2023-11-01 08:18:03,410 Thread 26: finished
+2023-11-01 08:18:03,579 https://api.statbotics.io:443 "GET /v2/team_event/2928/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:03,579 Updating cache with response from "https://api.statbotics.io/v2/team_event/2928/2023brd"
+2023-11-01 08:18:03,579 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:03,579 Thread 10: finished API Fetch
+2023-11-01 08:18:03,579 Thread 10: finished
+2023-11-01 08:18:03,771 https://api.statbotics.io:443 "GET /v2/team_event/9990/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:03,778 Updating cache with response from "https://api.statbotics.io/v2/team_event/9990/2023brd"
+2023-11-01 08:18:03,784 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:03,785 Thread 27: finished API Fetch
+2023-11-01 08:18:03,785 Thread 27: finished
+2023-11-01 08:18:03,927 https://api.statbotics.io:443 "GET /v2/team_event/3218/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:03,927 Updating cache with response from "https://api.statbotics.io/v2/team_event/3218/2023brd"
+2023-11-01 08:18:03,927 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:03,927 Thread 12: finished API Fetch
+2023-11-01 08:18:03,927 Thread 12: finished
+2023-11-01 08:18:04,094 https://api.statbotics.io:443 "GET /v2/team_event/948/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:04,094 Updating cache with response from "https://api.statbotics.io/v2/team_event/948/2023brd"
+2023-11-01 08:18:04,104 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:04,104 Thread 24: finished API Fetch
+2023-11-01 08:18:04,104 Thread 24: finished
+2023-11-01 08:18:04,271 https://api.statbotics.io:443 "GET /v2/team_event/4682/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:04,271 Updating cache with response from "https://api.statbotics.io/v2/team_event/4682/2023brd"
+2023-11-01 08:18:04,279 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:04,279 Thread 15: finished API Fetch
+2023-11-01 08:18:04,279 Thread 15: finished
+2023-11-01 08:18:04,445 https://api.statbotics.io:443 "GET /v2/team_event/2926/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:04,445 Updating cache with response from "https://api.statbotics.io/v2/team_event/2926/2023brd"
+2023-11-01 08:18:04,461 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:04,461 Thread 9: finished API Fetch
+2023-11-01 08:18:04,461 Thread 9: finished
+2023-11-01 08:18:04,628 https://api.statbotics.io:443 "GET /v2/team_event/6443/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:04,628 Updating cache with response from "https://api.statbotics.io/v2/team_event/6443/2023brd"
+2023-11-01 08:18:04,634 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:04,634 Thread 19: finished API Fetch
+2023-11-01 08:18:04,634 Thread 19: finished
+2023-11-01 08:18:04,799 https://api.statbotics.io:443 "GET /v2/team_event/9993/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:04,799 Updating cache with response from "https://api.statbotics.io/v2/team_event/9993/2023brd"
+2023-11-01 08:18:04,807 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:04,807 Thread 29: finished API Fetch
+2023-11-01 08:18:04,807 Thread 29: finished
+2023-11-01 08:18:04,971 https://api.statbotics.io:443 "GET /v2/team_event/9997/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:04,971 Updating cache with response from "https://api.statbotics.io/v2/team_event/9997/2023brd"
+2023-11-01 08:18:04,977 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:04,977 Thread 31: finished API Fetch
+2023-11-01 08:18:04,977 Thread 31: finished
+2023-11-01 08:18:05,148 https://api.statbotics.io:443 "GET /v2/team_event/2910/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:05,150 Updating cache with response from "https://api.statbotics.io/v2/team_event/2910/2023brd"
+2023-11-01 08:18:05,150 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:05,150 Thread 8: finished API Fetch
+2023-11-01 08:18:05,150 Thread 8: finished
+2023-11-01 08:18:05,322 https://api.statbotics.io:443 "GET /v2/team_event/9992/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:05,322 Updating cache with response from "https://api.statbotics.io/v2/team_event/9992/2023brd"
+2023-11-01 08:18:05,330 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:05,330 Thread 28: finished API Fetch
+2023-11-01 08:18:05,330 Thread 28: finished
+2023-11-01 08:18:05,506 https://api.statbotics.io:443 "GET /v2/team_event/5937/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:05,515 Updating cache with response from "https://api.statbotics.io/v2/team_event/5937/2023brd"
+2023-11-01 08:18:05,515 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:05,515 Thread 18: finished API Fetch
+2023-11-01 08:18:05,515 Thread 18: finished
+2023-11-01 08:18:05,677 https://api.statbotics.io:443 "GET /v2/team_event/8546/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:05,677 Updating cache with response from "https://api.statbotics.io/v2/team_event/8546/2023brd"
+2023-11-01 08:18:05,677 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:05,677 Thread 22: finished API Fetch
+2023-11-01 08:18:05,677 Thread 22: finished
+2023-11-01 08:18:05,844 https://api.statbotics.io:443 "GET /v2/team_event/1318/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:05,848 Updating cache with response from "https://api.statbotics.io/v2/team_event/1318/2023brd"
+2023-11-01 08:18:05,848 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:05,848 Thread 0: finished API Fetch
+2023-11-01 08:18:05,848 Thread 0: finished
+2023-11-01 08:18:06,030 https://api.statbotics.io:443 "GET /v2/team_event/2522/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:06,030 Updating cache with response from "https://api.statbotics.io/v2/team_event/2522/2023brd"
+2023-11-01 08:18:06,030 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:06,030 Thread 6: finished API Fetch
+2023-11-01 08:18:06,030 Thread 6: finished
+2023-11-01 08:18:06,195 https://api.statbotics.io:443 "GET /v2/team_event/2046/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:06,204 Updating cache with response from "https://api.statbotics.io/v2/team_event/2046/2023brd"
+2023-11-01 08:18:06,204 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:06,204 Thread 3: finished API Fetch
+2023-11-01 08:18:06,204 Thread 3: finished
+2023-11-01 08:18:06,369 https://api.statbotics.io:443 "GET /v2/team_event/2122/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:06,377 Updating cache with response from "https://api.statbotics.io/v2/team_event/2122/2023brd"
+2023-11-01 08:18:06,377 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:06,377 Thread 4: finished API Fetch
+2023-11-01 08:18:06,377 Thread 4: finished
+2023-11-01 08:18:06,546 https://api.statbotics.io:443 "GET /v2/team_event/9996/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:06,557 Updating cache with response from "https://api.statbotics.io/v2/team_event/9996/2023brd"
+2023-11-01 08:18:06,557 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:06,557 Thread 30: finished API Fetch
+2023-11-01 08:18:06,557 Thread 30: finished
+2023-11-01 08:18:06,727 https://api.statbotics.io:443 "GET /v2/team_event/4911/2023brd HTTP/1.1" 200 None
+2023-11-01 08:18:06,735 Updating cache with response from "https://api.statbotics.io/v2/team_event/4911/2023brd"
+2023-11-01 08:18:06,735 Connection pool is full, discarding connection: api.statbotics.io. Connection pool size: 10
+2023-11-01 08:18:06,735 Thread 16: finished API Fetch
+2023-11-01 08:18:06,735 Thread 16: finished
+2023-11-01 08:18:06,735 Main: finished Statbotics API fetch
+2023-11-01 08:18:06,735 127.0.0.1 - - [01/Nov/2023 08:18:06] "GET /get_rankings?event=2023brd&OPR=True&CCWMS=True&Overall=True&Auto=True&Teleop=True&Endgame=True HTTP/1.1" 200 -
+2023-11-01 08:18:27,199 127.0.0.1 - - [01/Nov/2023 08:18:27] "GET /team/hi HTTP/1.1" 200 -
+2023-11-01 08:18:27,455 127.0.0.1 - - [01/Nov/2023 08:18:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

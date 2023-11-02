@@ -39,7 +39,10 @@ def getTeamData(number):
 
 
 def allowed_file(filename):
-    return "." in filename and filename.rsplit(".", 1)[1].lower() in params.allowed_file_extensions
+    return (
+        "." in filename
+        and filename.rsplit(".", 1)[1].lower() in params.allowed_file_extensions
+    )
 
 
 @app.route("/")
@@ -50,7 +53,9 @@ def index():
         return render_template(
             "index.html",
             current_event=currentEvent["webcasts"][0]["channel"],
-            matches=TBA.fetchTeamMatchesForEvent(params.team_number, currentEvent["event_code"]),
+            matches=TBA.fetchTeamMatchesForEvent(
+                params.team_number, currentEvent["event_code"]
+            ),
         )
     else:
         return render_template(
@@ -95,7 +100,8 @@ def game_scouting():
                     table=build_table(
                         pd.read_excel(
                             os.path.join(
-                                params.download_folder, os.listdir(params.download_folder)[0]
+                                params.download_folder,
+                                os.listdir(params.download_folder)[0],
                             )
                         ),
                         "blue_light",
@@ -113,7 +119,9 @@ def game_scouting():
             success=True,
             table=build_table(
                 pd.read_excel(
-                    os.path.join(params.download_folder, os.listdir(params.download_folder)[0])
+                    os.path.join(
+                        params.download_folder, os.listdir(params.download_folder)[0]
+                    )
                 ),
                 "blue_light",
             ),
@@ -123,7 +131,9 @@ def game_scouting():
             "game-scouting.html",
             table=build_table(
                 pd.read_excel(
-                    os.path.join(params.download_folder, os.listdir(params.download_folder)[0])
+                    os.path.join(
+                        params.download_folder, os.listdir(params.download_folder)[0]
+                    )
                 ),
                 "blue_light",
             ),
