@@ -9,6 +9,6 @@ bonuses = [
     (24, "activationBonusAchieved", "Endgame Sustainability Bonus"),
     (23, "coopertitionCriteriaMet", "Endgame Coopertition Bonus"),
     (22, "sustainabilityBonusAchieved", "Endgame Activation Bonus"),
-]  # (Index in xlsx that the bonus is, Bonus names as on TBA)
+]  # (Index in xlsx that the bonus is, Bonus names as on TBA, CSV Header)
 auto_replace_team_names = True  # Enable autocorrect for invalid team numbers
 team_number_threshold = 2  # Threshold for characters when finding team replacements
