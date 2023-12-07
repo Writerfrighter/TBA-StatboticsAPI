@@ -222,20 +222,16 @@ def download_data(id):
 
 @app.route("/webhook", methods=["GET", "POST"])
 def webhook():
-    list = []
     if request.method == "POST":
         json = request.get_json()
+
         if json["message_type"] == "verification":
-            list.append(json)
             return jsonify(success=True)
         elif json["message_type"] == "broadcast":
-            list.append(json)
             return jsonify(success=True)
         elif json["message_type"] == "ping":
-            list.append(json)
             return jsonify(success=True)
         else:
-            list.append(json)
             return jsonify(success=True)
 
     else:

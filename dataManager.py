@@ -81,14 +81,24 @@ def completeData(eventCode):
     df = pd.read_excel("{}\{}.xlsx".format(params.download_folder, eventCode))
     eventMatches = TBA.fetchEventMatches(eventCode)
 
-    stats = [0, 0, 0]  # List for storing accuracy statistics
+    stats = [0, 0]  # List for storing accuracy statistics
+
+    for i in range(
+        len(params.location_dependent_comparisions)
+        + len(params.length_of_list_comparisons)
+        + len(params.value_comparisons)
+        + len(params.bonuses)
+    ):
+        stats.append(0)
 
     for k, entry in enumerate(df.values[::]):
         index = [
             i for i, j in enumerate(eventMatches) if j["match_number"] == entry[0]
-        ][0]
+        ][
+            0
+        ]  # Grab the index of event in TBA
         alliance = entry[3][-3::-1][::-1].lower()
-        # Check if the team numbers are correct, or else we can't continue
+        # Check if the team numbers are correct
         if (
             "frc" + str(entry[1])
             not in eventMatches[index]["alliances"][alliance]["team_keys"]
@@ -117,56 +127,115 @@ def completeData(eventCode):
                 df.loc[k, "Team Number"] = int(input("What is your replacement? \n"))
             stats[0] += 1
         # Begin corrections
-        if entry[27] != eventMatches[index]["alliances"][alliance]["score"]: #Final score
+
+        score = eventMatches[index]["alliances"][alliance]["score"]
+        if entry[27] != score:  # Final score correction
             print(
                 "Wrong score in match {}: It's {} but it should be {}.".format(
                     entry[0],
                     entry[27],
-                    eventMatches[index]["alliances"][alliance]["score"],
+                    score,
                 )
             )
-            stats[1] += abs(
-                eventMatches[index]["alliances"][alliance]["score"] - entry[27]
-            )
+            stats[1] += abs(score - entry[27])
             df.loc[k, "Final Alliance Score"] = eventMatches[index]["alliances"][
                 alliance
             ]["score"]
 
-        if entry[16] != len(eventMatches[index]["score_breakdown"][alliance]["links"]): # Link count
-            print(
-                "Wrong link count in match {}: It's {} but it should be {}.".format(
-                    entry[0],
-                    entry[16],
-                    len(eventMatches[index]["score_breakdown"][alliance]["links"]),
+        robot_position = (
+            eventMatches[index]["alliances"][alliance]["team_keys"].index(
+                "frc" + str(df.loc[k, "Team Number"])
+            )
+            + 1
+        )
+
+        # Location Dependent Comparisons
+        for i, correction in enumerate(params.location_dependent_comparisions):
+            value = eventMatches[index]["score_breakdown"][alliance][
+                correction["tba_format_name"].replace("%", str(robot_position))
+            ]
+            if correction["xlsx_tba_pairs"][entry[correction["index"]]] != value:
+                print(
+                    "Wrong {} value in match {}: It's {} but it should be {}.".format(
+                        correction["xlsx_name"],
+                        entry[0],
+                        correction["xlsx_tba_pairs"][entry[correction["index"]]],
+                        value,
+                    )
                 )
+                correct = list(correction["xlsx_tba_pairs"].keys())[
+                    list(correction["xlsx_tba_pairs"].values()).index(value)
+                ]  # Dict value to key
+                stats[2 + i] += 1
+                df.loc[k, correction["xlsx_name"]] = correct
+
+        # Length of List corrections
+        for i, correction in enumerate(params.length_of_list_comparisons):
+            length = len(
+                eventMatches[index]["score_breakdown"][alliance][correction["tba_name"]]
             )
-            stats[2] += abs(
-                len(eventMatches[index]["score_breakdown"][alliance]["links"])
-                - entry[16]
-            )
-            df.loc[k, "Teleop Links"] = len(
-                eventMatches[index]["score_breakdown"][alliance]["links"]
-            )
-        #Bonus corrections
-        for bonus in params.bonuses:
-            if bool(entry[bonus[0]]) != eventMatches[index]["score_breakdown"][alliance][bonus[1]]: # Bonus
+            if entry[correction["index"]] != length:
+                print(
+                    "Wrong {} count in match {}: It's {} but it should be {}.".format(
+                        correction["xlsx_name"],
+                        entry[0],
+                        entry[correction["index"]],
+                        length,
+                    )
+                )
+                stats[2 + len(params.location_dependent_comparisions) + i] += abs(
+                    length - entry[correction["index"]]
+                )
+                df.loc[k, correction["xlsx_name"]] = length
+
+        # Value comparisons
+        for correction in params.value_comparisons:
+            value = eventMatches[index]["score_breakdown"][alliance][
+                correction["tba_name"]
+            ]
+            csv_total = 0
+            for key in correction["xlsx_data"]:
+                csv_total += df.loc[k, key["xlsx_name"]]
+            if csv_total != length:
                 print(
                     "Wrong {} in match {}: It's {} but it should be {}.".format(
-                        bonus[2],
+                        correction["tba_name"],
                         entry[0],
-                        entry[bonus[0]],
-                        eventMatches[index]["score_breakdown"][alliance][bonus[1]],
+                        csv_total,
+                        value,
+                    )
+                )
+
+                if len(correction["xlsx_data"]) == 1:
+                    df.loc[k, correction["xlsx_data"][0]["xlsx_name"]] = length
+
+        # Bonus corrections
+        for bonus in params.bonuses:
+            if (
+                bool(entry[bonus["index"]])
+                != eventMatches[index]["score_breakdown"][alliance][bonus["tba_name"]]
+            ):  # Bonus
+                print(
+                    "Wrong {} in match {}: It's {} but it should be {}.".format(
+                        bonus["xlsx_name"],
+                        entry[0],
+                        entry[bonus["index"]],
+                        eventMatches[index]["score_breakdown"][alliance][
+                            bonus["tba_name"]
+                        ],
                     )
                 )
                 # stats[1] += 1
-    
-                df.loc[k, bonus[2]] = eventMatches[index]["score_breakdown"][alliance][bonus[1]]
 
+                df.loc[k, bonus["xlsx_name"]] = eventMatches[index]["score_breakdown"][
+                    alliance
+                ][bonus["tba_name"]]
 
     df.to_excel(os.path.join(params.download_folder, eventCode + ".xlsx"), index=False)
     print(
-        f"Correction statistics:\nTeam numbers entered incorrectly: {stats[0]}\nMean score deviation: {stats[1]/len(df.values)}\nMean link count deviation: {stats[2]/len(df.values)}"
+        f"\nCorrection statistics:\nTeam numbers entered incorrectly: {stats[0]}\nMean score deviation: {stats[1]/len(df.values)}\nMean link count deviation: {stats[2]/len(df.values)}"
     )
+    # TODO: Get metric system worked out
 
 
 def fixInvalidTeamNumber(matchKey, givenTeamNumber, alliance):
@@ -187,10 +256,19 @@ def fixInvalidTeamNumber(matchKey, givenTeamNumber, alliance):
     if max(matches) >= params.team_number_threshold:
         return teams[matches.index(max(matches))]
     else:
-        raise ValueError(
-            "Bad team number in match {}, team number {} fixInvalid could not identity the correct one.".format(
-                matchKey, givenTeamNumber
+        answer = input(
+            "Bad team number in match {}, team number {}, a suggested chance of {} was found that does not meet the minimum threshold do you accept the change? (y/n)".format(
+                matchKey, givenTeamNumber, teams[matches.index(max(matches))]
             )
-        )
+        ).lower()
+        if answer == "y":
+            return teams[matches.index(max(matches))]
+        else:
+            raise ValueError(
+                "Bad team number in match {}, team number {} fixInvalid could not identity the correct team number.".format(
+                    matchKey, givenTeamNumber
+                )
+            )
+
 
 combineEventRange("2023pncmp")
