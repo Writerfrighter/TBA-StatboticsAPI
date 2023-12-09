@@ -28,7 +28,7 @@ def combineDataRange(minDate, maxDate, fileName=None):
             except:
                 pass
         else:
-            "Hold up, there's a directory in here?"
+            print("Hold up, there's a directory in here?")
     if fileName == None:
         combineData(files, str(minDate) + str(maxDate) + "scouting_data.xlsx")
     else:
@@ -189,7 +189,7 @@ def completeData(eventCode):
                 df.loc[k, correction["xlsx_name"]] = length
 
         # Value comparisons
-        for correction in params.value_comparisons:
+        for i, correction in enumerate(params.value_comparisons):
             value = eventMatches[index]["score_breakdown"][alliance][
                 correction["tba_name"]
             ]
@@ -205,12 +205,17 @@ def completeData(eventCode):
                         value,
                     )
                 )
-
+                stats[
+                    2
+                    + len(params.location_dependent_comparisions)
+                    + len(params.length_of_list_comparisons)
+                    + i
+                ] += abs(value - csv_total)
                 if len(correction["xlsx_data"]) == 1:
                     df.loc[k, correction["xlsx_data"][0]["xlsx_name"]] = length
 
         # Bonus corrections
-        for bonus in params.bonuses:
+        for i, bonus in enumerate(params.bonuses):
             if (
                 bool(entry[bonus["index"]])
                 != eventMatches[index]["score_breakdown"][alliance][bonus["tba_name"]]
@@ -225,16 +230,24 @@ def completeData(eventCode):
                         ],
                     )
                 )
-                # stats[1] += 1
+                stats[
+                    2
+                    + len(params.location_dependent_comparisions)
+                    + len(params.length_of_list_comparisons)
+                    + len(params.value_comparisons)
+                    + i
+                ] += 1
 
                 df.loc[k, bonus["xlsx_name"]] = eventMatches[index]["score_breakdown"][
                     alliance
                 ][bonus["tba_name"]]
 
     df.to_excel(os.path.join(params.download_folder, eventCode + ".xlsx"), index=False)
-    print(
-        f"\nCorrection statistics:\nTeam numbers entered incorrectly: {stats[0]}\nMean score deviation: {stats[1]/len(df.values)}\nMean link count deviation: {stats[2]/len(df.values)}"
-    )
+    print("Correction Statistics --------------------")
+    leng = len(entry)
+    print("Team Numbers entered incorectly:", stats[0])
+    print("Mean final score deviation:", stats[1]/leng)
+    for c in stats[1::]: print(f"Mean percentage of {leng} deviation: %s", c/leng)
     # TODO: Get metric system worked out
 
 
