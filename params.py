@@ -53,9 +53,17 @@ value_comparisons = [
     #         {"index": 7, "xlsx_name": "Auto Scored Med"},
     #         {"index": 8, "xlsx_name": "Auto Scored High"},
     #     ],
-    # }, Won't work since sum over teams
+    # }, Won't work since sum over teams (Low Prio)
 ]  # (value name as on TBA, [(Index in xlsx that value is in, xlsx Header), ...)])
 
+string_comparisons = [
+    {
+        "index": 28,
+        "tba_name": "win??",
+        "xlsx_name": "Final WLT",
+        "xlsx_tba_pairs": {"Win": "placeholder", "Loss": "placeholder"}
+    },
+]
 
 bonuses = [
     {
@@ -74,3 +82,30 @@ bonuses = [
         "xlsx_name": "Endgame Activation Bonus",
     },
 ]  # (Index in xlsx that the bonus is, Bonus names as on TBA, xlsx Header)
+
+#
+# Team Data Compilation
+#
+
+to_average = [
+    {
+        "name": "Avg Total",
+        "catagory": "Score",
+        "to_average": ["Final Alliance Score"],
+    },
+    {
+        "name": "Avg Auto Pieces",
+        "catagory": "Autonomous",
+        "to_average": ["Auto Scored Low", "Auto Scored Med", "Auto Scored High"],
+    },
+    {
+        "name": "Avg Teleop Pieces",
+        "catagory": "Teleop",
+        "to_average": ["Teleop Goals Low", "Teleop Goals Med", "Teleop Goals High"],
+    },
+    {
+        "name": "Avg Missed",
+        "catagory": "Teleop",
+        "to_average": ["Teleop Missed Attempts"],
+    },
+]

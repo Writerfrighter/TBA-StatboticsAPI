@@ -25,7 +25,7 @@ var team = 492;
 
 async function get_events() {
   let res = await fetch(
-    `/get_events?season=${$("#season_selection").val()}&team_number=${$(
+    `/api/get_events?season=${$("#season_selection").val()}&team_number=${$(
       "#team_number"
     ).val()} `
   );
@@ -66,7 +66,7 @@ async function get_rankings() {
     : "False";
 
   let res = await fetch(
-    `/get_rankings?event=${$(
+    `/api/get_rankings?event=${$(
       "#event_selection"
     ).val()}&OPR=${use_OPR}&CCWMS=${use_CCWMS}&Overall=${use_overall_EPA}&Auto=${use_auto_EPA}&Teleop=${use_teleop_EPA}&Endgame=${use_endgame_EPA}`
   );
@@ -125,7 +125,6 @@ function removeData(chart) {
 
 function search_team() {
   team = $("#team_search").val();
-  console.log("runing");
   window.location.assign("/team/" + team);
 }
 
@@ -185,7 +184,7 @@ async function send_chat() {
   chat = $("#chat_input").val();
   add_chat(chat, false);
 
-  let res = await fetch(`/chat_response?chat=${chat}`);
+  let res = await fetch(`/api/chat_response?chat=${chat}`);
   res = await res.text();
 
   add_chat(res, true);

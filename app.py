@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, send_file, jsonify, flash, redirect
+# External Imports
+from flask import Flask, render_template, request, send_file
 from werkzeug.utils import secure_filename
 from pretty_html_table import build_table
 from datetime import datetime
@@ -6,11 +7,13 @@ import pandas as pd
 import numpy as np
 import logging
 import concurrent.futures
+import glob
+import os
+
+# Local Imports
 import createRankings
 import TBA
 import params
-import glob
-import os
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = params.upload_folder
@@ -21,7 +24,6 @@ logging.basicConfig(filename="main.log", format="%(asctime)s %(message)s", filem
 logger = logging.getLogger()
 
 logger.setLevel(logging.DEBUG)
-
 
 def getTeamData(number):
     logging.info("Thread for team %s: Starting", number)
@@ -160,7 +162,7 @@ def team(team):
     return team
 
 
-@app.route("/chat_response")
+@app.route("/api/chat_response")
 def chat_response():
     chat = request.args.get("chat")
 
@@ -170,20 +172,20 @@ def chat_response():
     return response
 
 
-@app.route("/get_events")
+@app.route("/api/get_events")
 def get_events():
     season = request.args.get("season")
     team_number = request.args.get("team_number")
     return TBA.fetchEventsForTeam(team_number, season)
 
 
-@app.route("/get_channels")
+@app.route("/api/get_channels")
 def get_channels():
     team = request.args.get("team")
     return TBA.fetchEventChannels(team)
 
 
-@app.route("/get_rankings")
+@app.route("/api/get_rankings")
 def get_rankings():
     event = request.args.get("event")
     use_OPR = True if request.args.get("OPR") == "True" else False
@@ -203,7 +205,9 @@ def get_rankings():
         use_endgame_EPA,
     )
 
-
+@app.route("/api/search_team/<str>")
+def search_team(str):
+    pass
 @app.route("/download_data/<id>")
 def download_data(id):
     try:
@@ -218,25 +222,6 @@ def download_data(id):
         files = list(filter(os.path.isfile, glob.glob(params.download_folder + "\*")))
         files.sort(key=os.path.getctime)
         return send_file(files[0])
-
-
-@app.route("/webhook", methods=["GET", "POST"])
-def webhook():
-    if request.method == "POST":
-        json = request.get_json()
-
-        if json["message_type"] == "verification":
-            return jsonify(success=True)
-        elif json["message_type"] == "broadcast":
-            return jsonify(success=True)
-        elif json["message_type"] == "ping":
-            return jsonify(success=True)
-        else:
-            return jsonify(success=True)
-
-    else:
-        return list
-
 
 if __name__ == "__main__":
     app.run()

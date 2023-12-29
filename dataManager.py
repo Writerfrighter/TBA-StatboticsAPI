@@ -1,7 +1,12 @@
+# External Imports
 import pandas as pd
+import os
+import glob
+
+# Local Imports
 import TBA
 import params
-import os
+
 
 
 def combineEventRange(eventCode, correctData=True):
@@ -28,7 +33,7 @@ def combineDataRange(minDate, maxDate, fileName=None):
             except:
                 pass
         else:
-            print("Hold up, there's a directory in here?")
+            print(f"Folder {f} should not be present in this folder.")
     if fileName == None:
         combineData(files, str(minDate) + str(maxDate) + "scouting_data.xlsx")
     else:
@@ -196,7 +201,7 @@ def completeData(eventCode):
             csv_total = 0
             for key in correction["xlsx_data"]:
                 csv_total += df.loc[k, key["xlsx_name"]]
-            if csv_total != length:
+            if csv_total != value:
                 print(
                     "Wrong {} in match {}: It's {} but it should be {}.".format(
                         correction["tba_name"],
@@ -213,6 +218,32 @@ def completeData(eventCode):
                 ] += abs(value - csv_total)
                 if len(correction["xlsx_data"]) == 1:
                     df.loc[k, correction["xlsx_data"][0]["xlsx_name"]] = length
+        
+        # String Comparisions
+        for i, correction in enumerate(params.string_comparisons):
+            value = eventMatches[index]["score_breakdown"][alliance][
+                correction["tba_name"]
+            ]
+            if correction["xlsx_tba_pairs"][entry[correction["index"]]] != value:
+                print(
+                    "Wrong {} value in match {}: It's {} but it should be {}.".format(
+                        correction["xlsx_name"],
+                        entry[0],
+                        correction["xlsx_tba_pairs"][entry[correction["index"]]],
+                        value,
+                    )
+                )
+                correct = list(correction["xlsx_tba_pairs"].keys())[
+                    list(correction["xlsx_tba_pairs"].values()).index(value)
+                ]  # Dict value to key
+                stats[2
+                    + len(params.location_dependent_comparisions)
+                    + len(params.length_of_list_comparisons)
+                    + len(params.value_comparisons)
+                    + i] += 1
+                df.loc[k, correction["xlsx_name"]] = correct
+
+        # TODO: Code Review
 
         # Bonus corrections
         for i, bonus in enumerate(params.bonuses):
@@ -244,11 +275,62 @@ def completeData(eventCode):
 
     df.to_excel(os.path.join(params.download_folder, eventCode + ".xlsx"), index=False)
     print("Correction Statistics --------------------")
-    leng = len(entry)
+    leng = len(df.values[::])
     print("Team Numbers entered incorectly:", stats[0])
-    print("Mean final score deviation:", stats[1]/leng)
-    for c in stats[1::]: print(f"Mean percentage of {leng} deviation: %s", c/leng)
-    # TODO: Get metric system worked out
+    print("Mean final score deviation:", "{:.2f}".format(stats[1] / leng))
+    for i, c in enumerate(stats[2 : len(params.location_dependent_comparisions) + 2 :]):
+        print(
+            "Percentage of {} entered incorrectly:".format(
+                params.location_dependent_comparisions[i]["xlsx_name"]
+            ),
+            "{:.2f}%".format(c * 100 / leng),
+        )
+    for i, c in enumerate(
+        stats[
+            2
+            + len(params.location_dependent_comparisions) : len(
+                params.length_of_list_comparisons
+            )
+            + len(params.location_dependent_comparisions)
+            + 2 :
+        ]
+    ):
+        print(
+            "Mean {} deviation:".format(
+                params.length_of_list_comparisons[i]["xlsx_name"]
+            ),
+            "{:.2f}".format(c / leng),
+        )
+    for i, c in enumerate(
+        stats[
+            2
+            + len(params.location_dependent_comparisions)
+            + len(params.length_of_list_comparisons) : 2
+            + len(params.location_dependent_comparisions)
+            + len(params.length_of_list_comparisons)
+            + len(params.value_comparisons) :
+        ]
+    ):
+        print(
+            "Percentage of {} entered incorrectly:".format(
+                params.value_comparisons[i]["xlsx_name"]
+            ),
+            "{:.2f}%".format(c * 100 / leng),
+        )
+    for i, c in enumerate(
+        stats[
+            2
+            + len(params.location_dependent_comparisions)
+            + len(params.length_of_list_comparisons)
+            + len(params.value_comparisons) : :
+        ]
+    ):
+        print(
+            "Percentage of {} entered incorrectly:".format(
+                params.bonuses[i]["xlsx_name"]
+            ),
+            "{:.2f}%".format(c * 100 / leng),
+        )
 
 
 def fixInvalidTeamNumber(matchKey, givenTeamNumber, alliance):
@@ -282,6 +364,44 @@ def fixInvalidTeamNumber(matchKey, givenTeamNumber, alliance):
                     matchKey, givenTeamNumber
                 )
             )
+def find_team(substring, data_file=None):
+    df = ""
+    if data_file == None:
+        files = list(filter(os.path.isfile, glob.glob(params.download_folder + "\*")))
+        files.sort(key=os.path.getctime)
+        file = files[0]
+        df = pd.read_excel(file)
+    else:
+        try:
+            df = pd.read_excel(data_file)
+        except:
+            raise FileNotFoundError("File at path {} not found, please use a valid local or global path".format(data_file))
+    df = df[df['Team Number'].astype(str).str.contains(substring)]
+    return list(set(df.loc[::, "Team Number"].values))
+
+def get_team_data(team_number: int, data_file=None):
+    result = {}
+    if data_file == None:
+        files = list(filter(os.path.isfile, glob.glob(params.download_folder + "\*")))
+        files.sort(key=os.path.getctime)
+        file = files[0]
+        df = pd.read_excel(file)
+    else:
+        try:
+            df = pd.read_excel(data_file)
+        except:
+            raise FileNotFoundError("File at path {} not found, please use a valid local or global path".format(data_file))
+    df = df.loc[df["Team Number"] == team_number]
+    
+    for average in params.to_average:
+        val = []
+        for name in average["to_average"]:
+            val += df[name].tolist()
+        result[average["name"]] = [average["catagory"], mean(val)]
+# TODO: Finish
+    return result
+    
+def mean(list): return sum(list)/len(list)
 
 
-combineEventRange("2023pncmp")
+print(get_team_data(492, "processed_data/2023pncmp.xlsx"))
