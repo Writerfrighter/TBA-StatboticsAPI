@@ -8,7 +8,6 @@ import TBA
 import params
 
 
-
 def combineEventRange(eventCode, correctData=True):
     event = TBA.fetchEventDate(eventCode).replace("-", "").split(" ")
     print(event)
@@ -218,7 +217,7 @@ def completeData(eventCode):
                 ] += abs(value - csv_total)
                 if len(correction["xlsx_data"]) == 1:
                     df.loc[k, correction["xlsx_data"][0]["xlsx_name"]] = length
-        
+
         # String Comparisions
         for i, correction in enumerate(params.string_comparisons):
             value = eventMatches[index]["score_breakdown"][alliance][
@@ -236,11 +235,13 @@ def completeData(eventCode):
                 correct = list(correction["xlsx_tba_pairs"].keys())[
                     list(correction["xlsx_tba_pairs"].values()).index(value)
                 ]  # Dict value to key
-                stats[2
+                stats[
+                    2
                     + len(params.location_dependent_comparisions)
                     + len(params.length_of_list_comparisons)
                     + len(params.value_comparisons)
-                    + i] += 1
+                    + i
+                ] += 1
                 df.loc[k, correction["xlsx_name"]] = correct
 
         # TODO: Code Review
@@ -364,6 +365,8 @@ def fixInvalidTeamNumber(matchKey, givenTeamNumber, alliance):
                     matchKey, givenTeamNumber
                 )
             )
+
+
 def find_team(substring, data_file=None):
     df = ""
     if data_file == None:
@@ -375,9 +378,14 @@ def find_team(substring, data_file=None):
         try:
             df = pd.read_excel(data_file)
         except:
-            raise FileNotFoundError("File at path {} not found, please use a valid local or global path".format(data_file))
-    df = df[df['Team Number'].astype(str).str.contains(substring)]
+            raise FileNotFoundError(
+                "File at path {} not found, please use a valid local or global path".format(
+                    data_file
+                )
+            )
+    df = df[df["Team Number"].astype(str).str.contains(substring)]
     return list(set(df.loc[::, "Team Number"].values))
+
 
 def get_team_data(team_number: int, data_file=None):
     result = {}
@@ -390,18 +398,39 @@ def get_team_data(team_number: int, data_file=None):
         try:
             df = pd.read_excel(data_file)
         except:
-            raise FileNotFoundError("File at path {} not found, please use a valid local or global path".format(data_file))
+            raise FileNotFoundError(
+                "File at path {} not found, please use a valid local or global path".format(
+                    data_file
+                )
+            )
     df = df.loc[df["Team Number"] == team_number]
-    
-    for average in params.to_average:
-        val = []
-        for name in average["to_average"]:
-            val += df[name].tolist()
-        result[average["name"]] = [average["catagory"], mean(val)]
-# TODO: Finish
+
+    for catagory in params.data.keys():
+        result[catagory] = {}
+        for item in params.data[catagory]:
+            if item["operation"] == "AVERAGE":
+                val = 0
+                for name in item["fields"]:
+                    val += sum(df[name].tolist())
+                result[catagory][item["header"]] = val / df.shape[0]
+            elif item["operation"] == "MAX":
+                for i in range(len(item["fields"])):  # name in item["fields"]:
+                    if df[item["fields"][i]].tolist().count(item["default"]) != len(
+                        df[item["fields"][i]].tolist()
+                    ):
+                        result[catagory][item["header"]] = item["values"][i]
+                        break
+                if result[catagory].get(item["header"]) == None:
+                    pass  # Optional Nonetype replacement
+            elif item["operation"] == "MAX_VAL":
+                pass
+            else:
+                print("Unsupported opperation")
     return result
-    
-def mean(list): return sum(list)/len(list)
+
+
+def mean(list):
+    return sum(list) / len(list)
 
 
 print(get_team_data(492, "processed_data/2023pncmp.xlsx"))

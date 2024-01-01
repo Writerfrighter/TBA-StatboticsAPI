@@ -25,6 +25,7 @@ logger = logging.getLogger()
 
 logger.setLevel(logging.DEBUG)
 
+
 def getTeamData(number):
     logging.info("Thread for team %s: Starting", number)
     info = TBA.fetchTeamInfo(number)
@@ -205,9 +206,12 @@ def get_rankings():
         use_endgame_EPA,
     )
 
+
 @app.route("/api/search_team/<str>")
 def search_team(str):
     pass
+
+
 @app.route("/download_data/<id>")
 def download_data(id):
     try:
@@ -222,6 +226,7 @@ def download_data(id):
         files = list(filter(os.path.isfile, glob.glob(params.download_folder + "\*")))
         files.sort(key=os.path.getctime)
         return send_file(files[0])
+
 
 if __name__ == "__main__":
     app.run()

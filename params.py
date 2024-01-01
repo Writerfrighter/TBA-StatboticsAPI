@@ -61,7 +61,7 @@ string_comparisons = [
         "index": 28,
         "tba_name": "win??",
         "xlsx_name": "Final WLT",
-        "xlsx_tba_pairs": {"Win": "placeholder", "Loss": "placeholder"}
+        "xlsx_tba_pairs": {"Win": "placeholder", "Loss": "placeholder"},
     },
 ]
 
@@ -87,25 +87,39 @@ bonuses = [
 # Team Data Compilation
 #
 
-to_average = [
-    {
-        "name": "Avg Total",
-        "catagory": "Score",
-        "to_average": ["Final Alliance Score"],
-    },
-    {
-        "name": "Avg Auto Pieces",
-        "catagory": "Autonomous",
-        "to_average": ["Auto Scored Low", "Auto Scored Med", "Auto Scored High"],
-    },
-    {
-        "name": "Avg Teleop Pieces",
-        "catagory": "Teleop",
-        "to_average": ["Teleop Goals Low", "Teleop Goals Med", "Teleop Goals High"],
-    },
-    {
-        "name": "Avg Missed",
-        "catagory": "Teleop",
-        "to_average": ["Teleop Missed Attempts"],
-    },
-]
+
+data = {
+    "Score": [
+        {
+            "header": "Avg Total",
+            "operation": "AVERAGE",
+            "fields": ["Final Alliance Score"],
+        },
+    ],
+    "Autonomous": [
+        {
+            "header": "Avg Peices",
+            "operation": "AVERAGE",
+            "fields": ["Auto Scored Low", "Auto Scored Med", "Auto Scored High"],
+        },
+    ],
+    "Teleop": [
+        {
+            "header": "Avg Peices",
+            "operation": "AVERAGE",
+            "fields": ["Teleop Goals Low", "Teleop Goals Med", "Teleop Goals High"],
+        },
+        {
+            "header": "Avg Missed",
+            "operation": "AVERAGE",
+            "fields": ["Teleop Missed Attempts"],
+        },
+        {
+            "header": "Max Level",
+            "operation": "MAX",
+            "fields": ["Teleop Goals High", "Teleop Goals Med", "Teleop Goals Low"],
+            "values": ["High", "Mid", "Low"],
+            "default": 0,
+        },
+    ],
+}
