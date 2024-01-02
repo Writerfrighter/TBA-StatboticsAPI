@@ -422,7 +422,9 @@ def get_team_data(team_number: int, data_file=None):
                         break
                 if result[catagory].get(item["header"]) == None:
                     pass  # Optional Nonetype replacement
-            elif item["operation"] == "MAX_VAL":
+            elif item["operation"] == "MAX_VALUE":
+                pass
+            elif item["operation"] == "STANDARD_DEV":
                 pass
             else:
                 print("Unsupported opperation")
@@ -433,4 +435,4 @@ def mean(list):
     return sum(list) / len(list)
 
 
-print(get_team_data(492, "processed_data/2023pncmp.xlsx"))
+print(get_team_data(2910, "processed_data/2023pncmp.xlsx"))

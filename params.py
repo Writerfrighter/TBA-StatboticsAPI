@@ -123,3 +123,9 @@ data = {
         },
     ],
 }
+
+# Options
+#    1. AVERAGE
+#    2. MAX
+#    3. MAX_VALUE
+#    4. STANDARD_DEV
