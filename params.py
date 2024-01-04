@@ -87,6 +87,27 @@ bonuses = [
 # Team Data Compilation
 #
 
+point_values = {
+    "Left Community": 3,
+    "Auto Scored Low": 3,
+    "Auto Scored Med": 4,
+    "Auto Scored High": 6,
+    "Auto Engaged Docked State": {
+        "Docked and Engaged": 12,
+        "Docked": 8,
+    },
+    "Teleop Goals Low": 2,
+    "Teleop Goals Med": 3,
+    "Teleop Goals High": 5,
+    "Teleop Links": 5,
+    "Fouls": -5,
+    "Tech Fouls": -12,
+    "Endgame Robot State": {
+        "Engaged": 10,
+        "Docked": 6,
+        "Parked": 2,
+    },
+}
 
 data = {
     "Score": [
@@ -95,6 +116,7 @@ data = {
             "operation": "AVERAGE",
             "fields": ["Final Alliance Score"],
         },
+        {"header": "EPA", "operation": "EPA", "fields": [""]},
     ],
     "Autonomous": [
         {
@@ -129,3 +151,4 @@ data = {
 #    2. MAX
 #    3. MAX_VALUE
 #    4. STANDARD_DEV
+#    5. EPA

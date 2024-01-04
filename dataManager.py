@@ -426,13 +426,53 @@ def get_team_data(team_number: int, data_file=None):
                 pass
             elif item["operation"] == "STANDARD_DEV":
                 pass
+            elif item["operation"] == "EPA":
+                pass
             else:
                 print("Unsupported opperation")
     return result
+
+
+def calculate_epa(team_number: int, data_file=None, fields="all"):
+    if data_file == None:
+        files = list(filter(os.path.isfile, glob.glob(params.download_folder + "\*")))
+        files.sort(key=os.path.getctime)
+        file = files[0]
+        df = pd.read_excel(file)
+    else:
+        try:
+            df = pd.read_excel(data_file)
+        except:
+            raise FileNotFoundError(
+                "File at path {} not found, please use a valid local or global path".format(
+                    data_file
+                )
+            )
+    df = df.loc[df["Team Number"] == team_number]
+    if fields == "all": fields = list(params.point_values.keys())
+    EPA = 0
+    for field in fields:
+        data_list = df[field].tolist()
+        field_type = type(data_list[0])
+        if field_type == int:
+            EPA += mean(data_list) * params.point_values[field]
+        elif field_type == str:
+            for i in range(len(data_list)):
+                value = params.point_values[field].get(data_list[i])
+                data_list[i] = value if value != None else 0
+            EPA += mean(data_list)
+        elif field_type == bool:
+            for i in range(len(data_list)):
+                data_list[i] = params.point_values[field] if data_list[i] else 0
+            EPA += mean(data_list)
+        else:
+            print("Unsupported field type:", field_type)
+    return EPA
 
 
 def mean(list):
     return sum(list) / len(list)
 
 
-print(get_team_data(2910, "processed_data/2023pncmp.xlsx"))
+print(get_team_data(492, "processed_data/2023pncmp.xlsx"))
+print(calculate_epa(492, "processed_data/2023pncmp.xlsx"))
