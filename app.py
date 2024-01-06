@@ -211,7 +211,6 @@ def get_rankings():
 def search_team(str):
     pass
 
-
 @app.route("/download_data/<id>")
 def download_data(id):
     try:

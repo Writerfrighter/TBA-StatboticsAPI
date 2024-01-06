@@ -1,9 +1,8 @@
-2023-12-18 07:16:23,096 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-01-04 13:57:38,411 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2023-12-18 07:16:23,096 [33mPress CTRL+C to quit[0m
-2023-12-18 07:16:24,125 Starting new HTTPS connection (1): www.thebluealliance.com:443
-2023-12-18 07:16:25,360 https://www.thebluealliance.com:443 "GET /api/v3/team/frc492/events/2023?X-TBA-Auth-Key=XEgamR41nGmLtS6W2Own9kkz2CQxZY1NK6UNZsbpPUDWcus4ioeUH9lGSmfNmkgu HTTP/1.1" 200 1545
-2023-12-18 07:16:25,503 127.0.0.1 - - [18/Dec/2023 07:16:25] "GET / HTTP/1.1" 200 -
-2023-12-18 07:16:25,777 127.0.0.1 - - [18/Dec/2023 07:16:25] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-2023-12-18 07:16:25,777 127.0.0.1 - - [18/Dec/2023 07:16:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-2023-12-18 07:16:26,424 127.0.0.1 - - [18/Dec/2023 07:16:26] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2024-01-04 13:57:38,411 [33mPress CTRL+C to quit[0m
+2024-01-04 13:57:39,234 127.0.0.1 - - [04/Jan/2024 13:57:39] "GET /scouting HTTP/1.1" 200 -
+2024-01-04 13:57:39,375 127.0.0.1 - - [04/Jan/2024 13:57:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-04 13:57:39,459 127.0.0.1 - - [04/Jan/2024 13:57:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2024-01-04 13:57:39,669 127.0.0.1 - - [04/Jan/2024 13:57:39] "[36mGET /static/images/TRC+Logo.png HTTP/1.1[0m" 304 -
+2024-01-04 13:57:40,048 127.0.0.1 - - [04/Jan/2024 13:57:40] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -

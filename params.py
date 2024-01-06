@@ -57,12 +57,12 @@ value_comparisons = [
 ]  # (value name as on TBA, [(Index in xlsx that value is in, xlsx Header), ...)])
 
 string_comparisons = [
-    {
-        "index": 28,
-        "tba_name": "win??",
-        "xlsx_name": "Final WLT",
-        "xlsx_tba_pairs": {"Win": "placeholder", "Loss": "placeholder"},
-    },
+    # {
+    #     "index": 28,
+    #     "tba_name": "win??",
+    #     "xlsx_name": "Final WLT",
+    #     "xlsx_tba_pairs": {"Win": "placeholder", "Loss": "placeholder"},
+    # },
 ]
 
 bonuses = [
@@ -116,7 +116,7 @@ data = {
             "operation": "AVERAGE",
             "fields": ["Final Alliance Score"],
         },
-        {"header": "EPA", "operation": "EPA", "fields": [""]},
+        {"header": "EPA", "operation": "EPA", "fields": "all"},
     ],
     "Autonomous": [
         {

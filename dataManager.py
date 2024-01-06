@@ -95,7 +95,7 @@ def completeData(eventCode):
     ):
         stats.append(0)
 
-    for k, entry in enumerate(df.values[::]):
+    for k, entry in enumerate(list(df.values)):
         index = [
             i for i, j in enumerate(eventMatches) if j["match_number"] == entry[0]
         ][
@@ -244,8 +244,6 @@ def completeData(eventCode):
                 ] += 1
                 df.loc[k, correction["xlsx_name"]] = correct
 
-        # TODO: Code Review
-
         # Bonus corrections
         for i, bonus in enumerate(params.bonuses):
             if (
@@ -269,14 +267,13 @@ def completeData(eventCode):
                     + len(params.value_comparisons)
                     + i
                 ] += 1
-
                 df.loc[k, bonus["xlsx_name"]] = eventMatches[index]["score_breakdown"][
                     alliance
-                ][bonus["tba_name"]]
+                ][bonus["tba_name"]] # Write not working
 
     df.to_excel(os.path.join(params.download_folder, eventCode + ".xlsx"), index=False)
     print("Correction Statistics --------------------")
-    leng = len(df.values[::])
+    leng = df.shape[0]
     print("Team Numbers entered incorectly:", stats[0])
     print("Mean final score deviation:", "{:.2f}".format(stats[1] / leng))
     for i, c in enumerate(stats[2 : len(params.location_dependent_comparisions) + 2 :]):
@@ -421,13 +418,16 @@ def get_team_data(team_number: int, data_file=None):
                         result[catagory][item["header"]] = item["values"][i]
                         break
                 if result[catagory].get(item["header"]) == None:
-                    pass  # Optional Nonetype replacement
+                    result[catagory][item["header"]] == "None"
+                    # Optional Nonetype replacement
             elif item["operation"] == "MAX_VALUE":
                 pass
             elif item["operation"] == "STANDARD_DEV":
                 pass
             elif item["operation"] == "EPA":
-                pass
+                result[catagory][item["header"]] = calculate_epa(
+                    team_number, fields=item["fields"]
+                )
             else:
                 print("Unsupported opperation")
     return result
@@ -449,7 +449,8 @@ def calculate_epa(team_number: int, data_file=None, fields="all"):
                 )
             )
     df = df.loc[df["Team Number"] == team_number]
-    if fields == "all": fields = list(params.point_values.keys())
+    if fields == "all":
+        fields = list(params.point_values.keys())
     EPA = 0
     for field in fields:
         data_list = df[field].tolist()
@@ -472,7 +473,3 @@ def calculate_epa(team_number: int, data_file=None, fields="all"):
 
 def mean(list):
     return sum(list) / len(list)
-
-
-print(get_team_data(492, "processed_data/2023pncmp.xlsx"))
-print(calculate_epa(492, "processed_data/2023pncmp.xlsx"))
